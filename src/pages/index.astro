@@ -1,20 +1,22 @@
 ---
+import Hero from "../components/Hero.tsx";
 import Layout from "../layouts/Layout.astro";
-import BackgroundBoxs from "../components/BackgroundBoxs.astro";
+
+
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="SphæraTech ・ Web Agency">
 	<main>
-		<BackgroundBoxs />
+		<!-- hero section -->
+		<Hero/>
 	</main>
 </Layout>
 
 <style>
 	main {
 		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
+		
+		
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
