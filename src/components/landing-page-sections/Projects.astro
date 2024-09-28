@@ -1,0 +1,22 @@
+---
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+import { BentoGridReact } from "../react/Projects";
+let url = Astro.url;
+const lang = getLangFromUrl(url);
+const t = useTranslations(Astro.url);
+const projects = Object.values(t("sections.projects"));
+---
+
+<div class="flex flex-col lg:flex-row gap-10 items-center content-center p-4">
+  <div class="flex-shrink-0 w-auto max-w-3xl flex flex-col gap-10">
+    <h4 class="text-5xl">Some pieces of our work</h4>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod corrupti
+      nihil non numquam odit repellendus aspernatur ducimus. Illo voluptate
+      tenetur error dolorem voluptates.
+    </p>
+  </div>
+  <div class="flex-grow">
+    <BentoGridReact client:only="react" projects={projects} />
+  </div>
+</div>

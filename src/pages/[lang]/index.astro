@@ -1,7 +1,11 @@
 ---
-import Hero from "../../components/Hero.astro";
+import Hero from "../../components/landing-page-sections/Hero.astro";
 import Layout from "../../layouts/Layout.astro";
 import { useTranslations } from "../../i18n/utils.ts";
+import Services from "@components/landing-page-sections/Services.astro";
+import Projects from "@components/landing-page-sections/Projects.astro";
+import Filler from "@components/landing-page-sections/Filler.astro";
+import Contact from "@components/landing-page-sections/Contact.astro";
 
 export async function getStaticPaths() {
   const availableLanguages = ["en", "fr", "es"];
@@ -14,10 +18,18 @@ const t = useTranslations(Astro.url);
 ---
 
 <Layout title={t("title")}>
-  <main>
+  <main class="flex flex-col gap-20">
     <!-- hero section -->
 
     <Hero />
+    <Services />
+    <Filler />
+
+    <Projects />
+    <Contact/>
+    <div class="mt-10 mb-10">
+
+    </div>
   </main>
 </Layout>
 

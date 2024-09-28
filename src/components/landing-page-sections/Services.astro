@@ -1,0 +1,58 @@
+---
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+import { ThreeDeeCard } from "../react/ThreeDeeCard";
+
+let url = Astro.url;
+const lang = getLangFromUrl(url);
+const t = useTranslations(Astro.url);
+
+const services = Object.values(t("sections.services"));
+---
+
+<div class="w-full dark-gray-1 p-4 sm:p-10">
+  <div class="text-center mb-8">
+    <h1 class="text-4xl mb-2 text-gray-300">We Offer Services</h1>
+    <p class="text-xl text-gray-300">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti nobis a
+      inventore aliquam mollitia sunt.
+    </p>
+  </div>
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-32 md:gap-32 max-w-6xl mx-auto"
+  >
+    {
+      services
+        .slice(0, 3)
+        .map((service, index) => (
+          <ThreeDeeCard
+            client:only="react"
+            key={index}
+            lang={lang}
+            url={service.url}
+            title={service.title}
+            icon={service.icon}
+            description={service.description}
+          />
+        ))
+    }
+  </div>
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-32 md:gap-32 max max-w-6xl mx-auto mt-4"
+  >
+    {
+      services
+        .slice(3)
+        .map((service, index) => (
+          <ThreeDeeCard
+            client:only="react"
+            key={index + 3}
+            lang={lang}
+            url={service.url}
+            title={service.title}
+            icon={service.icon}
+            description={service.description}
+          />
+        ))
+    }
+  </div>
+</div>

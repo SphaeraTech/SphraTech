@@ -1,0 +1,23 @@
+.card {
+    position: relative;
+    min-height: 10vh;
+    max-height: 30vh;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.1);
+}
+
+.dark .card {
+    background-color: black;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark .card:hover {
+    box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.1);
+}
+
