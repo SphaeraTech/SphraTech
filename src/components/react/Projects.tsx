@@ -4,19 +4,15 @@ import { BentoGrid, BentoGridItem } from "../react/ui/BentoGrid";
 
 export function BentoGridReact({ projects }) {
   return (
-    <BentoGrid className=" min-w-2 mx-auto">
+    <BentoGrid className=" min-w-2 mx-auto dark-blue-2">
       {projects.map((item, i) => (
         <BentoGridItem
           key={i}
           title={item.title}
           description={item.description}
-          header={
-            <img
-              src={item.preview}
-              className="rounded-xl group-hover/bento:translate-x-2 transition duration-200 "
-            />
+          picture={item.preview
+            
           }
-          className={i === 3 || i === 6 ? "md:col-span-2" : ""}
         />
       ))}
     </BentoGrid>
