@@ -1,11 +1,9 @@
 ---
 import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 import { ThreeDeeCard } from "../react/ThreeDeeCard";
-
 let url = Astro.url;
 const lang = getLangFromUrl(url);
 const t = useTranslations(Astro.url);
-
 const services = Object.values(t("sections.services"));
 ---
 

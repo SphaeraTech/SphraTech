@@ -1,0 +1,12 @@
+---
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+import ServicesSection  from "./react/ServiceSection"
+
+let url = Astro.url;
+const lang = getLangFromUrl(url);
+const t = useTranslations(Astro.url);
+
+const services = Object.values(t("sections.services"));
+---
+
+<ServicesSection client:only="react" services={services} lang={lang} />

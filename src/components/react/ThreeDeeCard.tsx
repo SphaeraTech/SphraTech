@@ -4,24 +4,22 @@ import { CardBody, CardContainer, CardItem } from "./ui/3D-Card";
 export function ThreeDeeCard({ lang, title, description, icon, url }) {
   const t = useTranslations(null, lang);
   return (
-    <a href={url}>
-      <CardContainer className="inter-var p-2 dark-blue-2 rounded-md border-white border-2 cursor-pointer ">
-        <CardBody className="card dark-blue-2 ">
-        <CardItem translateZ="50" className="pt-2 pb-2 dark:text-white">
-  <img src={icon} alt="" className="md:w-auto w-[50%]" />
+    <a href={url} className="w-full">
+      <CardContainer className=" rounded-md cursor-pointer">
+        <CardBody className="dark-blue-2 flex flex-col justify-between p-6 rounded-2xl">
+        <CardItem translateZ="50" className=" text-white ">
+  <img src={icon} alt=""  />
 </CardItem>
-
-
           <CardItem
             translateZ="50"
-            className="text-2xl pt-2 pb-1 font-bold dark:text-white"
+            className="text-2xl  font-bold text-white "
           >
             {title}
           </CardItem>
           <CardItem
             as="p"
             translateZ="60"
-            className="dark:text-white text-base max-w-sm  "
+            className="text-white text-base max-w-sm "
           >
             {description}
           </CardItem>

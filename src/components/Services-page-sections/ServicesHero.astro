@@ -1,0 +1,8 @@
+---
+import { getLangFromUrl } from "src/i18n/utils";
+import ServicesHero from "@components/Services-page-sections/react/ServicesHero";
+let url = Astro.url;
+const lang = getLangFromUrl(url);
+---
+
+<ServicesHero client:only="react" lang={lang}  />

@@ -11,7 +11,7 @@ export function BentoGridReact({ projects }) {
           title={item.title}
           description={item.description}
           picture={item.preview
-            
+
           }
         />
       ))}

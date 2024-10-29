@@ -1,0 +1,24 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import { useTranslations } from "../../i18n/utils.ts";
+import ServicesHero from "@components/services-page-sections/ServicesHero.astro";
+import WorksSection from "@components/Services-page-sections/WorkSection.astro";
+import Projects from "@components/landing-page-sections/Projects.astro";
+import ServicesSection from "@components/Services-page-sections/ServicesSection.astro";
+export async function getStaticPaths() {
+  const availableLanguages = ["en", "fr", "es"];
+  return availableLanguages.map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const t = useTranslations(Astro.url);
+---
+<Layout title="Services">
+  <main class="flex flex-col gap-10 ">
+    <!-- hero section for services -->
+    <ServicesHero />
+    <WorksSection />
+    <ServicesSection/>
+  </main>
+</Layout>

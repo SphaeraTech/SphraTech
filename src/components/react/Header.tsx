@@ -20,7 +20,7 @@ backdrop-blur-md px-8 py-4
       <nav>
         <ul className="flex flex-row text-white items-center gap-5 justify-between font-medium">
           <li className="hover:text-[#e14553] cursor-pointer">{t("nav.home")}</li>
-          <li className="hover:text-[#e14553] cursor-pointer">{t("nav.services")}</li>
+          <li className="hover:text-[#e14553] cursor-pointer"><a href={`${lang}/services`}>{t("nav.services")}</a></li>
           <li className="hover:text-[#e14553] cursor-pointer">{t("nav.blog")}</li>
           <li className="hover:text-[#e14553] cursor-pointer">{t("nav.about")}</li>
 
