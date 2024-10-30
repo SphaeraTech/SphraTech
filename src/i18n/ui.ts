@@ -26,21 +26,21 @@ export const ui = {
         title: "SEO Services",
         description:
           "We optimize your website to improve search engine rankings and drive organic traffic.",
-        icon: "icons/megaphone.svg",
+        icon: "images/seoService.webp",
         url: "",
       },
       {
         title: "SaaS Solutions",
         description:
           "We develop scalable and secure Software as a Service solutions tailored to your business needs.",
-        icon: "icons/saas-icon.svg",
+        icon: "images/saas.webp",
         url: "",
       },
       {
         title: "UI/UX Design",
         description:
           "Our expert designers create intuitive and visually appealing user interfaces and experiences.",
-        icon: "icons/ui-ux-icon.svg",
+        icon: "images/uiux.webp",
         url: "",
       },
       {
@@ -51,8 +51,8 @@ export const ui = {
         url: "",
       },
     ],
-    "sections.services.title":"Our Services",
-    "footer":"",
+    "sections.services.title": "Our Services",
+    footer: "",
     "sections.projects": [
       {
         title: "Moonbeam",
@@ -157,6 +157,40 @@ export const ui = {
     "sections.discuss.title": "Let’s discuss the idea",
     "sections.discuss.text":
       " Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. ",
+    "about.hero": {
+      pageTitle: "About Us",
+      phrase: "SpheraTech",
+
+      text: "lorem loremloremlorem",
+    },
+    "about.hero.content": {
+      title1: "Company",
+      content1: ` Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero
+          facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit.
+          Morbi aliquam porttitor mattis consequat neque, tellus blandit.Commodo
+          diam vulputate dui proin quis enim nibh. Non integer ac libero
+          facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit.
+          Morbi aliquam porttitor mattis consequat neque, tellus blandit.
+          Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero
+          facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit.
+          Morbi aliquam porttitor mattis consequat neque, tellus blandit.
+          Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero
+          facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit.
+          Morbi aliquam porttitor mattis consequat neque, tellus blandit.`,
+      title2: "Team",
+      content2: ` Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero
+          facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit.
+          Morbi aliquam porttitor mattis consequat neque, tellus blandit.Commodo
+          diam vulputate dui proin quis enim nibh. Non integer ac libero
+          facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit.
+          Morbi aliquam porttitor mattis consequat neque, tellus blandit.
+          Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero
+          facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit.
+          Morbi aliquam porttitor mattis consequat neque, tellus blandit.
+          Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero
+          facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit.
+          Morbi aliquam porttitor mattis consequat neque, tellus blandit.`,
+    },
   },
   fr: {
     title: "SphæraTech ・ Agence Web",

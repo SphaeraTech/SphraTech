@@ -1,6 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { HeroHighlight, Highlight } from "./ui/HeroHighlight";
 import { useTranslations } from "src/i18n/utils";
 
 export default function Hero({ lang = "en", services }) {
