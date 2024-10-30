@@ -1,0 +1,35 @@
+---
+import { useTranslations } from "src/i18n/utils";
+import TailwindButton from "../react/ui/Button";
+import BackgroundBeams from "../react/ui/BackgroundBeams";
+const t = useTranslations(Astro.url);
+---
+
+<section class="bg-black py-16">
+  <div class="container mx-auto px-4">
+    <div class="dark-blue-2 rounded-lg py-24 px-12 md:px-24 text-center">
+      <h2 class="text-2xl md:text-4xl font-bold text-white mb-4">
+        {t("sections.discuss.title")}
+      </h2>
+      <p class="text-sm md:text-base text-white mb-8">
+        {t("sections.discuss.text")}
+      </p>
+      <form class="flex justify-center items-center space-x-4">
+        <button
+          type="submit"
+          class="bg-black text-white py-3 px-6 rounded-full font-semibold shadow-md hover:bg-gray-800 transition duration-300"
+        >
+          {t("button.send")}
+        </button>
+      </form>
+    </div>
+  </div>
+  <!-- Go to Top Button -->
+  <div class="container mx-auto px-4 mt-8 text-right">
+    <button
+      class="bg-transparent border border-red-600 sphera-red-text text-white-500 py-2 px-6 rounded-full text-sm hover:bg-red-700 hover:text-white transition duration-300"
+    >
+      {t("button.goTop")}
+    </button>
+  </div>
+</section>
