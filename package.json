@@ -3,7 +3,7 @@
   "type": "module",
   "author": "SphæraTech",
   "description": "SphæraTech main website",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
