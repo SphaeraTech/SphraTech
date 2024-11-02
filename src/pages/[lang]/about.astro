@@ -1,0 +1,38 @@
+---
+import { useTranslations } from "../../i18n/utils.ts";
+import Layout from "../../layouts/Layout.astro";
+import Background from "../../components/react/Background";
+import { getLangFromUrl } from "src/i18n/utils";
+
+export async function getStaticPaths() {
+  const availableLanguages = ["en", "fr", "es"];
+  return availableLanguages.map((lang) => ({
+    params: { lang },
+  }));
+}
+let url = Astro.url;
+
+const lang = getLangFromUrl(url);
+
+const t = useTranslations(Astro.url);
+---
+
+<Layout title={t("title")}>
+  <main class="flex flex-col gap-5">
+    <Background text={t("about.hero")} />
+    <div class="flex flex-col gap-20 p-5">
+      <div>
+        <h3 class="font-semibold text-xl">{t("about.hero.content").title1}</h3>
+        <p>
+          {t("about.hero.content").content1}
+        </p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-xl">{t("about.hero.content").title2}</h3>
+        <p>
+          {t("about.hero.content").content2}
+        </p>
+      </div>
+    </div>
+  </main>
+</Layout>

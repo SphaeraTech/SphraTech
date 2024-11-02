@@ -1,0 +1,9 @@
+---
+import { getLangFromUrl } from "src/i18n/utils";
+import NavBar from "./react/Header";
+
+let url = Astro.url;
+const lang = getLangFromUrl(url)
+---
+
+<NavBar client:only="react" lang={lang} />
