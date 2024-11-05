@@ -60,7 +60,7 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="hide-scrollbar fade-in-section h-[30rem]  overflow-y-auto flex justify-center relative space-x-10 rounded-md p-10"
+      className="hide-scrollbar fade-in-section h-[50vh]  overflow-y-auto flex justify-center relative space-x-10 rounded-md p-10"
       
       ref={ref}
     >
