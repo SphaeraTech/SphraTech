@@ -1,9 +1,9 @@
 import React from "react";
 import { Carousel, Card } from "../react/ui/CardsCarousel";
 
-export function ServicesCarousel({ data, title }) {
+export function ServicesCarousel({ data, title ,lang}) {
   const cards = data.map((card, index) => (
-    <Card key={card.icon} card={card} index={index} />
+    <Card key={card.icon} card={card} index={index} lang={lang}/>
   ));
 
   return (
