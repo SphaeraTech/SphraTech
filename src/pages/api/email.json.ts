@@ -11,6 +11,7 @@ const transporter = nodemailer.createTransport({
   auth: {
     user: "mohmost32@gmail.com",
     pass: "jlwyjoxtjsmayikr",
+  },
 });
 
 export const POST: APIRoute = async ({ request }) => {
