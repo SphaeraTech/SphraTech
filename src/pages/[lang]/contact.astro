@@ -1,0 +1,24 @@
+---
+import { useTranslations } from "../../i18n/utils.ts";
+import Layout from "../../layouts/Layout.astro";
+
+import { getLangFromUrl } from "src/i18n/utils";
+import ContactForm from "@components/contact-page-sections/react/ContactForm";
+export async function getStaticPaths() {
+  const availableLanguages = ["en", "fr", "es"];
+  return availableLanguages.map((lang) => ({
+    params: { lang },
+  }));
+}
+let url = Astro.url;
+
+const lang = getLangFromUrl(url);
+export const prerender = true
+const t = useTranslations(Astro.url);
+---
+
+<Layout title={t("title")}>
+  <main class="flex flex-col ">
+  <ContactForm client:only="react" lang={lang} />
+  </main>
+</Layout>
