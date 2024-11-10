@@ -5,24 +5,23 @@ import ContactRequestEmail from "src/emails/ContactEmail"; // Assurez-vous que c
 
 import type { FormData } from "@components/contact-page-sections/react/ContactForm";
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
+  host: import.meta.env.SMTP_HOST,
+  port: parseInt(import.meta.env.SMTP_PORT, 10),
   secure: true,
   auth: {
-    user: "mohmost32@gmail.com",
-    pass: "jlwyjoxtjsmayikr",
+    user: import.meta.env.SMTP_USER,
+    pass: import.meta.env.SMTP_PASS,
   },
 });
 
 export const POST: APIRoute = async ({ request }) => {
   try {
-    console.log("Request headers:", request.headers);
     const data = await request.json();
-    console.log("Received data:", data);
+
     const html = await render(ContactRequestEmail(data));
     const mailOptions = {
-      from: data.email,
-      to: "mohmost32@gmail.com",
+      from: "teemohmost2020@gmail.com",
+      to: "sphaeratech@gmail.com",
       subject: "Demande de contact",
       html,
     };

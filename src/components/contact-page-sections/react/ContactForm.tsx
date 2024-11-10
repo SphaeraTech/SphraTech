@@ -51,7 +51,7 @@ const steps = [
   {
     id: 3,
     name: "Racontez-nous votre projet en quelques mots...",
-    fields: ["project"],
+    fields: ["projects"],
   },
   {
     id: 4,
@@ -180,6 +180,9 @@ export default function ContactForm() {
                       onValueChange={(value) =>
                         setValue("clientType", value, { shouldValidate: true })
                       }
+                      {...register("clientType", {
+                        required: "Client type is required",
+                      })}
                     >
                       <SelectTrigger>
                         <SelectValue placeholder="Sélectionnez une option" />
@@ -210,6 +213,9 @@ export default function ContactForm() {
                       onValueChange={(value) =>
                         setValue("services", value, { shouldValidate: true })
                       }
+                      {...register("services", {
+                        required: "Please select a service",
+                      })}
                     >
                       <SelectTrigger>
                         <SelectValue placeholder="Sélectionnez une option" />
@@ -236,7 +242,7 @@ export default function ContactForm() {
                     )}
                   </div>
                 )}
-                {currentStepFields.includes("features") && (
+                {currentStepFields.includes("projects") && (
                   <div className="mb-4 w-[90%] md:w-full">
                     <Label className="text-black">
                       Donnez-nous le maximum de détails ( sur vous, la
@@ -244,7 +250,14 @@ export default function ContactForm() {
                       longueur de la vidéo, Etc...)
                     </Label>
                     <Textarea
-                      {...register("projects")}
+                      {...register("projects", {
+                        required: "Please describe your project",
+                        minLength: {
+                          value: 10,
+                          message:
+                            "Please provide more details (min. 10 characters)",
+                        },
+                      })}
                       placeholder="Votre message..."
                     />
                     {errors.projects && (
@@ -260,6 +273,9 @@ export default function ContactForm() {
                       onValueChange={(value) =>
                         setValue("budget", value, { shouldValidate: true })
                       }
+                      {...register("budget", {
+                        required: "Please select a budget range",
+                      })}
                     >
                       <SelectTrigger>
                         <SelectValue placeholder="Sélectionnez une option" />
@@ -290,7 +306,11 @@ export default function ContactForm() {
                       placeholder="Votre nom*"
                       id="name"
                       {...register("name", {
-                        required: "Le nom est obligatoire",
+                        required: "Name is required",
+                        minLength: {
+                          value: 2,
+                          message: "Name must be at least 2 characters",
+                        },
                       })}
                     />
                     {errors.name && (
@@ -307,10 +327,10 @@ export default function ContactForm() {
                       id="email"
                       type="email"
                       {...register("email", {
-                        required: "L'adresse email est obligatoire",
+                        required: "Email is required",
                         pattern: {
                           value: /\S+@\S+\.\S+/,
-                          message: "Adresse email invalide",
+                          message: "Invalid email address",
                         },
                       })}
                     />
@@ -328,10 +348,10 @@ export default function ContactForm() {
                       placeholder="Votre numéro de téléphone*"
                       type="tel"
                       {...register("phone", {
-                        required: "Le numéro de téléphone est obligatoire",
+                        required: "Phone number is required",
                         pattern: {
-                          value: /^\+?[0-9]\d{9,14}$/,
-                          message: "Numéro de téléphone invalide",
+                          value: /^\+?[0-9]{9,14}$/,
+                          message: "Invalid phone number format",
                         },
                       })}
                     />
