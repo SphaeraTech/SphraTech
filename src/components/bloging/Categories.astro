@@ -1,0 +1,25 @@
+---
+const navItems = [
+  { name: "News", href: "#", active: true },
+  { name: "Product Updates", href: "#" },
+  { name: "Cloud Education", href: "#" },
+  { name: "Engineering", href: "#" },
+  { name: "Partner News", href: "#" },
+  { name: "Community", href: "#" },
+  { name: "Trust Security", href: "#" },
+  { name: "Culture", href: "#" }
+];
+---
+
+<nav class="flex p-5 justify-center bg-white w-full">
+  {navItems.map((item) => (
+    <a
+      href={item.href}
+      class={`px-3 py-2 rounded-full text-sm font-medium ${
+        item.active ? 'bg-blue-100 text-black' : 'text-gray-700 hover:text-black'
+      }`}
+    >
+      {item.name}
+    </a>
+  ))}
+</nav>

@@ -1,0 +1,89 @@
+---
+// src/components/PostCard.astro
+export interface Props {
+  imageUrl: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  author: string;
+  authorUrl: string;
+  url: string;
+}
+const { imageUrl, title, excerpt, date, author, authorUrl, url,showTag } = Astro.props;
+---
+
+<article class="post-card">
+  <a href={url} class="post-card__link">
+    <img src={imageUrl} alt={title} class="post-card__image" />
+    <div class="post-card__content">
+      <h2 class="post-card__title">{title}</h2>
+      <p class="post-card__excerpt">{excerpt}</p>
+      <div class="post-card__meta">
+        <a href={authorUrl} class="post-card__author">{author}</a>
+      </div>
+    </div>
+  </a>
+</article>
+
+<style>
+  .post-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition:
+      transform 0.3s,
+      box-shadow 0.3s;
+  }
+
+  .post-card__link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .post-card__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+
+  .post-card__content {
+    padding: 16px;
+    background-color: #fff;
+  }
+
+  .post-card__title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+  }
+
+  .post-card__excerpt {
+    color: #666;
+    margin: 8px 0;
+  }
+
+  .post-card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #888;
+  }
+
+  .post-card__author {
+    color: #0073e6;
+    text-decoration: none;
+  }
+
+  .post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+</style>

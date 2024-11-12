@@ -1,0 +1,73 @@
+---
+import { sanityClient } from "sanity:client";
+import Layout from "src/layouts/Layout.astro";
+import { useTranslations } from "../../../i18n/utils.ts";
+import PostCard from "../../../components/bloging/PostCard.astro";
+import { getCollection } from "astro:content";
+import Categories from "../../../components/bloging/Categories.astro";
+export async function getStaticPaths() {
+  const availableLanguages = ["en", "fr", "es"];
+  return availableLanguages.map((lang) => ({
+    params: { lang },
+  }));
+}
+const posts = await getCollection("blog");
+const newetPost = posts[0];
+const categoriesTopics = [
+  "Cloud education",
+  "Community",
+  "Culture",
+  "Engineering",
+  "News",
+  "Partner News",
+  "Product updates",
+  "Trust & Security",
+];
+const t = useTranslations(Astro.url);
+---
+
+<Layout>
+  <Categories />
+  <main class="m-10">
+    <div class="flex flex-col items-center gap-5">
+      <h1 class="text-5xl font-semibold text-center">SpheraTech's blog</h1>
+      <p class="text-center">
+        Dive into DigitalOcean product updates, company news, and educational
+        content on how developers and startups can leverage the cloud.
+      </p>
+    </div>
+    <section class="blog-grid">
+      <PostCard
+        key={newetPost.slug}
+        imageUrl={newetPost.data.imageUrl}
+        title={newetPost.data.title}
+        excerpt={newetPost.data.excerpt}
+        date={newetPost.data.date}
+        author={newetPost.data.author}
+        authorUrl={`/authors/${newetPost.data.authorSlug}`}
+        url={`/blog/${newetPost.slug}`}
+      />
+    </section>
+
+    <div>
+      <h2 class="font-">Our best picks</h2>
+      <section id="picks" class="flex gap-5 p-5">
+        {
+          posts.map((post) => (
+            <PostCard
+              key={post.slug}
+              imageUrl={post.data.imageUrl}
+              title={post.data.title}
+              excerpt={post.data.excerpt}
+              date={post.data.date}
+              author={post.data.author}
+              authorUrl={`/authors/${post.data.authorSlug}`}
+              url={`/blog/${post.slug}`}
+            />
+          ))
+        }
+      </section>
+    </div>
+    <!-- posts by topic list -->
+  </main>
+</Layout>

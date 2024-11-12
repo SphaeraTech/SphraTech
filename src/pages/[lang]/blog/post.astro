@@ -1,0 +1,43 @@
+---
+// src/pages/blog/[slug].astro
+import { getCollection } from 'astro:content';
+import Layout from '../../components/Layout.astro';
+
+const { slug } = Astro.params;
+const post = await getCollection('blog').then((posts) => posts.find((p) => p.slug === slug));
+
+if (!post) {
+  throw new Error(`Post with slug "${slug}" not found`);
+}
+---
+
+<Layout>
+  <article>
+    <header>
+      <h1>{post.data.title}</h1>
+      <p>{new Date(post.data.date).toLocaleDateString()}</p>
+      <p>by {post.data.author}</p>
+    </header>
+    <img src={post.data.imageUrl} alt={post.data.title} />
+    <div>
+      {post.body}
+    </div>
+  </article>
+</Layout>
+
+<style>
+  article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    margin: 16px 0;
+  }
+</style>

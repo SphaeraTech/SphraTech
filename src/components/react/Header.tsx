@@ -8,7 +8,7 @@ export default function NavBar({ lang = "en" }) {
 
   return (
     <header
-      className="flex items-center bg-[#0F0F0F66]/10 justify-between absolute w-full z-50 backdrop-filter 
+      className="flex items-center bg-[#0F0F0F66]/10 justify-between  w-full z-20 backdrop-filter 
       backdrop-blur-md px-8 py-4"
     >
       <div className="flex items-center">
