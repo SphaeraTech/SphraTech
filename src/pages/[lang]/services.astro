@@ -1,0 +1,76 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { useTranslations } from "../../i18n/utils.ts";
+import Background from "../../components/react/Background";
+import { StickyScrollSection } from "../../components/react/StickyScrollSection";
+export async function getStaticPaths() {
+  const availableLanguages = ["en", "fr", "es"];
+  return availableLanguages.map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const t = useTranslations(Astro.url);
+const services = [
+  {
+    title: t("services.section.webdevelopment"),
+    content: t("services.section.webdevelopment.content"),
+    img: "/icons/webdev-icon.svg",
+    hashTag:"#webdev"
+  },
+  {
+    title: t("services.section.saas"),
+    content: t("services.section.saas.content"),
+    img: "/icons/saas-icon.svg",
+    hashTag:"#saas"
+  },
+  {
+    title: t("services.section.seo"),
+    content: t("services.section.seo.content"),
+    img: "/icons/seo.svg",
+    hashTag:"#seo"
+  },
+  {
+    title: t("services.section.code"),
+    content: t("services.section.code.content"),
+    img: "/icons/seo.svg",
+    hashTag:"#code"
+  },
+];
+let isLeft = true
+
+---
+
+<Layout title={t("title")}>
+  <main class="flex flex-col gap-20">
+    <Background
+      client:only="react"
+      text={t("services.hero")}
+      page={"services"}
+    />
+    {
+      services.map((service) => (
+      <a href={`${service.hashTag}`}>
+          <div class="flex flex-col bg-gray-800 h-auto mb-10">
+          <div class="flex ml-5">
+            <img src={service.img} alt={service.title} class="w-auto" />
+            <span
+              class="p-10 font-semibold text-3xl"
+              id={service.title.replace(/\s+/g, "-")}
+            >
+              {service.title}
+            </span>
+          </div>
+          <div >
+            <StickyScrollSection
+              client:only="react"
+              content={service.content}
+            />
+          </div>
+        </div>
+      </a>
+      ))
+    }
+  </main>
+</Layout>
+

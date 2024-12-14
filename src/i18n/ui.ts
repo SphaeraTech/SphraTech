@@ -20,14 +20,14 @@ export const ui = {
         description:
           "We build responsive, high-performance websites and web applications to enhance your online presence.",
         icon: "images/webDevelopment.webp",
-        url: "services/",
+        url: "/services/#web",
       },
       {
         title: "SEO Services",
         description:
           "We optimize your website to improve search engine rankings and drive organic traffic.",
         icon: "images/seoService.webp",
-        url: "",
+        url: "/services/#seo",
       },
       {
         title: "SaaS Solutions",
@@ -47,7 +47,7 @@ export const ui = {
         title: "Mobile Development",
         description:
           "Our team specializes in developing robust and user-friendly mobile applications for iOS and Android.",
-        icon: "icons/mobiledev.svg",
+        icon: "images/devApp.webp",
         url: "",
       },
     ],
@@ -160,7 +160,6 @@ export const ui = {
     "about.hero": {
       pageTitle: "About Us",
       phrase: "SpheraTech",
-
       text: "lorem loremloremlorem",
     },
     "about.hero.content": {
@@ -191,6 +190,123 @@ export const ui = {
           facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit.
           Morbi aliquam porttitor mattis consequat neque, tellus blandit.`,
     },
+    "services.hero": {
+      pageTitle: "Services",
+      phrase: "Find your niche",
+      text: "lorem loremloremlorem",
+    },
+    "services.hero.content": {
+      title1: "Web Development",
+      content1: ` Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero
+          facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit.
+          Morbi aliquam porttitor mattis consequat neque, tellus blandit.Commodo
+          diam vulputate dui proin quis enim nibh. Non integer ac libero
+          facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit.
+          Morbi aliquam porttitor mattis consequat neque, tellus blandit.
+          Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero
+          facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit.
+          Morbi aliquam porttitor mattis consequat neque, tellus blandit.
+          Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero
+          facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit.
+          Morbi aliquam porttitor mattis consequat neque, tellus blandit.`,
+      title2: "Team",
+      content2: ` Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero
+          facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit.
+          Morbi aliquam porttitor mattis consequat neque, tellus blandit.Commodo
+          diam vulputate dui proin quis enim nibh. Non integer ac libero
+          facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit.
+          Morbi aliquam porttitor mattis consequat neque, tellus blandit.
+          Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero
+          facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit.
+          Morbi aliquam porttitor mattis consequat neque, tellus blandit.
+          Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero
+          facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit.
+          Morbi aliquam porttitor mattis consequat neque, tellus blandit.`,
+    },
+    "services.section.webdevelopment": "Web Development",
+    "services.section.webdevelopment.content": [
+      {
+        title: "Vitrine sites",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, beatae! Alias reiciendis culpa iure adipisci blanditiis, tempore harum? Quae, odit numquam voluptatum minus blanditiis illo vitae doloremque aut qui? Fugiat.",
+        illustration: "/images/vitrine-site.webp",
+      },
+      {
+        title: "Landing pages",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, beatae! Alias reiciendis culpa iure adipisci blanditiis, tempore harum? Quae, odit numquam voluptatum minus blanditiis illo vitae doloremque aut qui? Fugiat.",
+        illustration: "",
+      },
+      {
+        title: "E-commerce.",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, beatae! Alias reiciendis culpa iure adipisci blanditiis, tempore harum? Quae, odit numquam voluptatum minus blanditiis illo vitae doloremque aut qui? Fugiat.",
+        illustration: "",
+      },
+    ],
+    "services.section.saas": "SaaS Solutions",
+    "services.section.saas.content": [
+      {
+        title: "Lorem ipsum dolor",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, beatae! Alias reiciendis culpa iure adipisci blanditiis, tempore harum? Quae, odit numquam voluptatum minus blanditiis illo vitae doloremque aut qui? Fugiat.",
+        illustration: "",
+      },
+      {
+        title: "Lorem ipsum dolor",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, beatae! Alias reiciendis culpa iure adipisci blanditiis, tempore harum? Quae, odit numquam voluptatum minus blanditiis illo vitae doloremque aut qui? Fugiat.",
+        illustration: "",
+      },
+      {
+        title: "Lorem ipsum dolor",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, beatae! Alias reiciendis culpa iure adipisci blanditiis, tempore harum? Quae, odit numquam voluptatum minus blanditiis illo vitae doloremque aut qui? Fugiat.",
+        illustration: "",
+      },
+    ],
+    "services.section.seo": "Search engine optimization",
+    "services.section.seo.content": [
+      {
+        title: "Lorem ipsum dolor",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, beatae! Alias reiciendis culpa iure adipisci blanditiis, tempore harum? Quae, odit numquam voluptatum minus blanditiis illo vitae doloremque aut qui? Fugiat.",
+        illustration: "",
+      },
+      {
+        title: "Lorem ipsum dolor",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, beatae! Alias reiciendis culpa iure adipisci blanditiis, tempore harum? Quae, odit numquam voluptatum minus blanditiis illo vitae doloremque aut qui? Fugiat.",
+        illustration: "",
+      },
+      {
+        title: "Lorem ipsum dolor",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, beatae! Alias reiciendis culpa iure adipisci blanditiis, tempore harum? Quae, odit numquam voluptatum minus blanditiis illo vitae doloremque aut qui? Fugiat.",
+        illustration: "",
+      },
+    ],
+    "services.section.code": "Custom code solution",
+    "services.section.code.content": [
+      {
+        title: "Lorem ipsum dolor",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, beatae! Alias reiciendis culpa iure adipisci blanditiis, tempore harum? Quae, odit numquam voluptatum minus blanditiis illo vitae doloremque aut qui? Fugiat.",
+        illustration: "",
+      },
+      {
+        title: "Lorem ipsum dolor",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, beatae! Alias reiciendis culpa iure adipisci blanditiis, tempore harum? Quae, odit numquam voluptatum minus blanditiis illo vitae doloremque aut qui? Fugiat.",
+        illustration: "",
+      },
+      {
+        title: "Lorem ipsum dolor",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, beatae! Alias reiciendis culpa iure adipisci blanditiis, tempore harum? Quae, odit numquam voluptatum minus blanditiis illo vitae doloremque aut qui? Fugiat.",
+        illustration: "",
+      },
+    ],
     contact: {
       title: "Contact us",
       questions: [
@@ -224,15 +340,16 @@ export const ui = {
           "Strategy",
           "Other",
         ],
-        third:{
-          message:"Give us as much detail as possible (about you, the expected service, deadlines, number of photos, length of the video, etc.)",
-          placeHolder:"Your message..."
+        third: {
+          message:
+            "Give us as much detail as possible (about you, the expected service, deadlines, number of photos, length of the video, etc.)",
+          placeHolder: "Your message...",
         },
         final: {
-          placeHolders:{
-            name:"Your name*",
-            email:"Your email adresse*",
-            phoneNumber:"Your phone number (with country code)*"
+          placeHolders: {
+            name: "Your name*",
+            email: "Your email adresse*",
+            phoneNumber: "Your phone number (with country code)*",
           },
           message: [
             "Here we go! We'll take care of it 💼",

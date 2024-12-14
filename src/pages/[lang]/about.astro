@@ -19,7 +19,7 @@ const t = useTranslations(Astro.url);
 
 <Layout title={t("title")}>
   <main class="flex flex-col gap-5">
-    <Background text={t("about.hero")} />
+    <Background text={t("about.hero")} page={"about"} />
     <div class="flex flex-col gap-20 p-5">
       <div>
         <h3 class="font-semibold text-xl">{t("about.hero.content").title1}</h3>
