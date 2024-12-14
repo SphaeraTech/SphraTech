@@ -60,12 +60,12 @@ export default function NavBar({ lang = "en" }) {
           </li>
           <li>
             <a
-              href="#"
-              className="border-2 border-white px-5 py-1 rounded-full bg-gray-600/30"
+              className="border-2 border-white px-5 py-1 rounded-full bg-gray-600/30 "
+              href={`/${lang}/contact`}
             >
-              Contact
+              {t("nav.contact")}
             </a>
-          </li>
+           </li>
         </ul>
       </nav>
     </header>

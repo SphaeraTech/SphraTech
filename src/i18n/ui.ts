@@ -307,6 +307,57 @@ export const ui = {
         illustration: "",
       },
     ],
+    contact: {
+      title: "Contact us",
+      questions: [
+        "Who are you ?",
+        "What can we do for you ?",
+        "Tell us about your project in a few words...",
+        "What is your budget ?",
+        "How to contact you ?",
+        "Here we go! We take care of it 💼",
+      ],
+      buttons: {
+        next: "Next",
+        previous: "Previous",
+        selectOption: "Select an option",
+      },
+      Label: {
+        warning: "This field is required",
+      },
+      steps: {
+        first: [
+          "A company / Local authority",
+          "An individual",
+          "Freelancer / Artist / Creator",
+          "An association / NGO",
+        ],
+        second: [
+          "Video / Photo",
+          "Website",
+          "Social Media",
+          "Graphic Design",
+          "Strategy",
+          "Other",
+        ],
+        third: {
+          message:
+            "Give us as much detail as possible (about you, the expected service, deadlines, number of photos, length of the video, etc.)",
+          placeHolder: "Your message...",
+        },
+        final: {
+          placeHolders: {
+            name: "Your name*",
+            email: "Your email adresse*",
+            phoneNumber: "Your phone number (with country code)*",
+          },
+          message: [
+            "Here we go! We'll take care of it 💼",
+            "You will receive a quote in less than 24 hours. Do you want an express response? schedule a telephone appointment:",
+          ],
+        },
+      },
+    },
   },
   fr: {
     title: "SphæraTech ・ Agence Web",
