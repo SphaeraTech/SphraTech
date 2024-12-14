@@ -30,7 +30,7 @@ export const ContactRequestEmail = ({
         <Container className="border border-solid border-[#eaeaea] rounded my-[40px] mx-auto p-[20px] max-w-[465px]">
           <Section className="mt-[32px]">
             <Img
-              src="https://firebasestorage.googleapis.com/v0/b/pokemoh-ad0fa.appspot.com/o/vanity_corp_Icon_color.png?alt=media&token=d032c028-f706-44e7-9ce7-344be758e94d"
+              src="https://res.cloudinary.com/dofo65qnb/image/upload/v1734065855/mainLogo_zlwslp.webp"
               alt="Cat"
               width="100"
               height="100"
@@ -46,26 +46,50 @@ export const ContactRequestEmail = ({
             <strong>{name}</strong>. Voici les détails :
           </Text>
 
-          <Section className="p-4 border border-gray-300 rounded mb-4">
-            <Text className="text-base">
-              <strong>1. Qui êtes-vous ?</strong> {clientType}
-            </Text>
-            <Text className="text-base">
-              <strong>2. Qu’est-ce qu’on peut faire pour vous ?</strong>{" "}
-              {services}
-            </Text>
-            <Text className="text-base">
-              <strong>3. Racontez-nous votre projet en quelques mots...</strong>{" "}
-              {projects}
-            </Text>
-            <Text className="text-base">
-              <strong>4. Quel est votre budget ?</strong> {budget}
-            </Text>
-            <Text className="text-base">
-              <strong>5. Comment vous contacter ?</strong> Email : {email},
-              Téléphone : {phone}
-            </Text>
-          </Section>
+          <table class="min-w-full bg-white border border-gray-300 rounded-lg shadow-md mb-4">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="py-2 px-4 border-b text-left">Question</th>
+                <th class="py-2 px-4 border-b text-left">Réponse</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="py-2 px-4">
+                  <strong>1. Qui êtes-vous ?</strong>
+                </td>
+                <td class="py-2 px-4">{clientType}</td>
+              </tr>
+              <tr class="border-b">
+                <td class="py-2 px-4">
+                  <strong>2. Qu’est-ce qu’on peut faire pour vous ?</strong>
+                </td>
+                <td class="py-2 px-4">{services}</td>
+              </tr>
+              <tr class="border-b">
+                <td class="py-2 px-4">
+                  <strong>
+                    3. Racontez-nous votre projet en quelques mots...
+                  </strong>
+                </td>
+                <td class="py-2 px-4">{projects}</td>
+              </tr>
+              <tr class="border-b">
+                <td class="py-2 px-4">
+                  <strong>4. Quel est votre budget ?</strong>
+                </td>
+                <td class="py-2 px-4">{budget}</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-4">
+                  <strong>5. Comment vous contacter ?</strong>
+                </td>
+                <td class="py-2 px-4">
+                  Email : {email}, Téléphone : {phone}
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
           <Hr className="border-gray-400 my-4" />
           <Text className="text-gray-600 text-xs">

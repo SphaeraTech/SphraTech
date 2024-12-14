@@ -2,27 +2,28 @@ import nodemailer from "nodemailer";
 import type { APIRoute } from "astro";
 import { render } from "@react-email/components";
 import ContactRequestEmail from "src/emails/ContactEmail"; // Assurez-vous que ce chemin est correct
-
+import dotenv from "dotenv"
+dotenv.config()
 import type { FormData } from "@components/contact-page-sections/react/ContactForm";
+
 const transporter = nodemailer.createTransport({
-  host: import.meta.env.SMTP_HOST,
-  port: parseInt(import.meta.env.SMTP_PORT, 10),
+  host: process.env.SMPT_HOST,
+  port: parseInt(process.env.SMTP_PORT, 10),
   secure: true,
   auth: {
-    user: import.meta.env.SMTP_USER,
-    pass: import.meta.env.SMTP_PASS,
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
   },
 });
 
 export const POST: APIRoute = async ({ request }) => {
   try {
     const data = await request.json();
-
     const html = await render(ContactRequestEmail(data));
     const mailOptions = {
-      from: "teemohmost2020@gmail.com",
+      from: data.email,
       to: "sphaeratech@gmail.com",
-      subject: "Demande de contact",
+      subject: "Demande de devis",
       html,
     };
     await transporter.sendMail(mailOptions);
