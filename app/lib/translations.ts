@@ -18,7 +18,10 @@ export const translations = {
       title3: 'into',
       title4: 'Reality',
       title5: 'with us',
-      subtitle: 'Contact us today and discover how we can elevate your business to new heights!'
+      subtitle: 'Contact us today and discover how we can elevate your business to new heights!',
+      ctaBtn:'Get started',
+      seeWorkBtn:'See Our Work',
+      scrollBtn:'Scroll to explore'
     },
     services: {
       title: 'Our Services',

@@ -13,9 +13,7 @@ export default function Home() {
     <main className="min-h-screen">
       <HeroSection />
       <ServicesSection />
-      <div className='min-h-screen'>
-        <WhyChooseUsSection />
-      </div>
+      <WhyChooseUsSection />
       {/* <ProductsSection /> */}
       <CTASection />
       <FAQSection />
