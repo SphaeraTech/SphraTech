@@ -1,10 +1,13 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, Check, ArrowRight, Zap, Shield, Clock, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Check, ArrowRight, Zap, Shield, Clock, TrendingUp, ExternalLink } from 'lucide-react';
 import { servicesData } from '@/app/lib/servicesData';
 import { translations } from '@/app/lib/translations';
+import Navigation from '@/app/components/Navigation';
+import Footer from '@/app/components/Footer';
 import CTASection from '@/app/components/CTASection';
+import ProjectCard from '@/app/components/ProjectCard';
 
 interface ServicePageProps {
   params: Promise<{ slug: string }>;
@@ -80,6 +83,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   return (
     <>
+      <Navigation />
       
       <main className="min-h-screen bg-slate-950 text-white">
         {/* Hero Section */}
@@ -146,6 +150,34 @@ export default async function ServicePage({ params }: ServicePageProps) {
             </div>
           </div>
         </section>
+
+        {/* Client Projects Section - Only show if clients exist */}
+        {serviceData.clients && serviceData.clients.length > 0 && (
+          <section className="py-20 px-6 bg-slate-900">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                  {translations.en.servicePage.ourProjects}
+                </h2>
+                <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+                  {translations.en.servicePage.projectsDesc}
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {serviceData.clients.map((client: any, index: number) => (
+                  <ProjectCard 
+                    key={index} 
+                    client={client} 
+                    gradient={service.gradient}
+                    border={service.border}
+                    iconBg={service.iconBg}
+                  />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Process Section */}
         <section className="py-20 px-6 bg-gradient-to-b from-slate-950 to-slate-900">
@@ -255,6 +287,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
         </section>
       </main>
 
+      <Footer />
     </>
   );
 }

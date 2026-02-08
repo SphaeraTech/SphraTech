@@ -106,6 +106,21 @@ export const translations = {
             question: 'Can you work with existing codebases?',
             answer: 'Absolutely! We can improve, refactor, or add features to your existing web applications while maintaining code quality.'
           }
+        ],
+        clients: [
+          {
+            name: "BS move",
+            description: "Website for a moving-company complete with quota calculator,custom email templates ...",
+            pictures: ["client-projects/web-dev/bs-move/pic1.png", "client-projects/web-dev/bs-move/pic4.png", "client-projects/web-dev/bs-move/pic3.png", "client-projects/web-dev/bs-move/pic2.png"],
+            siteLink: "https://bsmove.com/"
+
+          },
+          {
+            name: "EMSG Mansoure",
+            description: "Website for largest german auto-part company in algeria.",
+            pictures: ["client-projects/web-dev/emsg/pic1.png", "client-projects/web-dev/emsg/pic4.png", "client-projects/web-dev/emsg/pic3.png", "client-projects/web-dev/emsg/pic2.png"],
+            siteLink: "https://bsmove.com/"
+          }
         ]
       },
       mobile: {
@@ -227,6 +242,9 @@ export const translations = {
       featuresDesc: 'We deliver excellence through innovation and dedication',
       technologies: 'Technologies & Tools',
       technologiesDesc: 'We use cutting-edge technologies to build robust solutions',
+      ourProjects: 'Our Projects',
+      projectsDesc: 'See what we\'ve built for our clients', 
+      visitSite: 'Visit Site',
       faq: 'Frequently Asked Questions',
       features: {
         fast: {
