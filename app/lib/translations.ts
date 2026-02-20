@@ -208,9 +208,37 @@ export const translations = {
       },
     },
     why: {
-      title: 'Why choose us?',
-      desc: 'At SphaeraTech, we combine expertise and innovation to deliver customized web solutions that perfectly align with your business goals. Our skilled team ensures high-quality performance, security, and usability in every project, making your satisfaction our top priority. Trust us to stay ahead of the curve and exceed your expectations.',
-      cta: 'Contact US'
+      title: "Why Choose\nUs?",
+      subtitle: "We don't just build products; we engineer digital experiences that disrupt markets and define brand legacies.",
+      portfolio: "View Portfolio",
+      start: "Start Project",
+      cards: {
+        quality: {
+          title: "Quality Control",
+          desc: "Excellence in every realization. We maintain rigorous standards to ensure every pixel and line of code meets world-class benchmarks.",
+          tag: "Precision Engineered"
+        },
+        price: {
+          title: "Value-Driven Pricing",
+          desc: "Affordable and reasonable without compromising on the high-end boutique quality your brand deserves."
+        },
+        seo: {
+          title: "SEO Optimized",
+          desc: "Natural referencing built into the core. Our SEO-first code ensures your project ranks from day one."
+        },
+        design: {
+          title: "Elegant Design",
+          desc: "Custom graphic quality tailored for your specific brand identity. No templates, just pure creativity."
+        },
+        fast: {
+          title: "Fast Service",
+          desc: "High-performing products delivered in record time frames."
+        },
+        personal: {
+          title: "Personalized Touch",
+          desc: "Adjustable and personal products. We scale with you, providing human support every step of the way."
+        }
+      }
     },
     cta: {
       title: "Let's discuss the idea",
@@ -409,6 +437,45 @@ export const translations = {
       trustBadge: 'Trusted by',
       users: 'users',
       newReleases: 'New releases every month'
+    },
+    about: {
+      heroBadge: 'Built with passion, from scratch',
+      heroTitle1: 'We are',
+      heroTitle2: 'SphaeraTech',
+      heroSubtitle: 'A passionate digital agency on a mission to help businesses transform their boldest ideas into world-class digital experiences.',
+     
+      storyTitle1: 'From a',
+      storyHighlight: 'garage idea',
+      storyTitle2: 'to a real agency',
+      storyP1: 'It all started late one night — too many browser tabs open, too many businesses with terrible websites, and one clear thought: "I can fix this."',
+      storyP2: 'SphaeraTech was born not in a co-working space or an incubator, but in the kind of chaotic, caffeine-fueled environment where the best ideas actually live. No investors, no safety net — just genuine belief that good design and clean code can change the way a business grows.',
+      storyP3: 'Every project since has been treated the same way: with full ownership, honest communication, and a relentless drive to deliver something the client is genuinely proud of.',
+      storyCta: 'Work With Us',
+      founderRole: 'Founder & Lead Developer',
+      founderQuote: '"I started SphaeraTech from my room with a laptop, a strong Wi-Fi connection, and an obsession for building things that actually work. No fancy office, no big team — just relentless focus on delivering real results for real people."',
+      marketingName: 'Marketing Lead',
+      marketingRole: 'Head of Growth & Marketing',
+      marketingQuote: '"Marketing isn\'t about pushing products — it\'s about telling real stories that connect. Every campaign I build starts with one question: what does this client\'s audience actually care about?"',
+      mvTitle: 'Mission & Vision',
+      mvSubtitle: 'The "why" behind everything we build',
+      missionTitle: 'Our Mission',
+      missionDesc: 'To make world-class digital experiences accessible to every business — regardless of size. We believe a small business deserves the same quality of web presence as a Fortune 500 company, and we\'re here to make that happen, one project at a time.',
+      visionTitle: 'Our Vision',
+      visionDesc: 'To become the go-to digital partner for ambitious businesses across the globe — known not just for beautiful work, but for the measurable growth we create. A future where SphaeraTech is synonymous with trust, innovation, and results.',
+      valuesTitle: 'What We Stand For',
+      valuesSubtitle: 'The principles that guide every decision we make',
+      value1Title: 'Passion First',
+      value1Desc: 'We don\'t just build websites — we pour passion into every pixel, every line of code, and every interaction. This started from love for the craft, and that never changed.',
+      value2Title: 'Speed & Quality',
+      value2Desc: 'We believe you should never have to choose between fast delivery and high quality. We\'ve built our workflow to deliver both, every time.',
+      value3Title: 'Transparency',
+      value3Desc: 'No hidden fees, no vague timelines, no corporate runaround. You\'ll always know exactly what we\'re building, when, and why.',
+      value4Title: 'Client Obsessed',
+      value4Desc: 'Your success is our success. We treat every project as if it were our own business on the line — because your growth is what drives ours.',
+    
+      // Team section
+      teamTitle: 'The People Behind the Work',
+      teamSubtitle: 'Small team. Massive output.',
     },
   },
   fr: {

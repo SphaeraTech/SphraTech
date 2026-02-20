@@ -18,17 +18,7 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden">
-      {/* Grid Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-custom-blue-900 via-custom-blue-950 to-slate-900">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-                            linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)`,
-            backgroundSize: '50px 50px'
-          }}
-        ></div>
-      </div>
+     
 
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -63,17 +53,13 @@ export default function HeroSection() {
               onClick={() => scrollToSection('contact')}
               className="group px-8 py-4 bg-gradient-to-r from-red-600 to-red-500 rounded-full font-semibold hover:from-red-500 hover:to-red-400 transition-all flex items-center gap-2 hover:gap-4 shadow-lg shadow-red-500/25 hover:shadow-red-500/40"
             >
-              {t.hero.ctaBtn}
+              <a href="contact"> {t.hero.ctaBtn}</a>
+
+
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
 
-            <button
-              onClick={() => scrollToSection('about')}
-              className="group px-8 py-4 bg-slate-800/50 backdrop-blur-xl border border-slate-700 rounded-full font-semibold hover:bg-slate-700/50 hover:border-slate-600 transition-all flex items-center gap-2"
-            >
-              <PlayCircle className="w-5 h-5" />
-              {t.hero.seeWorkBtn}
-            </button>
+
           </div>
 
           {/* Social Proof Stats */}

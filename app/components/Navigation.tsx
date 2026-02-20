@@ -66,8 +66,8 @@ export default function Navigation() {
             )}
           </div>
 
-          <a href="/#blog" className="hover:text-red-400 transition">{t.nav.blog}</a>
-          <a href="/#about" className="hover:text-red-400 transition">{t.nav.about}</a>
+          <a href="/blog" className="hover:text-red-400 transition">{t.nav.blog}</a>
+          <a href="/about" className="hover:text-red-400 transition">{t.nav.about}</a>
 
           {/* Language Selector */}
           <div className="relative">
@@ -103,7 +103,7 @@ export default function Navigation() {
           </div>
 
           <button className="px-6 py-2 border border-white rounded-full hover:bg-white hover:text-slate-950 transition">
-            {t.nav.contact}
+            <a href="contact"> {t.nav.contact}</a>
           </button>
         </div>
 
@@ -152,8 +152,8 @@ export default function Navigation() {
               )}
             </div>
 
-            <a href="/#blog" className="hover:text-red-400 transition">{t.nav.blog}</a>
-            <a href="/#about" className="hover:text-red-400 transition">{t.nav.about}</a>
+            <a href="/blog" className="hover:text-red-400 transition">{t.nav.blog}</a>
+            <a href="/about" className="hover:text-red-400 transition">{t.nav.about}</a>
 
             {/* Mobile Language Selector */}
             <div className="flex gap-2 pt-2 border-t border-slate-700">
