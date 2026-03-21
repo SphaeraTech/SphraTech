@@ -29,6 +29,7 @@ export default function ServiceCard({
   const service = t.services[titleKey as keyof typeof t.services];
   
   return (
+    
     <div
       className={` cursor-pointer group relative bg-gradient-to-br ${gradient} backdrop-blur-sm rounded-2xl p-8 border ${border} transition-all duration-300 hover:scale-105 flex flex-col`}
     >

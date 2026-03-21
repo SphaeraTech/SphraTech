@@ -209,7 +209,7 @@ export const translations = {
     },
     why: {
       title: "Why Choose\nUs?",
-      subtitle: "We don't just build products; we engineer digital experiences that disrupt markets and define brand legacies.",
+      subtitle: "We don't just build products; we create thoughtful digital experiences that help brands stand out and grow.",
       portfolio: "View Portfolio",
       start: "Start Project",
       cards: {

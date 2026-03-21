@@ -48,13 +48,7 @@ export default function Navigation() {
                 onMouseEnter={() => setShowProductsMenu(true)}
                 onMouseLeave={() => setShowProductsMenu(false)}
               >
-                <Link
-                  href="/products"
-                  className="block px-4 py-3 text-left hover:bg-slate-700 transition"
-                  onClick={() => setShowProductsMenu(false)}
-                >
-                  {t.nav.ourProducts}
-                </Link>
+              
                 <Link
                   href="/free-tools"
                   className="block px-4 py-3 text-left hover:bg-slate-700 transition"
@@ -134,13 +128,7 @@ export default function Navigation() {
               </button>
               {showMobileProductsMenu && (
                 <div className="ml-4 mt-2 space-y-2 border-l-2 border-slate-700 pl-4">
-                  <Link
-                    href="/products"
-                    className="block hover:text-red-400 transition"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {t.nav.ourProducts}
-                  </Link>
+                
                   <Link
                     href="/free-tools"
                     className="block hover:text-red-400 transition"

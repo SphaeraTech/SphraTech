@@ -32,9 +32,9 @@ export default function Home() {
           zIndex: 0,
         }}
       />
-
+  
       {/* All sections sit above the grid layer */}
-      <div style={{ position: "relative", zIndex: 1 }} className="flex flex-col md:gap-50 gap-20">
+      <div style={{ position: "relative", zIndex: 1 }} className="flex flex-col md:gap-10 gap-20">
         <HeroSection />
         <ServicesSection />
         <WhyChooseUsSection />
