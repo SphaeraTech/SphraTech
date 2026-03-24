@@ -31,23 +31,20 @@ export default function ContactForm() {
     setIsSubmitting(true);
     setError('');
 
-    // Validate required fields
     if (!formData.name || !formData.email || !formData.service || !formData.budget || !formData.timeline) {
-      setError('Please fill in all required fields');
+      setError(t.contact.form.errors.required);
       setIsSubmitting(false);
       return;
     }
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      setError('Please enter a valid email address');
+      setError(t.contact.form.errors.email);
       setIsSubmitting(false);
       return;
     }
 
     try {
-      // TODO: Replace with your actual API endpoint
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -58,7 +55,6 @@ export default function ContactForm() {
 
       if (response.ok) {
         setIsSubmitted(true);
-        // Reset form
         setFormData({
           name: '',
           email: '',
@@ -72,7 +68,7 @@ export default function ContactForm() {
         throw new Error('Failed to submit form');
       }
     } catch (err) {
-      setError('Something went wrong. Please try again or email us directly at hello@sphaeratech.com');
+      setError(t.contact.form.errors.submit);
       console.error('Form submission error:', err);
     } finally {
       setIsSubmitting(false);
@@ -85,21 +81,21 @@ export default function ContactForm() {
         <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
           <CheckCircle className="w-10 h-10" />
         </div>
-        <h2 className="text-3xl font-bold mb-4">Thank You!</h2>
+        <h2 className="text-3xl font-bold mb-4">{t.contact.form.success.title}</h2>
         <p className="text-xl text-slate-300 mb-6">
-          We've received your message and will get back to you within 24 hours.
+          {t.contact.form.success.message}
         </p>
         <div className="space-y-4">
-          <p className="text-slate-400">While you wait, check out:</p>
+          <p className="text-slate-400">{t.contact.form.success.checkout}</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="/#services" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 rounded-lg transition">
-              Our Services
+              {t.contact.form.success.services}
             </a>
             <a href="/products" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 rounded-lg transition">
-              Our Products
+              {t.contact.form.success.products}
             </a>
             <a href="/#about" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 rounded-lg transition">
-              About Us
+              {t.contact.form.success.about}
             </a>
           </div>
         </div>
@@ -107,7 +103,7 @@ export default function ContactForm() {
           onClick={() => setIsSubmitted(false)}
           className="mt-8 text-red-400 hover:text-red-300 transition"
         >
-          Submit Another Request
+          {t.contact.form.success.another}
         </button>
       </div>
     );
@@ -122,10 +118,9 @@ export default function ContactForm() {
       )}
 
       <div className="grid md:grid-cols-2 gap-6 mb-6">
-        {/* Name */}
         <div>
           <label htmlFor="name" className="block text-sm font-semibold mb-2">
-            Name <span className="text-red-500">*</span>
+            {t.contact.form.name.label} <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
@@ -135,14 +130,13 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-red-500 transition"
-            placeholder="John Doe"
+            placeholder={t.contact.form.name.placeholder}
           />
         </div>
 
-        {/* Email */}
         <div>
           <label htmlFor="email" className="block text-sm font-semibold mb-2">
-            Email <span className="text-red-500">*</span>
+            {t.contact.form.email.label} <span className="text-red-500">*</span>
           </label>
           <input
             type="email"
@@ -152,15 +146,14 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-red-500 transition"
-            placeholder="john@example.com"
+            placeholder={t.contact.form.email.placeholder}
           />
         </div>
       </div>
 
-      {/* Phone */}
       <div className="mb-6">
         <label htmlFor="phone" className="block text-sm font-semibold mb-2">
-          Phone <span className="text-slate-500">(optional)</span>
+          {t.contact.form.phone.label} <span className="text-slate-500">({t.contact.form.phone.optional})</span>
         </label>
         <input
           type="tel"
@@ -169,17 +162,16 @@ export default function ContactForm() {
           value={formData.phone}
           onChange={handleChange}
           className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-red-500 transition"
-          placeholder="+1 (555) 123-4567"
+          placeholder={t.contact.form.phone.placeholder}
         />
       </div>
 
-      {/* Service */}
       <div className="mb-6">
         <label htmlFor="service" className="block text-sm font-semibold mb-2">
-          What service do you need? <span className="text-red-500">*</span>
+          {t.contact.form.service.label} <span className="text-red-500">*</span>
         </label>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-          {['Web Development', 'SEO', 'UI/UX', 'Mobile', 'SaaS', 'Other'].map((service) => (
+          {t.contact.form.service.options.map((service) => (
             <label
               key={service}
               className={`flex items-center justify-center px-4 py-3 border rounded-lg cursor-pointer transition ${
@@ -202,13 +194,12 @@ export default function ContactForm() {
         </div>
       </div>
 
-      {/* Budget */}
       <div className="mb-6">
         <label htmlFor="budget" className="block text-sm font-semibold mb-2">
-          What's your budget range? <span className="text-red-500">*</span>
+          {t.contact.form.budget.label} <span className="text-red-500">*</span>
         </label>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          {['Under $5K', '$5K-$15K', '$15K-$50K', '$50K+'].map((budget) => (
+          {t.contact.form.budget.options.map((budget) => (
             <label
               key={budget}
               className={`flex items-center justify-center px-4 py-3 border rounded-lg cursor-pointer transition ${
@@ -231,13 +222,12 @@ export default function ContactForm() {
         </div>
       </div>
 
-      {/* Timeline */}
       <div className="mb-6">
         <label htmlFor="timeline" className="block text-sm font-semibold mb-2">
-          When do you need this? <span className="text-red-500">*</span>
+          {t.contact.form.timeline.label} <span className="text-red-500">*</span>
         </label>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          {['As soon as possible', '1-3 months', '3-6 months', 'Just browsing'].map((timeline) => (
+          {t.contact.form.timeline.options.map((timeline) => (
             <label
               key={timeline}
               className={`flex items-center justify-center px-4 py-3 border rounded-lg cursor-pointer transition ${
@@ -260,10 +250,9 @@ export default function ContactForm() {
         </div>
       </div>
 
-      {/* Message */}
       <div className="mb-8">
         <label htmlFor="message" className="block text-sm font-semibold mb-2">
-          Tell us about your project
+          {t.contact.form.message.label}
         </label>
         <textarea
           id="message"
@@ -272,11 +261,10 @@ export default function ContactForm() {
           onChange={handleChange}
           rows={6}
           className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-red-500 transition resize-none"
-          placeholder="Describe your project, goals, and any specific requirements..."
+          placeholder={t.contact.form.message.placeholder}
         />
       </div>
 
-      {/* Submit Button */}
       <button
         type="submit"
         disabled={isSubmitting}
@@ -285,18 +273,18 @@ export default function ContactForm() {
         {isSubmitting ? (
           <>
             <Loader2 className="w-5 h-5 animate-spin" />
-            Sending...
+            {t.contact.form.submit.sending}
           </>
         ) : (
           <>
-            Let's Discuss Your Project
+            {t.contact.form.submit.button}
             <Send className="w-5 h-5" />
           </>
         )}
       </button>
 
       <p className="text-center text-sm text-slate-400 mt-4">
-        We typically respond within 24 hours
+        {t.contact.form.footer}
       </p>
     </form>
   );

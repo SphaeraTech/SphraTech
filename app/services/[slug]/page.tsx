@@ -287,7 +287,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
         </section>
       </main>
 
-      <Footer />
     </>
   );
 }
