@@ -84,18 +84,24 @@ function HoverCard({
   children: React.ReactNode;
 }) {
   const [hovered, setHovered] = useState(false);
+  const { isMobile } = useBreakpoint();
+  
+  // Only enable hover effects on non-mobile devices
+  const handleMouseEnter = !isMobile ? () => setHovered(true) : undefined;
+  const handleMouseLeave = !isMobile ? () => setHovered(false) : undefined;
+  
   return (
     <div
       style={{
         ...style,
-        boxShadow: hovered
+        boxShadow: !isMobile && hovered
           ? `0 0 30px ${RED_GLOW}, inset 0 0 0 1px ${RED_BORDER}`
           : "none",
-        borderColor: hovered ? RED_BORDER : CARD_BORDER,
+        borderColor: !isMobile && hovered ? RED_BORDER : CARD_BORDER,
         transition: "box-shadow 0.3s, border-color 0.3s",
       }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {children}
     </div>
@@ -132,15 +138,22 @@ export default function WhyChooseUs() {
   const c = w.cards;
   const titleLines = w.title.split("\n");
 
+  // Desktop: original 12-column grid with spans
+  // Tablet: custom layout
+  // Mobile: single column
   const gridCols = isMobile
     ? "1fr"
     : isTablet
-    ? "repeat(6, 1fr)"
+    ? "repeat(2, 1fr)"
     : "repeat(12, 1fr)";
-  const gap = isMobile ? "1rem" : "1.5rem";
+  const gap = isMobile ? "1rem" : isTablet ? "1.25rem" : "1.5rem";
 
   const span = (mobile: number, tablet: number, desktop: number) =>
     `span ${isMobile ? mobile : isTablet ? tablet : desktop}`;
+
+  // Only enable hover on non-mobile
+  const handleQ1MouseEnter = !isMobile ? () => setQ1Hovered(true) : undefined;
+  const handleQ1MouseLeave = !isMobile ? () => setQ1Hovered(false) : undefined;
 
   return (
     <div
@@ -194,7 +207,7 @@ export default function WhyChooseUs() {
 
           <h2
             style={{
-              fontSize: "clamp(2.5rem, 8vw, 6rem)",
+              fontSize: "clamp(3.5rem, 8vw, 6rem)",
               fontWeight: 900,
               fontStyle: "italic",
               letterSpacing: "-0.05em",
@@ -241,21 +254,22 @@ export default function WhyChooseUs() {
           <div
             style={{
               ...base,
-              gridColumn: span(1, 6, 4),
-              gridRow: isDesktop ? "span 2" : "auto",
+              gridColumn: span(1, isTablet ? 2 : 1, 4),
+              gridRow: !isMobile && isDesktop ? "span 2" : "auto",
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
               position: "relative",
               overflow: "hidden",
-              boxShadow: q1Hovered
+              boxShadow: !isMobile && q1Hovered
                 ? `0 0 35px ${RED_GLOW}, inset 0 0 0 1px ${RED_BORDER}`
                 : "none",
-              borderColor: q1Hovered ? RED_BORDER : CARD_BORDER,
+              borderColor: !isMobile && q1Hovered ? RED_BORDER : CARD_BORDER,
               transition: "box-shadow 0.3s, border-color 0.3s",
+              padding: isMobile ? "1.5rem" : "2rem",
             }}
-            onMouseEnter={() => setQ1Hovered(true)}
-            onMouseLeave={() => setQ1Hovered(false)}
+            onMouseEnter={handleQ1MouseEnter}
+            onMouseLeave={handleQ1MouseLeave}
           >
             {/* Ghost icon watermark — tinted red on hover */}
             <div
@@ -265,8 +279,9 @@ export default function WhyChooseUs() {
                 right: 0,
                 padding: "1rem",
                 color: RED,
-                opacity: q1Hovered ? 0.18 : 0.06,
+                opacity: !isMobile && q1Hovered ? 0.18 : 0.06,
                 transition: "opacity 0.3s",
+                pointerEvents: "none",
               }}
             >
               <IconVerifiedGhost />
@@ -321,11 +336,12 @@ export default function WhyChooseUs() {
           <HoverCard
             style={{
               ...base,
-              gridColumn: span(1, 6, 8),
+              gridColumn: span(1, isTablet ? 1 : 1, 8),
               display: "flex",
               flexDirection: isMobile ? "column" : "row",
               gap: "2rem",
               alignItems: isMobile ? "flex-start" : "center",
+              padding: isMobile ? "1.5rem" : "2rem",
             }}
           >
             <div style={iconBox}>
@@ -334,7 +350,7 @@ export default function WhyChooseUs() {
             <div>
               <h3
                 style={{
-                  fontSize: "1.5rem",
+                  fontSize: isMobile ? "1.5rem" : "1.5rem",
                   fontWeight: 700,
                   marginBottom: "0.5rem",
                   color: "white",
@@ -350,7 +366,8 @@ export default function WhyChooseUs() {
           <HoverCard
             style={{
               ...base,
-              gridColumn: span(1, 6, 8),
+              gridColumn: span(1, isTablet ? 1 : 1, 8),
+              padding: isMobile ? "1.5rem" : "2rem",
             }}
           >
             <div
@@ -367,7 +384,7 @@ export default function WhyChooseUs() {
               <div>
                 <h3
                   style={{
-                    fontSize: "1.5rem",
+                    fontSize: isMobile ? "1.5rem" : "1.5rem",
                     fontWeight: 700,
                     marginBottom: "0.75rem",
                     color: "white",
@@ -386,7 +403,8 @@ export default function WhyChooseUs() {
           <HoverCard
             style={{
               ...base,
-              gridColumn: span(1, 3, 4),
+              gridColumn: span(1, isTablet ? 1 : 1, 4),
+              padding: isMobile ? "1.5rem" : "2rem",
             }}
           >
             <div style={{ ...iconBox, marginBottom: "1.5rem" }}>
@@ -394,7 +412,7 @@ export default function WhyChooseUs() {
             </div>
             <h3
               style={{
-                fontSize: "1.5rem",
+                fontSize: isMobile ? "1.5rem" : "1.5rem",
                 fontWeight: 700,
                 marginBottom: "0.75rem",
                 color: "white",
@@ -409,9 +427,10 @@ export default function WhyChooseUs() {
           <HoverCard
             style={{
               ...base,
-              gridColumn: span(1, 3, 4),
+              gridColumn: span(1, isTablet ? 1 : 1, 4),
               position: "relative",
               overflow: "hidden",
+              padding: isMobile ? "1.5rem" : "2rem",
             }}
           >
             <div
@@ -419,11 +438,12 @@ export default function WhyChooseUs() {
                 position: "absolute",
                 bottom: "-2.5rem",
                 right: "-2.5rem",
-                width: "10rem",
-                height: "10rem",
+                width: isMobile ? "8rem" : "10rem",
+                height: isMobile ? "8rem" : "10rem",
                 borderRadius: "9999px",
                 background: RED_SOFT,
                 filter: "blur(3rem)",
+                pointerEvents: "none",
               }}
             />
             <div style={{ ...iconBox, marginBottom: "1.5rem" }}>
@@ -431,7 +451,7 @@ export default function WhyChooseUs() {
             </div>
             <h3
               style={{
-                fontSize: "1.5rem",
+                fontSize: isMobile ? "1.5rem" : "1.5rem",
                 fontWeight: 700,
                 marginBottom: "0.75rem",
                 color: "white",
@@ -445,11 +465,11 @@ export default function WhyChooseUs() {
           {/* 6. Fast — red accent card */}
           <div
             style={{
-              gridColumn: span(1, 6, 4),
+              gridColumn: span(1, isTablet ? 2 : 1, 4),
               background: `linear-gradient(135deg, ${RED} 0%, #c41f1f 100%)`,
               border: "1px solid rgba(255,255,255,0.15)",
               borderRadius: "0.75rem",
-              padding: "2rem",
+              padding: isMobile ? "1.5rem" : "2rem",
               position: "relative",
               overflow: "hidden",
               boxShadow: `0 0 40px ${RED_GLOW}`,
@@ -471,7 +491,7 @@ export default function WhyChooseUs() {
               <div>
                 <h3
                   style={{
-                    fontSize: "1.5rem",
+                    fontSize: isMobile ? "1.5rem" : "1.5rem",
                     fontWeight: 900,
                     fontStyle: "italic",
                     color: "white",
@@ -492,11 +512,12 @@ export default function WhyChooseUs() {
                 position: "absolute",
                 top: 0,
                 right: 0,
-                width: "8rem",
-                height: "8rem",
+                width: isMobile ? "6rem" : "8rem",
+                height: isMobile ? "6rem" : "8rem",
                 borderRadius: "9999px",
                 background: "rgba(255,255,255,0.12)",
                 transform: "translate(50%,-50%)",
+                pointerEvents: "none",
               }}
             />
             {/* Glow blob */}
@@ -505,11 +526,12 @@ export default function WhyChooseUs() {
                 position: "absolute",
                 bottom: "-3rem",
                 left: "-2rem",
-                width: "12rem",
-                height: "12rem",
+                width: isMobile ? "8rem" : "12rem",
+                height: isMobile ? "8rem" : "12rem",
                 borderRadius: "9999px",
                 background: "rgba(255,255,255,0.08)",
                 filter: "blur(2rem)",
+                pointerEvents: "none",
               }}
             />
           </div>
@@ -530,6 +552,10 @@ export default function WhyChooseUs() {
 
 function CTAButton() {
   const [hovered, setHovered] = useState(false);
+  const { isMobile } = useBreakpoint();
+
+  const handleMouseEnter = !isMobile ? () => setHovered(true) : undefined;
+  const handleMouseLeave = !isMobile ? () => setHovered(false) : undefined;
 
   return (
     <Link
@@ -538,41 +564,43 @@ function CTAButton() {
         display: "inline-flex",
         alignItems: "center",
         gap: "0.75rem",
-        padding: "1rem 2.5rem",
-        background: hovered
+        padding: isMobile ? "0.875rem 2rem" : "1rem 2.5rem",
+        background: !isMobile && hovered
           ? "transparent"
           : `linear-gradient(135deg, ${RED} 0%, #c41f1f 100%)`,
         border: `2px solid ${RED}`,
         borderRadius: "0.5rem",
         color: "white",
         fontWeight: 700,
-        fontSize: "1rem",
+        fontSize: isMobile ? "0.875rem" : "1rem",
         letterSpacing: "0.08em",
         textTransform: "uppercase",
         textDecoration: "none",
         cursor: "pointer",
-        boxShadow: hovered
+        boxShadow: !isMobile && hovered
           ? `0 0 40px ${RED_GLOW}, 0 0 80px rgba(255,56,56,0.15)`
           : `0 0 20px ${RED_GLOW}`,
-        transform: hovered ? "translateY(-2px)" : "translateY(0)",
+        transform: !isMobile && hovered ? "translateY(-2px)" : "translateY(0)",
         transition: "all 0.25s ease",
         position: "relative",
         overflow: "hidden",
       }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      {/* Shimmer sweep on hover */}
-      <span
-        style={{
-          position: "absolute",
-          inset: 0,
-          background:
-            "linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.12) 50%, transparent 60%)",
-          transform: hovered ? "translateX(100%)" : "translateX(-100%)",
-          transition: "transform 0.5s ease",
-        }}
-      />
+      {/* Shimmer sweep on hover - disabled on mobile */}
+      {!isMobile && (
+        <span
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.12) 50%, transparent 60%)",
+            transform: hovered ? "translateX(100%)" : "translateX(-100%)",
+            transition: "transform 0.5s ease",
+          }}
+        />
+      )}
 
       <span style={{ position: "relative", zIndex: 1 }}>Get in Touch</span>
 
@@ -585,11 +613,11 @@ function CTAButton() {
         strokeLinecap="round"
         strokeLinejoin="round"
         style={{
-          width: "1.1rem",
-          height: "1.1rem",
+          width: isMobile ? "0.9rem" : "1.1rem",
+          height: isMobile ? "0.9rem" : "1.1rem",
           position: "relative",
           zIndex: 1,
-          transform: hovered ? "translateX(4px)" : "translateX(0)",
+          transform: !isMobile && hovered ? "translateX(4px)" : "translateX(0)",
           transition: "transform 0.25s ease",
         }}
       >
