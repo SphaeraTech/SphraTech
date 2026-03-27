@@ -25,11 +25,7 @@ export default function FreeToolsPage() {
         <div className="max-w-7xl mx-auto px-6 py-12">
           {/* Header Section */}
           <div className="text-center mb-12">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/30 rounded-full text-red-400 text-sm mb-6">
-              <Sparkles className="w-4 h-4" />
-              New releases every month
-            </div>
+
 
             {/* Title */}
             <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-red-400 to-purple-400 text-transparent bg-clip-text">

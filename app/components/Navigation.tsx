@@ -30,25 +30,21 @@ export default function Navigation() {
         <div className="hidden md:flex items-center gap-8">
           <a href="/#home" className="hover:text-red-400 transition">{t.nav.home}</a>
           <a href="/#services" className="hover:text-red-400 transition">{t.nav.services}</a>
-          
+
           {/* Products Dropdown */}
           <div className="relative">
             <button
               onClick={() => setShowProductsMenu(!showProductsMenu)}
-              onMouseEnter={() => setShowProductsMenu(true)}
-              onMouseLeave={() => setShowProductsMenu(false)}
               className="flex items-center gap-1 hover:text-red-400 transition"
             >
               {t.nav.products}
               <ChevronDown className={`w-4 h-4 transition-transform ${showProductsMenu ? 'rotate-180' : ''}`} />
             </button>
             {showProductsMenu && (
-              <div 
+              <div
                 className="absolute top-full mt-2 bg-slate-800 rounded-lg border border-slate-700 overflow-hidden shadow-xl min-w-[180px]"
-                onMouseEnter={() => setShowProductsMenu(true)}
-                onMouseLeave={() => setShowProductsMenu(false)}
               >
-              
+
                 <Link
                   href="/free-tools"
                   className="block px-4 py-3 text-left hover:bg-slate-700 transition"
@@ -116,7 +112,7 @@ export default function Navigation() {
           <div className="flex flex-col gap-4 px-6 py-4">
             <a href="/#home" className="hover:text-red-400 transition">{t.nav.home}</a>
             <a href="/#services" className="hover:text-red-400 transition">{t.nav.services}</a>
-            
+
             {/* Mobile Products Dropdown */}
             <div>
               <button
@@ -128,7 +124,7 @@ export default function Navigation() {
               </button>
               {showMobileProductsMenu && (
                 <div className="ml-4 mt-2 space-y-2 border-l-2 border-slate-700 pl-4">
-                
+
                   <Link
                     href="/free-tools"
                     className="block hover:text-red-400 transition"
