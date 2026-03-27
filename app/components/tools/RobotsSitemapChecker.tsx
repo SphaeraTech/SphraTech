@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { FileText, Map, CheckCircle2, XCircle, AlertCircle, Search, Globe, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function RobotsSitemapChecker() {
     const [url, setUrl] = useState('');
@@ -55,13 +56,13 @@ export default function RobotsSitemapChecker() {
                             placeholder="Enter your domain (e.g., example.com)"
                             value={url}
                             onChange={(e) => setUrl(e.target.value)}
-                            className="w-full bg-slate-800/50 border border-slate-700 rounded-2xl pl-12 pr-4 py-4 focus:outline-none focus:border-indigo-500 transition-all"
+                            className="w-full bg-slate-800/50 border border-slate-700 rounded-2xl pl-12 pr-4 py-4 focus:outline-none focus:border-red-500 transition-all"
                         />
                     </div>
                     <button
                         type="submit"
                         disabled={isValidating || !url}
-                        className="bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 transition-all"
+                        className="bg-red-600 hover:bg-red-500 disabled:opacity-50 px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 transition-all"
                     >
                         {isValidating ? 'Validating...' : 'Check Files'}
                     </button>
@@ -74,8 +75,8 @@ export default function RobotsSitemapChecker() {
                     <div className="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-xl">
                         <div className="p-6 border-b border-slate-800 flex items-center justify-between bg-slate-900/50">
                             <div className="flex items-center gap-3">
-                                <div className="p-2 bg-indigo-500/10 rounded-lg">
-                                    <FileText className="w-5 h-5 text-indigo-400" />
+                                <div className="p-2 bg-red-500/10 rounded-lg">
+                                    <FileText className="w-5 h-5 text-red-400" />
                                 </div>
                                 <div>
                                     <h3 className="font-bold">robots.txt</h3>
@@ -130,17 +131,17 @@ export default function RobotsSitemapChecker() {
                         </div>
                     </div>
 
-                    <div className="lg:col-span-2 bg-indigo-600/10 border border-indigo-500/20 p-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div className="lg:col-span-2 bg-red-600/10 border border-red-500/20 p-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8">
                         <div className="space-y-2">
                             <h3 className="text-2xl font-bold">Improve Your Site's Crawlability</h3>
                             <p className="text-slate-400 max-w-xl">
                                 Technical SEO issues in your robots.txt or sitemap can prevent search engines from indexing your most important pages.
                             </p>
                         </div>
-                        <button className="whitespace-nowrap bg-indigo-600 hover:bg-indigo-50 text-white hover:text-indigo-600 px-8 py-4 rounded-2xl font-bold transition-all flex items-center gap-2 group">
+                        <Link href="/contact" className="whitespace-nowrap bg-red-600 hover:bg-red-50 text-white hover:text-red-600 px-8 py-4 rounded-2xl font-bold transition-all flex items-center gap-2 group">
                             Fix My Technical SEO
                             <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </button>
+                        </Link>
                     </div>
                 </div>
             )}

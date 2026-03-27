@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Upload, Download, Eye, FileImage, ShieldCheck, Monitor, Smartphone, Globe, Info, RefreshCcw } from 'lucide-react';
+import { Upload, Download, Eye, FileImage, ShieldCheck, Monitor, Smartphone, Globe, Info, RefreshCcw, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function FaviconGenerator() {
     const [file, setFile] = useState<File | null>(null);
@@ -37,7 +38,7 @@ export default function FaviconGenerator() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 {/* Upload Column */}
                 <div className="space-y-8">
-                    <div className="bg-slate-900 border-2 border-dashed border-slate-800 rounded-[2rem] p-12 text-center group hover:border-indigo-500/50 transition-all cursor-pointer relative overflow-hidden">
+                    <div className="bg-slate-900 border-2 border-dashed border-slate-800 rounded-[2rem] p-12 text-center group hover:border-red-500/50 transition-all cursor-pointer relative overflow-hidden">
                         <input
                             type="file"
                             className="absolute inset-0 opacity-0 cursor-pointer z-10"
@@ -45,8 +46,8 @@ export default function FaviconGenerator() {
                             onChange={handleFileChange}
                         />
                         <div className="relative z-0 flex flex-col items-center">
-                            <div className="w-20 h-20 bg-indigo-500/10 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                <Upload className="w-8 h-8 text-indigo-400" />
+                            <div className="w-20 h-20 bg-red-500/10 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                <Upload className="w-8 h-8 text-red-400" />
                             </div>
                             <h3 className="text-xl font-bold mb-2">Upload your logo</h3>
                             <p className="text-slate-500 text-sm max-w-xs mb-8">
@@ -64,17 +65,23 @@ export default function FaviconGenerator() {
                     <button
                         onClick={generateFavicons}
                         disabled={!file || isGenerating}
-                        className="w-full bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 py-5 rounded-2xl font-bold text-lg shadow-xl shadow-indigo-600/20 transition-all flex items-center justify-center gap-3"
+                        className="w-full bg-red-600 hover:bg-red-500 disabled:opacity-50 py-5 rounded-2xl font-bold text-lg shadow-xl shadow-red-600/20 transition-all flex items-center justify-center gap-3"
                     >
                         {isGenerating ? <RefreshCcw className="w-6 h-6 animate-spin" /> : <Download className="w-6 h-6" />}
                         {isGenerating ? 'Generating Assets...' : 'Generate Favicon Package'}
                     </button>
 
-                    <div className="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl flex items-start gap-4">
-                        <Info className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
-                        <p className="text-xs text-slate-500 leading-relaxed">
-                            By using our tool, we automatically create all the necessary sizes and formats required for modern browsers, mobile devices (iOS/Android), and OS-level integrations.
-                        </p>
+                    <div className="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl flex flex-col gap-6">
+                        <div className="flex items-start gap-4">
+                            <Info className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
+                            <p className="text-xs text-slate-500 leading-relaxed">
+                                By using our tool, we automatically create all the necessary sizes and formats required for modern browsers, mobile devices (iOS/Android), and OS-level integrations.
+                            </p>
+                        </div>
+                        <Link href="/contact" className="text-sm font-bold text-red-400 hover:text-red-300 flex items-center gap-2 transition-colors">
+                            Need a custom logo design? Contact us
+                            <ArrowRight className="w-4 h-4" />
+                        </Link>
                     </div>
                 </div>
 
@@ -89,8 +96,8 @@ export default function FaviconGenerator() {
                                 <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
                             </div>
                             <div className="ml-4 flex-1 bg-slate-900/50 rounded-lg h-7 flex items-center px-3">
-                                <div className="w-3 h-3 bg-indigo-500/20 rounded-sm mr-2 flex items-center justify-center">
-                                    {file ? <img src={URL.createObjectURL(file)} className="w-2.5 h-2.5 object-contain" /> : <Globe className="w-2 h-2 text-indigo-400" />}
+                                <div className="w-3 h-3 bg-red-500/20 rounded-sm mr-2 flex items-center justify-center">
+                                    {file ? <img src={URL.createObjectURL(file)} className="w-2.5 h-2.5 object-contain" /> : <Globe className="w-2 h-2 text-red-400" />}
                                 </div>
                                 <span className="text-[10px] text-slate-400 font-mono">https://yoursite.com</span>
                             </div>
@@ -102,7 +109,7 @@ export default function FaviconGenerator() {
                             </div>
                             <div className="flex bg-slate-800 border-2 border-slate-700 px-4 py-2 rounded-lg items-center gap-3">
                                 <div className="w-5 h-5 bg-slate-900 rounded flex items-center justify-center">
-                                    {file ? <img src={URL.createObjectURL(file)} className="w-4 h-4 object-contain" /> : <div className="w-3 h-3 bg-indigo-500/40 rounded-sm"></div>}
+                                    {file ? <img src={URL.createObjectURL(file)} className="w-4 h-4 object-contain" /> : <div className="w-3 h-3 bg-red-500/40 rounded-sm"></div>}
                                 </div>
                                 <span className="text-sm font-medium text-slate-300">Your Site Title</span>
                                 <div className="w-4 h-4 text-slate-600 ml-4">×</div>
@@ -115,14 +122,14 @@ export default function FaviconGenerator() {
                         <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 flex flex-col items-center gap-4">
                             <Smartphone className="w-5 h-5 text-slate-500" />
                             <div className="w-16 h-16 bg-slate-800 rounded-2xl flex items-center justify-center overflow-hidden shadow-xl border border-white/5">
-                                {file ? <img src={URL.createObjectURL(file)} className="w-10 h-10 object-contain" /> : <div className="w-8 h-8 bg-indigo-500/20 rounded-lg"></div>}
+                                {file ? <img src={URL.createObjectURL(file)} className="w-10 h-10 object-contain" /> : <div className="w-8 h-8 bg-red-500/20 rounded-lg"></div>}
                             </div>
                             <span className="text-[10px] font-bold text-slate-500 uppercase">iOS Homescreen</span>
                         </div>
                         <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 flex flex-col items-center gap-4">
                             <Monitor className="w-5 h-5 text-slate-500" />
                             <div className="w-16 h-16 bg-slate-800 rounded-lg flex items-center justify-center overflow-hidden shadow-xl border border-white/5">
-                                {file ? <img src={URL.createObjectURL(file)} className="w-10 h-10 object-contain" /> : <div className="w-8 h-8 bg-indigo-500/20 rounded-lg"></div>}
+                                {file ? <img src={URL.createObjectURL(file)} className="w-10 h-10 object-contain" /> : <div className="w-8 h-8 bg-red-500/20 rounded-lg"></div>}
                             </div>
                             <span className="text-[10px] font-bold text-slate-500 uppercase">OS Taskbar</span>
                         </div>

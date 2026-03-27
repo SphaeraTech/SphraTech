@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Search, Key, TrendingUp, BarChart, Target, Info, CheckCircle, ChevronDown } from 'lucide-react';
+import Link from 'next/link';
 
 export default function KeywordDifficultyChecker() {
     const [keyword, setKeyword] = useState('');
@@ -43,8 +44,8 @@ export default function KeywordDifficultyChecker() {
         <div className="space-y-10">
             <div className="max-w-3xl mx-auto">
                 <form onSubmit={handleSearch} className="relative group">
-                    <div className="absolute inset-0 bg-indigo-500/20 blur-xl group-focus-within:bg-indigo-500/30 transition-all rounded-full"></div>
-                    <div className="relative flex p-1.5 bg-slate-900 border border-slate-800 rounded-2xl focus-within:border-indigo-500 transition-all">
+                    <div className="absolute inset-0 bg-red-500/20 blur-xl group-focus-within:bg-red-500/30 transition-all rounded-full"></div>
+                    <div className="relative flex p-1.5 bg-slate-900 border border-slate-800 rounded-2xl focus-within:border-red-500 transition-all">
                         <div className="flex-1 flex items-center px-4">
                             <Search className="w-5 h-5 text-slate-500 mr-3" />
                             <input
@@ -58,7 +59,7 @@ export default function KeywordDifficultyChecker() {
                         <button
                             type="submit"
                             disabled={isSearching || !keyword}
-                            className="bg-indigo-600 hover:bg-indigo-500 px-8 py-3 rounded-xl font-bold transition-all shadow-lg shadow-indigo-500/20"
+                            className="bg-red-600 hover:bg-red-500 px-8 py-3 rounded-xl font-bold transition-all shadow-lg shadow-red-500/20"
                         >
                             Check Difficulty
                         </button>
@@ -90,7 +91,7 @@ export default function KeywordDifficultyChecker() {
                         <div className="bg-slate-900 border border-slate-800 p-8 rounded-3xl">
                             <p className="text-slate-500 text-sm font-bold uppercase tracking-widest mb-2">Monthly Volume</p>
                             <div className="flex items-center gap-3">
-                                <BarChart className="w-8 h-8 text-indigo-400" />
+                                <BarChart className="w-8 h-8 text-red-400" />
                                 <span className="text-4xl font-bold">{result.volume}</span>
                             </div>
                             <p className="text-xs text-slate-500 mt-4 flex items-center gap-1">
@@ -123,7 +124,7 @@ export default function KeywordDifficultyChecker() {
                         <div className="lg:col-span-2 bg-slate-900 border border-slate-800 p-8 rounded-3xl">
                             <div className="flex items-center justify-between mb-8">
                                 <h3 className="font-bold text-xl flex items-center gap-2">
-                                    <TrendingUp className="w-5 h-5 text-indigo-400" />
+                                    <TrendingUp className="w-5 h-5 text-red-400" />
                                     Search Interest Trend
                                 </h3>
                                 <span className="text-xs text-slate-500 bg-slate-800 px-3 py-1 rounded-full uppercase font-bold">Past 12 Months</span>
@@ -132,7 +133,7 @@ export default function KeywordDifficultyChecker() {
                                 {result.trend.map((val: number, i: number) => (
                                     <div key={i} className="flex-1 group relative">
                                         <div
-                                            className="w-full bg-indigo-500/20 group-hover:bg-indigo-500/40 transition-all rounded-t-sm"
+                                            className="w-full bg-red-500/20 group-hover:bg-red-500/40 transition-all rounded-t-sm"
                                             style={{ height: `${val}%` }}
                                         ></div>
                                         <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-800 text-[10px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
@@ -166,7 +167,7 @@ export default function KeywordDifficultyChecker() {
                                     </div>
                                 ))}
                             </div>
-                            <button className="p-4 text-sm font-bold text-indigo-400 hover:bg-indigo-500/10 transition-colors flex items-center justify-center gap-2">
+                            <button className="p-4 text-sm font-bold text-red-400 hover:bg-red-500/10 transition-colors flex items-center justify-center gap-2">
                                 View all ideas
                                 <ChevronDown className="w-4 h-4" />
                             </button>
@@ -174,8 +175,8 @@ export default function KeywordDifficultyChecker() {
                     </div>
 
                     {/* CTA Section */}
-                    <div className="bg-gradient-to-r from-indigo-900/40 to-slate-900 p-10 rounded-3xl border border-indigo-500/20 flex flex-col items-center text-center">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 rounded-full text-indigo-400 text-xs font-bold mb-6">
+                    <div className="bg-gradient-to-r from-red-900/40 to-slate-900 p-10 rounded-3xl border border-red-500/20 flex flex-col items-center text-center">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/30 rounded-full text-red-400 text-xs font-bold mb-6">
                             <CheckCircle className="w-4 h-4" />
                             Dominate your niche
                         </div>
@@ -184,12 +185,12 @@ export default function KeywordDifficultyChecker() {
                             Difficulty {result.difficulty} is {result.difficulty > 60 ? 'high' : 'moderate'}. We specialize in high-authority backlink building and content strategies that beat even the toughest competition.
                         </p>
                         <div className="flex gap-4">
-                            <button className="bg-indigo-600 hover:bg-indigo-500 px-8 py-3 rounded-xl font-bold transition-all transform hover:scale-105">
+                            <Link href="/contact" className="bg-red-600 hover:bg-red-500 px-8 py-3 rounded-xl font-bold transition-all transform hover:scale-105 text-center">
                                 Check Backlinks
-                            </button>
-                            <button className="bg-slate-800 hover:bg-slate-700 px-8 py-3 rounded-xl font-bold transition-all">
+                            </Link>
+                            <Link href="/contact" className="bg-slate-800 hover:bg-slate-700 px-8 py-3 rounded-xl font-bold transition-all text-center">
                                 Get SEO Strategy
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { Calculator, Layout, ShoppingCart, Rocket, Monitor, Zap, Search, Globe, ChevronRight, MessageSquare } from 'lucide-react';
+import Link from 'next/link';
 
 type WebsiteType = 'landing' | 'corporate' | 'ecommerce' | 'saas';
 
@@ -63,7 +64,7 @@ export default function WebsiteCostEstimator() {
             <div className="lg:col-span-2 space-y-10">
                 <section>
                     <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-                        <Layout className="w-5 h-5 text-indigo-400" />
+                        <Layout className="w-5 h-5 text-red-400" />
                         1. Select Project Type
                     </h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -72,11 +73,11 @@ export default function WebsiteCostEstimator() {
                                 key={t}
                                 onClick={() => setType(t)}
                                 className={`p-6 rounded-2xl border-2 transition-all flex flex-col items-center gap-3 text-center ${type === t
-                                    ? 'bg-indigo-600/10 border-indigo-500 shadow-[0_0_20px_rgba(99,102,241,0.2)]'
+                                    ? 'bg-red-600/10 border-red-500 shadow-[0_0_20px_rgba(99,102,241,0.2)]'
                                     : 'bg-slate-900 border-slate-800 hover:border-slate-700'
                                     }`}
                             >
-                                <div className={`${type === t ? 'text-indigo-400' : 'text-slate-500'}`}>
+                                <div className={`${type === t ? 'text-red-400' : 'text-slate-500'}`}>
                                     {getWebsiteTypeIcon(t)}
                                 </div>
                                 <div>
@@ -99,18 +100,18 @@ export default function WebsiteCostEstimator() {
                                 key={feat.id}
                                 onClick={() => toggleFeature(feat.id)}
                                 className={`p-5 rounded-2xl border transition-all flex items-center justify-between text-left group ${selectedFeatures.includes(feat.id)
-                                    ? 'bg-indigo-600/5 border-indigo-500/50'
+                                    ? 'bg-red-600/5 border-red-500/50'
                                     : 'bg-slate-900/50 border-slate-800 hover:border-slate-700'
                                     }`}
                             >
                                 <div className="flex-1">
                                     <div className="flex items-center gap-2">
                                         <span className="font-semibold text-slate-100">{feat.name}</span>
-                                        <span className="text-xs bg-indigo-500/10 text-indigo-400 px-1.5 py-0.5 rounded">+${feat.price}</span>
+                                        <span className="text-xs bg-red-500/10 text-red-400 px-1.5 py-0.5 rounded">+${feat.price}</span>
                                     </div>
                                     <p className="text-xs text-slate-500 mt-1">{feat.description}</p>
                                 </div>
-                                <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${selectedFeatures.includes(feat.id) ? 'bg-indigo-600 border-indigo-600' : 'border-slate-700'
+                                <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${selectedFeatures.includes(feat.id) ? 'bg-red-600 border-red-600' : 'border-slate-700'
                                     }`}>
                                     {selectedFeatures.includes(feat.id) && <CheckCircle className="w-4 h-4 text-white" />}
                                 </div>
@@ -125,7 +126,7 @@ export default function WebsiteCostEstimator() {
                 <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 sticky top-32 shadow-2xl">
                     <div className="flex items-center justify-between mb-8">
                         <h3 className="font-bold text-lg">Project Summary</h3>
-                        <Calculator className="w-5 h-5 text-indigo-400" />
+                        <Calculator className="w-5 h-5 text-red-400" />
                     </div>
 
                     <div className="space-y-4 mb-8">
@@ -138,7 +139,7 @@ export default function WebsiteCostEstimator() {
                             return (
                                 <div key={featId} className="flex justify-between text-sm animate-in fade-in slide-in-from-right-2">
                                     <span className="text-slate-400">{feat?.name}</span>
-                                    <span className="font-mono text-indigo-400">+${feat?.price}</span>
+                                    <span className="font-mono text-red-400">+${feat?.price}</span>
                                 </div>
                             );
                         })}
@@ -148,7 +149,7 @@ export default function WebsiteCostEstimator() {
                         <div className="flex justify-between items-end">
                             <span className="text-slate-400 font-bold">Estimated Cost</span>
                             <div className="text-right">
-                                <div className="text-4xl font-black bg-gradient-to-r from-indigo-400 to-purple-400 text-transparent bg-clip-text">
+                                <div className="text-4xl font-black bg-gradient-to-r from-red-400 to-purple-400 text-transparent bg-clip-text">
                                     ${totalPrice.toLocaleString()}
                                 </div>
                                 <p className="text-[10px] text-slate-500 mt-1 uppercase tracking-widest font-bold">*Final price may vary</p>
@@ -157,10 +158,10 @@ export default function WebsiteCostEstimator() {
                     </div>
 
                     <div className="space-y-3">
-                        <button className="w-full bg-indigo-600 hover:bg-indigo-500 py-4 rounded-xl font-bold transition-all transform hover:-translate-y-1 shadow-lg shadow-indigo-600/20 flex items-center justify-center gap-2">
+                        <Link href="/contact" className="w-full bg-red-600 hover:bg-red-500 py-4 rounded-xl font-bold transition-all transform hover:-translate-y-1 shadow-lg shadow-red-600/20 flex items-center justify-center gap-2 text-white">
                             <MessageSquare className="w-5 h-5" />
                             Get Detailed Quote
-                        </button>
+                        </Link>
                         <button className="w-full bg-slate-800 hover:bg-slate-700 py-4 rounded-xl font-bold transition-all border border-slate-700">
                             Save Configuration
                         </button>

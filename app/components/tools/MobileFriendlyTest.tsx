@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Smartphone, CheckCircle2, AlertCircle, XCircle, Globe, RefreshCw, Eye, Laptop, Tablet, Search, Monitor, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function MobileFriendlyTest() {
     const [url, setUrl] = useState('');
@@ -42,7 +43,7 @@ export default function MobileFriendlyTest() {
     return (
         <div className="space-y-12">
             <div className="max-w-3xl mx-auto">
-                <form onSubmit={handleTest} className="flex gap-4 p-2 bg-slate-900 border border-slate-800 rounded-2xl focus-within:border-indigo-500 transition-all">
+                <form onSubmit={handleTest} className="flex gap-4 p-2 bg-slate-900 border border-slate-800 rounded-2xl focus-within:border-red-500 transition-all">
                     <div className="flex-1 flex items-center gap-3 px-4">
                         <Globe className="w-5 h-5 text-slate-500" />
                         <input
@@ -56,7 +57,7 @@ export default function MobileFriendlyTest() {
                     <button
                         type="submit"
                         disabled={isTesting || !url}
-                        className="bg-indigo-600 hover:bg-indigo-500 px-8 rounded-xl font-bold transition-all flex items-center gap-2"
+                        className="bg-red-600 hover:bg-red-500 px-8 rounded-xl font-bold transition-all flex items-center gap-2"
                     >
                         {isTesting ? <RefreshCw className="w-5 h-5 animate-spin" /> : <Smartphone className="w-5 h-5" />}
                         Test URL
@@ -124,18 +125,18 @@ export default function MobileFriendlyTest() {
                             </div>
                         </div>
 
-                        <div className="bg-indigo-600 rounded-3xl p-8 relative overflow-hidden group">
+                        <div className="bg-red-600 rounded-3xl p-8 relative overflow-hidden group">
                             <div className="absolute -bottom-10 -right-10 opacity-10 group-hover:scale-110 transition-transform">
                                 <Monitor className="w-48 h-48" />
                             </div>
                             <h3 className="text-2xl font-bold mb-4">Mobile traffic is over 60%.</h3>
-                            <p className="text-indigo-100 mb-8 max-w-md">
+                            <p className="text-red-100 mb-8 max-w-md">
                                 Don't lose customers because your site is slow or hard to use on phones. We create mobile-first experiences that convert.
                             </p>
-                            <button className="bg-white text-indigo-600 px-8 py-4 rounded-2xl font-bold hover:shadow-xl transition-all flex items-center gap-2">
+                            <Link href="/contact" className="bg-white text-red-600 px-8 py-4 rounded-2xl font-bold hover:shadow-xl transition-all flex items-center gap-2">
                                 Audit My Entire Site
                                 <ArrowRight className="w-5 h-5" />
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

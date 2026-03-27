@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Gauge, Zap, Clock, Smartphone, Monitor, ChevronRight, RefreshCw, BarChart3, AlertTriangle } from 'lucide-react';
+import Link from 'next/link';
 
 export default function WebsiteSpeedTest() {
     const [url, setUrl] = useState('');
@@ -51,14 +52,14 @@ export default function WebsiteSpeedTest() {
                         <div className="flex bg-slate-800 p-1 rounded-xl">
                             <button
                                 onClick={() => setDevice('mobile')}
-                                className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${device === 'mobile' ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}
+                                className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${device === 'mobile' ? 'bg-red-600 text-white' : 'text-slate-400'}`}
                             >
                                 <Smartphone className="w-4 h-4" />
                                 Mobile
                             </button>
                             <button
                                 onClick={() => setDevice('desktop')}
-                                className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${device === 'desktop' ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}
+                                className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${device === 'desktop' ? 'bg-red-600 text-white' : 'text-slate-400'}`}
                             >
                                 <Monitor className="w-4 h-4" />
                                 Desktop
@@ -72,13 +73,13 @@ export default function WebsiteSpeedTest() {
                             placeholder="https://example.com"
                             value={url}
                             onChange={(e) => setUrl(e.target.value)}
-                            className="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-6 py-4 focus:outline-none focus:border-indigo-500 transition-colors text-lg"
+                            className="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-6 py-4 focus:outline-none focus:border-red-500 transition-colors text-lg"
                             disabled={isTesting}
                         />
                         <button
                             type="submit"
                             disabled={isTesting || !url}
-                            className="bg-indigo-600 hover:bg-indigo-500 px-8 py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-3 min-w-[180px]"
+                            className="bg-red-600 hover:bg-red-500 px-8 py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-3 min-w-[180px]"
                         >
                             {isTesting ? (
                                 <>
@@ -102,7 +103,7 @@ export default function WebsiteSpeedTest() {
                         {/* Performance Score */}
                         <div className="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl flex flex-col items-center justify-center text-center">
                             <div className="relative w-40 h-40 mb-6 group">
-                                <div className="absolute inset-0 bg-indigo-500/20 rounded-full blur-2xl group-hover:bg-indigo-500/30 transition-all"></div>
+                                <div className="absolute inset-0 bg-red-500/20 rounded-full blur-2xl group-hover:bg-red-500/30 transition-all"></div>
                                 <svg className="w-full h-full transform -rotate-90 relative z-10">
                                     <circle
                                         cx="80"
@@ -153,7 +154,7 @@ export default function WebsiteSpeedTest() {
                         <div className="bg-slate-900 shadow-xl border border-slate-800 rounded-3xl overflow-hidden">
                             <div className="p-6 border-b border-slate-800 bg-slate-900/50 flex items-center justify-between">
                                 <h3 className="font-bold flex items-center gap-2">
-                                    <BarChart3 className="w-5 h-5 text-indigo-400" />
+                                    <BarChart3 className="w-5 h-5 text-red-400" />
                                     Optimization Opportunities
                                 </h3>
                                 <span className="text-xs font-bold text-orange-400 bg-orange-400/10 px-2 py-1 rounded">Estimated Savings</span>
@@ -162,7 +163,7 @@ export default function WebsiteSpeedTest() {
                                 {testResult.opportunities.map((opp: any, idx: number) => (
                                     <div key={idx} className="p-6 flex items-center justify-between group hover:bg-slate-800/50 transition-all cursor-pointer">
                                         <div className="flex items-start gap-4">
-                                            <div className="mt-1 p-2 bg-slate-800 rounded-lg group-hover:bg-indigo-500/10 group-hover:text-indigo-400 transition-colors">
+                                            <div className="mt-1 p-2 bg-slate-800 rounded-lg group-hover:bg-red-500/10 group-hover:text-red-400 transition-colors">
                                                 <AlertTriangle className="w-4 h-4" />
                                             </div>
                                             <div>
@@ -181,8 +182,8 @@ export default function WebsiteSpeedTest() {
 
                         {/* Lab Recommendations */}
                         <div className="bg-slate-900 shadow-xl border border-slate-800 rounded-3xl p-8 flex flex-col items-center justify-center text-center space-y-6">
-                            <div className="w-20 h-20 bg-indigo-500/10 rounded-full flex items-center justify-center">
-                                <Zap className="w-10 h-10 text-indigo-500" />
+                            <div className="w-20 h-20 bg-red-500/10 rounded-full flex items-center justify-center">
+                                <Zap className="w-10 h-10 text-red-500" />
                             </div>
                             <div>
                                 <h3 className="text-2xl font-bold mb-4">Slow loading? We can fix that.</h3>
@@ -190,10 +191,10 @@ export default function WebsiteSpeedTest() {
                                     Our performance experts can optimize your code, images, and server infrastructure to achieve lightning-fast load times.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 w-full">
-                                    <button className="flex-1 px-6 py-4 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-bold transition-all transform hover:-translate-y-1">
+                                    <Link href="/contact" className="flex-1 px-6 py-4 bg-red-600 hover:bg-red-500 rounded-xl font-bold transition-all transform hover:-translate-y-1 text-center">
                                         Book Speed Audit
-                                    </button>
-                                    <button className="flex-1 px-6 py-4 bg-slate-800 hover:bg-slate-700 rounded-xl font-bold transition-all border border-slate-700">
+                                    </Link>
+                                    <button className="flex-1 px-6 py-4 bg-slate-800 hover:bg-slate-700 rounded-xl font-bold transition-all border border-slate-700 text-center">
                                         Learn about Core Web Vitals
                                     </button>
                                 </div>

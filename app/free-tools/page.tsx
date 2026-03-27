@@ -26,13 +26,13 @@ export default function FreeToolsPage() {
           {/* Header Section */}
           <div className="text-center mb-12">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 rounded-full text-indigo-400 text-sm mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/30 rounded-full text-red-400 text-sm mb-6">
               <Sparkles className="w-4 h-4" />
               New releases every month
             </div>
 
             {/* Title */}
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-purple-400 text-transparent bg-clip-text">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-red-400 to-purple-400 text-transparent bg-clip-text">
               {t.freeTools?.title || 'Free tools'}
             </h1>
 
@@ -50,8 +50,8 @@ export default function FreeToolsPage() {
               <button
                 onClick={() => setSelectedCategory('all')}
                 className={`px-6 py-2 rounded-full font-medium transition-all ${selectedCategory === 'all'
-                    ? 'bg-indigo-600 text-white'
-                    : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                  ? 'bg-red-600 text-white'
+                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
                   }`}
               >
                 All
@@ -61,8 +61,8 @@ export default function FreeToolsPage() {
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-6 py-2 rounded-full font-medium transition-all ${selectedCategory === category.id
-                      ? 'bg-indigo-600 text-white'
-                      : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                    ? 'bg-red-600 text-white'
+                    : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
                     }`}
                 >
                   {category.name}
@@ -78,7 +78,7 @@ export default function FreeToolsPage() {
                 placeholder="Search products"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-indigo-500 transition-colors"
+                className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-500 transition-colors"
               />
             </div>
           </div>

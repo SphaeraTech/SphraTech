@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { RefreshCw, Copy, Check, Lock, Unlock, Download, Share2, Layout, Palette } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ColorPaletteGenerator() {
     const [colors, setColors] = useState<string[]>([]);
@@ -42,7 +43,7 @@ export default function ColorPaletteGenerator() {
                 <div className="flex gap-4">
                     <button
                         onClick={generatePalette}
-                        className="bg-indigo-600 hover:bg-indigo-500 px-8 py-4 rounded-2xl font-bold flex items-center gap-3 transition-all transform active:scale-95"
+                        className="bg-red-600 hover:bg-red-500 px-8 py-4 rounded-2xl font-bold flex items-center gap-3 transition-all transform active:scale-95"
                     >
                         <RefreshCw className="w-5 h-5" />
                         Generate New (Space)
@@ -99,8 +100,8 @@ export default function ColorPaletteGenerator() {
             {/* Preview Section */}
             <div className="bg-slate-900 border border-slate-800 rounded-3xl p-10">
                 <div className="flex items-center gap-4 mb-10">
-                    <div className="p-3 bg-indigo-500/10 rounded-2xl">
-                        <Layout className="w-6 h-6 text-indigo-400" />
+                    <div className="p-3 bg-red-500/10 rounded-2xl">
+                        <Layout className="w-6 h-6 text-red-400" />
                     </div>
                     <div>
                         <h3 className="text-2xl font-bold">Live UI Preview</h3>
@@ -143,13 +144,13 @@ export default function ColorPaletteGenerator() {
                             <p className="text-sm font-bold opacity-60" style={{ color: colors[4] }}>SpheraDesign System v2.0</p>
                         </div>
 
-                        <div className="bg-indigo-600 rounded-2xl p-8 text-white relative overflow-hidden group">
+                        <div className="bg-red-600 rounded-2xl p-8 text-white relative overflow-hidden group">
                             <div className="relative z-10">
                                 <h4 className="font-bold text-lg mb-2">Love these colors?</h4>
-                                <p className="text-indigo-100 text-sm mb-6">We can create a complete custom design system for your brand that stands out from the competition.</p>
-                                <button className="bg-white text-indigo-600 px-6 py-2.5 rounded-lg font-bold text-sm hover:shadow-lg transition-all">
+                                <p className="text-red-100 text-sm mb-6">We can create a complete custom design system for your brand that stands out from the competition.</p>
+                                <Link href="/contact" className="bg-white text-red-600 px-6 py-2.5 rounded-lg font-bold text-sm hover:shadow-lg transition-all text-center inline-block">
                                     Work With Us
-                                </button>
+                                </Link>
                             </div>
                             <Palette className="absolute -bottom-6 -right-6 w-32 h-32 opacity-10 group-hover:scale-110 transition-transform" />
                         </div>

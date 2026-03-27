@@ -6,33 +6,33 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 const processSteps = [
-  { 
-    icon: Target, 
-    color: 'from-violet-500 to-indigo-500',
-    bgColor: 'bg-gradient-to-br from-violet-500/10 to-indigo-500/10'
+  {
+    icon: Target,
+    color: 'from-violet-500 to-red-500',
+    bgColor: 'bg-gradient-to-br from-violet-500/10 to-red-500/10'
   },
-  { 
-    icon: Users, 
-    color: 'from-indigo-500 to-blue-500',
-    bgColor: 'bg-gradient-to-br from-indigo-500/10 to-blue-500/10'
+  {
+    icon: Users,
+    color: 'from-red-500 to-blue-500',
+    bgColor: 'bg-gradient-to-br from-red-500/10 to-blue-500/10'
   },
-  { 
-    icon: Zap, 
+  {
+    icon: Zap,
     color: 'from-blue-500 to-cyan-500',
     bgColor: 'bg-gradient-to-br from-blue-500/10 to-cyan-500/10'
   },
-  { 
-    icon: TrendingUp, 
+  {
+    icon: TrendingUp,
     color: 'from-cyan-500 to-emerald-500',
     bgColor: 'bg-gradient-to-br from-cyan-500/10 to-emerald-500/10'
   },
-  { 
-    icon: Shield, 
+  {
+    icon: Shield,
     color: 'from-emerald-500 to-green-500',
     bgColor: 'bg-gradient-to-br from-emerald-500/10 to-green-500/10'
   },
-  { 
-    icon: CheckCircle2, 
+  {
+    icon: CheckCircle2,
     color: 'from-green-500 to-teal-500',
     bgColor: 'bg-gradient-to-br from-green-500/10 to-teal-500/10'
   }
@@ -66,7 +66,7 @@ export default function ProcessSection() {
             {processSteps.map((step, index) => {
               const isEven = index % 2 === 0;
               const Icon = step.icon;
-              
+
               return (
                 <motion.div
                   key={index}
@@ -109,10 +109,10 @@ export default function ProcessSection() {
                           </div>
                         </div>
                         <p className="text-slate-300 mb-4">
-                          {t.process?.steps?.[index]?.description || 
-                           'Detailed description of this step in our process'}
+                          {t.process?.steps?.[index]?.description ||
+                            'Detailed description of this step in our process'}
                         </p>
-                        
+
                         {/* Sub-steps */}
                         {t.process?.steps?.[index]?.subSteps && (
                           <ul className="space-y-2">
@@ -155,10 +155,10 @@ export default function ProcessSection() {
                               </div>
                             </div>
                             <p className="text-slate-300 mb-4">
-                              {t.process?.steps?.[index]?.description || 
-                               'Detailed description of this step in our process'}
+                              {t.process?.steps?.[index]?.description ||
+                                'Detailed description of this step in our process'}
                             </p>
-                            
+
                             {/* Sub-steps */}
                             {t.process?.steps?.[index]?.subSteps && (
                               <ul className="space-y-2">
@@ -211,10 +211,10 @@ export default function ProcessSection() {
                               </div>
                             </div>
                             <p className="text-slate-300 mb-4">
-                              {t.process?.steps?.[index]?.description || 
-                               'Detailed description of this step in our process'}
+                              {t.process?.steps?.[index]?.description ||
+                                'Detailed description of this step in our process'}
                             </p>
-                            
+
                             {/* Sub-steps */}
                             {t.process?.steps?.[index]?.subSteps && (
                               <ul className="space-y-2">
@@ -240,7 +240,7 @@ export default function ProcessSection() {
         </div>
 
         {/* Key Metrics */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -251,7 +251,7 @@ export default function ProcessSection() {
             { label: "Client Satisfaction", value: "4.9/5", color: "from-blue-500 to-cyan-500" },
             { label: "Projects Delivered", value: "500+", color: "from-violet-500 to-purple-500" }
           ].map((metric, index) => (
-            <div 
+            <div
               key={index}
               className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 text-center border border-slate-700 hover:border-slate-600 transition-colors"
             >

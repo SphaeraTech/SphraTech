@@ -107,7 +107,7 @@ export const freeToolsData: FreeTool[] = [
     image: '/tools/tech-stack.svg',
     featured: false,
     link: '/free-tools/tech-stack-detector',
-    gradient: 'from-indigo-500 to-purple-500'
+    gradient: 'from-red-500 to-purple-500'
   },
   {
     id: 'color-palette-generator',

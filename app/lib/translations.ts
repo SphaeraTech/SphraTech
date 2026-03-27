@@ -521,7 +521,7 @@ export const translations = {
         errors: {
           required: "Please fill in all required fields",
           email: "Please enter a valid email address",
-          submit: "Something went wrong. Please try again or email us directly at hello@sphaeratech.com",
+          submit: "Something went wrong. Please try again or email us directly at contact@spheratech.org",
         },
         success: {
           title: "Thank You!",
