@@ -1,7 +1,7 @@
 'use client';
 
 import { Globe } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '@/app/contexts/LanguageContext';
 
 export default function Footer() {
   const { t } = useLanguage();

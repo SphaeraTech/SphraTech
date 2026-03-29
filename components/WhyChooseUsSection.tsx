@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '@/app/contexts/LanguageContext';
 import { useState, useEffect } from 'react';
 
 // ── EXACT icons from the HTML reference ──────────────────────

@@ -1,7 +1,7 @@
 'use client';
 
 import { Package, Puzzle, BarChart, Shield } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '@/app/contexts/LanguageContext';
 
 interface ProductCardProps {
   iconName: string; // Changed from icon: LucideIcon

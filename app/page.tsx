@@ -1,11 +1,11 @@
-import HeroSection from './components/HeroSection';
-import ServicesSection from './components/ServicesSection';
-import WhyChooseUsSection from './components/WhyChooseUsSection';
-import CTASection from './components/CTASection';
-import ProcessSection from './components/ProcessSection';
-import FAQSection from './components/FAQSection';
-import QuoteSection from './components/QuoteSection';
-import ProductsSection from './components/ProductsSection';
+import HeroSection from '@/components/HeroSection';
+import ServicesSection from '@/components/ServicesSection';
+import WhyChooseUsSection from '@/components/WhyChooseUsSection';
+import CTASection from '@/components/CTASection';
+import ProcessSection from '@/components/ProcessSection';
+import FAQSection from '@/components/FAQSection';
+import QuoteSection from '@/components/QuoteSection';
+import ProductsSection from '@/components/ProductsSection';
 
 export default function Home() {
   return (
@@ -32,7 +32,7 @@ export default function Home() {
           zIndex: 0,
         }}
       />
-  
+
       {/* All sections sit above the grid layer */}
       <div style={{ position: "relative", zIndex: 1 }} className="flex flex-col md:gap-10 gap-20">
         <HeroSection />

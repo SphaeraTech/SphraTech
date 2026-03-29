@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, LayoutGroup } from "framer-motion";
-import { cn } from "@/app/utils/tailwind";
+import { cn } from "@/utils/tailwind";
 
 export const FlipWords = ({
   words,

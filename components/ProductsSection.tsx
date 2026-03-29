@@ -1,8 +1,8 @@
 'use client';
 
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '@/app/contexts/LanguageContext';
 import ProductCard from './ProductCard';
-import { productsData } from '../lib/productsData';
+import { productsData } from '@/lib/productsData';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 

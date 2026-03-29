@@ -1,6 +1,6 @@
-import ProductCard from '../components/ProductCard';
-import { productsData } from '../lib/productsData';
-import { translations } from '../lib/translations';
+import ProductCard from '@/components/ProductCard';
+import { productsData } from '@/lib/productsData';
+import { translations } from '@/lib/translations';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { Metadata } from 'next';

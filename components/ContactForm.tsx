@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Send, CheckCircle, Loader2 } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '@/app/contexts/LanguageContext';
 
 // 1. Define strict types for our form data
 interface ContactFormData {

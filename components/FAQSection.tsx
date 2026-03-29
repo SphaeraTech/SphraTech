@@ -1,6 +1,6 @@
 'use client';
 
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '@/app/contexts/LanguageContext';
 import { Plus, Minus, MessageCircle, HelpCircle, FileQuestion, Lightbulb } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';

@@ -1,8 +1,8 @@
 'use client';
-import CTASection from '../components/CTASection';
+import CTASection from '@/components/CTASection';
 import { Target, Eye, Heart, Zap, Shield, Users, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '@/app/contexts/LanguageContext';
 
 export default function AboutPage() {
   const { t } = useLanguage();

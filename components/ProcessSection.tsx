@@ -1,6 +1,6 @@
 'use client';
 
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '@/app/contexts/LanguageContext';
 import { CheckCircle2, Target, Users, Zap, TrendingUp, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';

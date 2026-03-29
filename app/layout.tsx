@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { LanguageProvider } from './contexts/LanguageContext';
-import Navigation from "./components/Navigation";
-import Footer from "./components/Footer";
-import { GoogleAnalytics ,GoogleTagManager} from '@next/third-parties/google'
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: "SphaeraTech - Transform Your Vision into Reality",
@@ -19,10 +19,10 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className="antialiased">
         <LanguageProvider>
-          <Navigation/>
+          <Navigation />
           {children}
           <GoogleAnalytics gaId="G-PYK3CWE3MX" />
-          <Footer/>
+          <Footer />
         </LanguageProvider>
       </body>
     </html>

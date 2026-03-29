@@ -2,12 +2,12 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, Check, ArrowRight, Zap, Shield, Clock, TrendingUp, ExternalLink } from 'lucide-react';
-import { servicesData } from '@/app/lib/servicesData';
-import { translations } from '@/app/lib/translations';
-import Navigation from '@/app/components/Navigation';
-import Footer from '@/app/components/Footer';
-import CTASection from '@/app/components/CTASection';
-import ProjectCard from '@/app/components/ProjectCard';
+import { servicesData } from '@/lib/servicesData';
+import { translations } from '@/lib/translations';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+import CTASection from '@/components/CTASection';
+import ProjectCard from '@/components/ProjectCard';
 
 interface ServicePageProps {
   params: Promise<{ slug: string }>;

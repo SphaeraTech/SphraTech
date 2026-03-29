@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '@/app/contexts/LanguageContext';
 import { Send, Calendar, Clock, CheckCircle, MessageSquare, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';

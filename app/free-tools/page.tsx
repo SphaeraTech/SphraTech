@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import { Search, Sparkles, Users } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { freeToolsData, categories } from '../lib/freeToolsData';
-import FreeToolCard from '../components/FreeToolCard';
+import { freeToolsData, categories } from '@/lib/freeToolsData';
+import FreeToolCard from '@/components/FreeToolCard';
 
 export default function FreeToolsPage() {
   const { t } = useLanguage();

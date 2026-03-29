@@ -2,7 +2,7 @@
 
 import { Globe, Menu, X, Languages, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '@/app/contexts/LanguageContext';
 import Link from 'next/link';
 
 export default function Navigation() {

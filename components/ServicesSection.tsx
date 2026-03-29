@@ -1,8 +1,8 @@
 'use client';
 
-import { useLanguage } from '../contexts/LanguageContext';
-import ServiceCard from '@/app/components/ui/ServiceCard';
-import { servicesData } from '../lib/servicesData';
+import { useLanguage } from '@/app/contexts/LanguageContext';
+import ServiceCard from '@/components/ui/ServiceCard';
+import { servicesData } from '@/lib/servicesData';
 
 export default function ServicesSection() {
   const { t } = useLanguage();

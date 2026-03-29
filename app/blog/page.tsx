@@ -1,9 +1,9 @@
 import React from 'react';
-import Navigation from '@/app/components/Navigation';
-import BlogPostCard from '@/app/components/BlogPostCard';
+import Navigation from '@/components/Navigation';
+import BlogPostCard from '@/components/BlogPostCard';
 import { Metadata } from 'next';
 import { WordPressPost } from '@/types/blog';
-import { getPosts } from '../lib/sanity';
+import { getPosts } from '@/lib/sanity';
 
 export const metadata: Metadata = {
     title: 'Blog - SphaeraTech',

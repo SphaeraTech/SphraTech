@@ -1,7 +1,7 @@
 'use client';
 
 import { ArrowRight } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '@/app/contexts/LanguageContext';
 
 export default function CTASection() {
   const { t } = useLanguage();
@@ -48,7 +48,7 @@ export default function CTASection() {
 
               {/* Button */}
               <a
-                href="contact"
+                href="/contact"
                 className="
                   inline-flex items-center gap-3
                   px-8 py-4

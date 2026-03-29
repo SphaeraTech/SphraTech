@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { FreeTool } from '../lib/freeToolsData';
+import { FreeTool } from '@/lib/freeToolsData';
 
 interface FreeToolCardProps {
   tool: FreeTool;

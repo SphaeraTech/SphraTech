@@ -1,21 +1,21 @@
 'use client';
 
 import { useParams, notFound } from 'next/navigation';
-import { freeToolsData } from '../../lib/freeToolsData';
+import { freeToolsData } from '@/lib/freeToolsData';
 import { ChevronLeft, Share2 } from 'lucide-react';
 import Link from 'next/link';
 
 // Import tool components (placeholders for now)
-import WebsiteSpeedTest from '../../components/tools/WebsiteSpeedTest';
-import SeoAnalyzer from '../../components/tools/SeoAnalyzer';
-import MetaTagGenerator from '../../components/tools/MetaTagGenerator';
-import RobotsSitemapChecker from '../../components/tools/RobotsSitemapChecker';
-import KeywordDifficultyChecker from '../../components/tools/KeywordDifficultyChecker';
-import WebsiteCostEstimator from '../../components/tools/WebsiteCostEstimator';
-import MobileFriendlyTest from '../../components/tools/MobileFriendlyTest';
-import TechStackDetector from '../../components/tools/TechStackDetector';
-import ColorPaletteGenerator from '../../components/tools/ColorPaletteGenerator';
-import FaviconGenerator from '../../components/tools/FaviconGenerator';
+import WebsiteSpeedTest from '@/components/tools/WebsiteSpeedTest';
+import SeoAnalyzer from '@/components/tools/SeoAnalyzer';
+import MetaTagGenerator from '@/components/tools/MetaTagGenerator';
+import RobotsSitemapChecker from '@/components/tools/RobotsSitemapChecker';
+import KeywordDifficultyChecker from '@/components/tools/KeywordDifficultyChecker';
+import WebsiteCostEstimator from '@/components/tools/WebsiteCostEstimator';
+import MobileFriendlyTest from '@/components/tools/MobileFriendlyTest';
+import TechStackDetector from '@/components/tools/TechStackDetector';
+import ColorPaletteGenerator from '@/components/tools/ColorPaletteGenerator';
+import FaviconGenerator from '@/components/tools/FaviconGenerator';
 
 const toolComponents: { [key: string]: React.ComponentType } = {
     'website-speed-test': WebsiteSpeedTest,

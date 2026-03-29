@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { SanityPost } from "@/app/types/blog";
-import { urlFor } from "@/app/lib/helpers"; // your image helper
+import { SanityPost } from "@/types/blog";
+import { urlFor } from "@/lib/helpers"; // your image helper
 
 interface BlogPostCardProps {
   post: SanityPost;

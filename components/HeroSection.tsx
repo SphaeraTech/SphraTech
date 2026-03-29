@@ -1,7 +1,7 @@
 'use client';
 
-import { useLanguage } from '../contexts/LanguageContext';
-import { FlipWords } from "@/app/components/ui/FlipWords";
+import { useLanguage } from '@/app/contexts/LanguageContext';
+import { FlipWords } from "@/components/ui/FlipWords";
 import { ArrowRight, PlayCircle, CheckCircle, Users, Rocket, Award, ChevronDown } from 'lucide-react';
 
 export default function HeroSection() {
