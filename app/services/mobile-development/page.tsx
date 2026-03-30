@@ -53,8 +53,6 @@ export default function MobileDevPage() {
 
     return (
         <>
-            <Navigation />
-
             <main className="min-h-screen bg-slate-950 text-white">
                 {/* Hero Section */}
                 <section className="relative pt-32 pb-20 px-6 overflow-hidden">
@@ -256,7 +254,6 @@ export default function MobileDevPage() {
                     <CTASection />
                 </section>
             </main>
-            <Footer />
         </>
     );
 }

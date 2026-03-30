@@ -53,7 +53,6 @@ export default function WebDevPage() {
 
     return (
         <>
-            <Navigation />
 
             <main className="min-h-screen bg-slate-950 text-white">
                 {/* Hero Section */}
@@ -256,7 +255,6 @@ export default function WebDevPage() {
                     <CTASection />
                 </section>
             </main>
-            <Footer />
         </>
     );
 }
