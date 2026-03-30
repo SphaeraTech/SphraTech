@@ -42,7 +42,7 @@ export default function ProjectCard({ client, gradient, border, iconBg }: Projec
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
-            
+
             {/* Image Navigation */}
             {client.pictures.length > 1 && (
               <>
@@ -67,11 +67,10 @@ export default function ProjectCard({ client, gradient, border, iconBg }: Projec
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`w-2 h-2 rounded-full transition-all ${
-                        index === currentImageIndex
+                      className={`w-2 h-2 rounded-full transition-all ${index === currentImageIndex
                           ? 'bg-white w-8'
                           : 'bg-white/50 hover:bg-white/75'
-                      }`}
+                        }`}
                       aria-label={`Go to image ${index + 1}`}
                     />
                   ))}
@@ -90,7 +89,7 @@ export default function ProjectCard({ client, gradient, border, iconBg }: Projec
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-2xl font-bold">{client.name}</h3>
-          <a 
+          {client.siteLink && <a
             href={client.siteLink}
             target="_blank"
             rel="noopener noreferrer"
@@ -98,9 +97,10 @@ export default function ProjectCard({ client, gradient, border, iconBg }: Projec
           >
             <span className="text-sm">Visit Site</span>
             <ExternalLink className="w-4 h-4" />
-          </a>
+          </a>}
+
         </div>
-        
+
         {client.description && (
           <p className="text-slate-300 leading-relaxed">{client.description}</p>
         )}

@@ -65,6 +65,15 @@ export const translations = {
             question: 'Can you help with existing SaaS applications?',
             answer: 'Yes, we can help modernize, scale, or add new features to existing SaaS applications.'
           }
+        ],
+        clients: [
+          {
+            name: "CargoFlow",
+            description: "A platform that helps moving companies manage quotes, scheduling, and business operations efficiently.",
+            pictures: ["saas-projects/cargoflow/front.png", "saas-projects/cargoflow/02.png"],
+
+          }
+         
         ]
       },
       webDev: {
