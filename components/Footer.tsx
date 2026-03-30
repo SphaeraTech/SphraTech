@@ -138,9 +138,8 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-slate-800">
           <div className="flex items-center gap-3">
             <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-red-700 rounded-lg transform -rotate-12 flex items-center justify-center shadow-lg shadow-red-500/20">
-                <Globe className="w-5 h-5 text-white transform rotate-12" />
-              </div>
+            <img src="/navbar-logo.png" alt="SphæraTech Logo" width="64px" />
+
             </div>
             <span className="font-bold text-white text-lg">SphaeraTech</span>
           </div>
