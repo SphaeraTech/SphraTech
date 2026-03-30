@@ -91,7 +91,7 @@ export default function AboutPage() {
 
     
         {/* ── TEAM ───────────────────────────────────────────── */}
-        <section className="py-24 px-6 bg-gradient-to-b from-slate-950 to-slate-900">
+        <section className="py-24 px-6 bg-gradient-to-b from-slate-950 to-slate-900" id='team'>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">{a.teamTitle}</h2>

@@ -19,21 +19,22 @@ export default function Footer() {
             <h3 className="font-bold text-white mb-4">{t.footer.company}</h3>
             <ul className="space-y-3 text-slate-400">
               <li>
-                <a 
-                  href="#" 
+                <a
+                  href="/about"
                   className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
                 >
                   {t.footer.aboutUs}
                 </a>
               </li>
               <li>
-                <a 
-                  href="#" 
+                <a
+                  href="/about#team"
                   className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
                 >
                   {t.footer.team}
                 </a>
               </li>
+              {/*
               <li>
                 <a 
                   href="#" 
@@ -42,99 +43,87 @@ export default function Footer() {
                   {t.footer.careers}
                 </a>
               </li>
+              */}
             </ul>
           </div>
-    
+
           {/* Services Links */}
           <div>
             <h3 className="font-bold text-white mb-4">{t.footer.services}</h3>
             <ul className="space-y-3 text-slate-400">
               <li>
-                <a 
-                  href="#" 
+                <a
+                  href="/services/saas-solutions"
                   className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
                 >
-                  {t.footer.branding}
+                  {t.footer.saas}c
                 </a>
               </li>
               <li>
-                <a 
-                  href="#" 
+                <a
+                  href="/services/web-development"
                   className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
                 >
                   {t.footer.webDev}
                 </a>
               </li>
               <li>
-                <a 
-                  href="#" 
+                <a
+                  href="/services/mobile-development"
                   className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
                 >
-                  {t.footer.marketing}
+                  {t.footer.mobileDev}
                 </a>
               </li>
             </ul>
           </div>
-    
+
           {/* Resources Links */}
           <div>
             <h3 className="font-bold text-white mb-4">{t.footer.resources}</h3>
             <ul className="space-y-3 text-slate-400">
               <li>
-                <a 
-                  href="#blog" 
+                <a
+                  href="/blog"
                   className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
                 >
                   {t.footer.blog}
                 </a>
               </li>
-              <li>
+              {
+                /*  <li>
                 <a 
                   href="#" 
                   className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
                 >
                   {t.footer.caseStudy}
                 </a>
-              </li>
-              <li>
+              </li>  */
+              }
+
+              {
+                /*  <li>
                 <a 
                   href="#" 
                   className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
                 >
                   {t.footer.testimonials}
                 </a>
-              </li>
+              </li>  */
+              }
+
             </ul>
           </div>
-    
+
           {/* Social Links */}
           <div>
             <h3 className="font-bold text-white mb-4">{t.footer.follow}</h3>
             <ul className="space-y-3 text-slate-400">
+              
               <li>
-                <a 
-                  href="https://instagram.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-flex items-center gap-2"
-                >
-                  <span>Instagram</span>
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="https://figma.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-flex items-center gap-2"
-                >
-                  <span>Figma</span>
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="https://linkedin.com" 
-                  target="_blank" 
+                <a
+                  href="https://www.linkedin.com/company/spheradev"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-flex items-center gap-2"
                 >
@@ -144,7 +133,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-    
+
         {/* Logo and Copyright Section */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-slate-800">
           <div className="flex items-center gap-3">
@@ -155,7 +144,7 @@ export default function Footer() {
             </div>
             <span className="font-bold text-white text-lg">SphaeraTech</span>
           </div>
-    
+
           <div className="text-slate-400 text-sm text-center sm:text-right">
             <p>&copy; {new Date().getFullYear()} SphaeraTech. {t.footer.rights || 'All rights reserved.'}</p>
             <p className="mt-1">
@@ -169,7 +158,7 @@ export default function Footer() {
             </p>
           </div>
         </div>
-    
+
         {/* Go to Top Button */}
         <div className="flex justify-center mt-8">
           <button
@@ -177,10 +166,10 @@ export default function Footer() {
             className="px-6 py-3 border border-red-500 text-red-500 rounded-full hover:bg-red-500 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-red-500/25 active:scale-95 flex items-center gap-2 group"
             aria-label="Scroll to top"
           >
-            <svg 
-              className="w-5 h-5 transform transition-transform group-hover:-translate-y-1" 
-              fill="none" 
-              stroke="currentColor" 
+            <svg
+              className="w-5 h-5 transform transition-transform group-hover:-translate-y-1"
+              fill="none"
+              stroke="currentColor"
               viewBox="0 0 24 24"
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />

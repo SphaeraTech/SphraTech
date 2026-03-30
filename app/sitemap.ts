@@ -23,15 +23,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
             url: `${SITE_URL}/services/web-development`,
             lastModified: new Date(),
             priority: 0.8,
-        }, {
+        }, 
+        {
             url: `${SITE_URL}/services/mobile-development`,
             lastModified: new Date(),
             priority: 0.8,
-        }, {
+        }, 
+        {
             url: `${SITE_URL}/services/seo-services`,
             lastModified: new Date(),
             priority: 0.8,
-        }, {
+        }, 
+        {
             url: `${SITE_URL}/blog`,
             lastModified: new Date(),
             priority: 0.8,
