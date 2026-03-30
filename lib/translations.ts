@@ -19,9 +19,9 @@ export const translations = {
       title4: 'Reality',
       title5: 'with us',
       subtitle: 'Contact us today and discover how we can elevate your business to new heights!',
-      ctaBtn:'Get started',
-      seeWorkBtn:'See Our Work',
-      scrollBtn:'Scroll to explore'
+      ctaBtn: 'Get started',
+      seeWorkBtn: 'See Our Work',
+      scrollBtn: 'Scroll to explore'
     },
     services: {
       title: 'Our Services',
@@ -73,7 +73,7 @@ export const translations = {
             pictures: ["saas-projects/cargoflow/front.png", "saas-projects/cargoflow/02.png"],
 
           }
-         
+
         ]
       },
       webDev: {
@@ -173,7 +173,8 @@ export const translations = {
             question: 'Do you help with app store submission?',
             answer: 'Yes, we handle the entire app store submission process for both Apple App Store and Google Play Store, including preparing all required assets and metadata.'
           }
-        ]
+        ],
+        clients: []
       },
       seo: {
         title: 'SEO Services',
@@ -212,8 +213,9 @@ export const translations = {
           {
             question: 'What\'s included in your SEO services?',
             answer: 'Our services include keyword research, on-page optimization, technical SEO, content strategy, link building, and regular performance reporting.'
-          }
-        ]
+          },
+        ],
+        clients: []
       },
     },
     why: {
@@ -283,7 +285,7 @@ export const translations = {
       technologies: 'Technologies & Tools',
       technologiesDesc: 'We use cutting-edge technologies to build robust solutions',
       ourProjects: 'Our Projects',
-      projectsDesc: 'See what we\'ve built for our clients', 
+      projectsDesc: 'See what we\'ve built for our clients',
       visitSite: 'Visit Site',
       faq: 'Frequently Asked Questions',
       features: {
@@ -452,7 +454,7 @@ export const translations = {
       heroTitle1: 'We are',
       heroTitle2: 'SphaeraTech',
       heroSubtitle: 'A passionate digital agency on a mission to help businesses transform their boldest ideas into world-class digital experiences.',
-     
+
       storyTitle1: 'From a',
       storyHighlight: 'garage idea',
       storyTitle2: 'to a real agency',
@@ -481,7 +483,7 @@ export const translations = {
       value3Desc: 'No hidden fees, no vague timelines, no corporate runaround. You\'ll always know exactly what we\'re building, when, and why.',
       value4Title: 'Client Obsessed',
       value4Desc: 'Your success is our success. We treat every project as if it were our own business on the line — because your growth is what drives ours.',
-    
+
       // Team section
       teamTitle: 'The People Behind the Work',
       teamSubtitle: 'Small team. Massive output.',
@@ -543,7 +545,7 @@ export const translations = {
         },
       },
     }
-    
+
   },
   fr: {
     nav: {
@@ -707,7 +709,8 @@ export const translations = {
             question: 'Aidez-vous à la soumission sur les stores ?',
             answer: 'Oui, nous gérons l’intégralité du processus de soumission sur les stores pour l’App Store d’Apple et le Google Play Store, y compris la préparation de tous les actifs et métadonnées requis.'
           }
-        ]
+        ],
+        clients: []
       },
       seo: {
         title: 'Services SEO',
@@ -747,7 +750,8 @@ export const translations = {
             question: 'Que comprend vos services SEO ?',
             answer: 'Nos services incluent la recherche de mots-clés, l’optimisation on-page, le SEO technique, la stratégie de contenu, le netlinking et des rapports de performance réguliers.'
           }
-        ]
+        ],
+        clients: []
       }
     },
     why: {
@@ -986,7 +990,7 @@ export const translations = {
       heroTitle1: 'Nous sommes',
       heroTitle2: 'SphaeraTech',
       heroSubtitle: 'Une agence digitale passionnée en mission pour aider les entreprises à transformer leurs idées les plus audacieuses en expériences digitales de classe mondiale.',
-  
+
       storyTitle1: 'D’une',
       storyHighlight: 'idée de garage',
       storyTitle2: 'à une vraie agence',
@@ -1015,7 +1019,7 @@ export const translations = {
       value3Desc: 'Pas de frais cachés, pas de délais vagues, pas de jargon corporatif. Vous saurez toujours exactement ce que nous construisons, quand et pourquoi.',
       value4Title: 'Obsédés par le Client',
       value4Desc: 'Votre succès est notre succès. Nous traitons chaque projet comme si c’était notre propre entreprise en jeu — parce que votre croissance est ce qui motive la nôtre.',
-  
+
       teamTitle: 'Les Personnes Derrière le Travail',
       teamSubtitle: 'Petite équipe. Résultats massifs.',
     },
@@ -1240,7 +1244,8 @@ export const translations = {
             question: '¿Ayudan con el envío a las tiendas de aplicaciones?',
             answer: 'Sí, manejamos todo el proceso de envío a las tiendas para la App Store de Apple y Google Play Store, incluyendo la preparación de todos los activos y metadatos requeridos.'
           }
-        ]
+        ],
+        clients: []
       },
       seo: {
         title: 'Servicios SEO',
@@ -1280,7 +1285,8 @@ export const translations = {
             question: '¿Qué incluye sus servicios SEO?',
             answer: 'Nuestros servicios incluyen investigación de palabras clave, optimización en la página, SEO técnico, estrategia de contenido, construcción de enlaces e informes de rendimiento regulares.'
           }
-        ]
+        ],
+        clients: []
       }
     },
     why: {
@@ -1519,7 +1525,7 @@ export const translations = {
       heroTitle1: 'Somos',
       heroTitle2: 'SphaeraTech',
       heroSubtitle: 'Una agencia digital apasionada en una misión para ayudar a las empresas a transformar sus ideas más audaces en experiencias digitales de clase mundial.',
-  
+
       storyTitle1: 'De una',
       storyHighlight: 'idea en un garaje',
       storyTitle2: 'a una agencia real',
@@ -1548,7 +1554,7 @@ export const translations = {
       value3Desc: 'Sin tarifas ocultas, sin plazos vagos, sin jerga corporativa. Siempre sabrás exactamente qué estamos construyendo, cuándo y por qué.',
       value4Title: 'Obsesionados con el Cliente',
       value4Desc: 'Tu éxito es nuestro éxito. Tratamos cada proyecto como si fuera nuestro propio negocio en juego, porque tu crecimiento es lo que impulsa el nuestro.',
-  
+
       teamTitle: 'Las Personas Detrás del Trabajo',
       teamSubtitle: 'Equipo pequeño. Resultados masivos.',
     },
@@ -1610,5 +1616,5 @@ export const translations = {
       },
     }
   }
-  
+
 };

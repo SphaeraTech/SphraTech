@@ -2,7 +2,7 @@ import { Globe, Terminal, Code, Palette, Smartphone, LucideIcon } from 'lucide-r
 
 export interface Service {
   slug: string;
-  icon: LucideIcon;
+  iconName: string;
   gradient: string;
   border: string;
   iconBg: string;
@@ -15,7 +15,7 @@ export const servicesData: Service[] = [
 
   {
     slug: 'saas-solutions',
-    icon: Code,
+    iconName: 'Code',
     gradient: 'from-custom-red/20 to-red-950/20',
     border: 'border-red-800/30 hover:border-red-600/50',
     iconBg: 'from-red-500 to-red-700',
@@ -25,7 +25,7 @@ export const servicesData: Service[] = [
   },
   {
     slug: 'web-development',
-    icon: Terminal, // Using Lucide React's Code icon
+    iconName: 'Terminal',
     gradient: 'from-custom-red/20 to-red-950/20',
     border: 'border-red-800/30 hover:border-red-600/50',
     iconBg: 'from-red-500 to-red-700',
@@ -35,7 +35,7 @@ export const servicesData: Service[] = [
   },
   {
     slug: 'mobile-development',
-    icon: Smartphone,
+    iconName: 'Smartphone',
     gradient: 'from-custom-red/20 to-red-950/20',
     border: 'border-red-800/30 hover:border-red-600/50',
     iconBg: 'from-red-500 to-red-700',
@@ -44,7 +44,7 @@ export const servicesData: Service[] = [
     descKey: 'mobile'
   }, {
     slug: 'seo-services',
-    icon: Globe,
+    iconName: 'Globe',
     gradient: 'from-custom-red/20 to-red-950/20',
     border: 'border-red-800/30 hover:border-red-600/50',
     iconBg: 'from-red-500 to-red-700',

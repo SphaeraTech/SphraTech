@@ -29,7 +29,7 @@ export default function Navigation() {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           <a href="/#home" className="hover:text-red-400 transition">{t.nav.home}</a>
-          <a href="/#services" className="hover:text-red-400 transition">{t.nav.services}</a>
+          <a href="/services" className="hover:text-red-400 transition">{t.nav.services}</a>
 
           {/* Products Dropdown */}
           <div className="relative">
@@ -111,7 +111,7 @@ export default function Navigation() {
         <div className="md:hidden bg-slate-900 border-t border-slate-800">
           <div className="flex flex-col gap-4 px-6 py-4">
             <a href="/#home" className="hover:text-red-400 transition">{t.nav.home}</a>
-            <a href="/#services" className="hover:text-red-400 transition">{t.nav.services}</a>
+            <a href="/services" className="hover:text-red-400 transition">{t.nav.services}</a>
 
             {/* Mobile Products Dropdown */}
             <div>
