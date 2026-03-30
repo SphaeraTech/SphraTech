@@ -56,7 +56,7 @@ export default function Footer() {
                   href="/services/saas-solutions"
                   className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
                 >
-                  {t.footer.saas}c
+                  {t.footer.saas}
                 </a>
               </li>
               <li>
