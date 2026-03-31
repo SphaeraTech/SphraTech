@@ -18,7 +18,7 @@ const ICONS: Record<string, LucideIcon> = {
 const SLUG = 'saas-solutions';
 
 export const metadata: Metadata = {
-    title: 'SaaS Solutions - SphaeraTech',
+    title: 'SaaS Solutions - SpheraTech',
     description: 'We develop scalable and secure Software as a Service solutions tailored to your business needs.',
 };
 

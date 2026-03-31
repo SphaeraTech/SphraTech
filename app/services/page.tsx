@@ -8,7 +8,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-    title: 'Our Services - SphaeraTech',
+    title: 'Our Services - SpheraTech',
     description: 'Professional web development, SEO, SaaS solutions, and mobile app development services.',
 };
 

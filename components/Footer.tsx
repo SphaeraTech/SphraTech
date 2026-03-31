@@ -141,11 +141,11 @@ export default function Footer() {
             <img src="/navbar-logo.png" alt="SphæraTech Logo" width="64px" />
 
             </div>
-            <span className="font-bold text-white text-lg">SphaeraTech</span>
+            <span className="font-bold text-white text-lg">SpheraTech</span>
           </div>
 
           <div className="text-slate-400 text-sm text-center sm:text-right">
-            <p>&copy; {new Date().getFullYear()} SphaeraTech. {t.footer.rights || 'All rights reserved.'}</p>
+            <p>&copy; {new Date().getFullYear()} SpheraTech. {t.footer.rights || 'All rights reserved.'}</p>
             <p className="mt-1">
               <a href="/privacy" className="hover:text-white transition-colors mx-2">
                 Privacy Policy

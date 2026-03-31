@@ -6,7 +6,7 @@ import { ArrowLeft } from 'lucide-react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Our Products - SphaeraTech',
+  title: 'Our Products - SpheraTech',
   description: 'Explore our range of innovative software products and solutions',
 };
 

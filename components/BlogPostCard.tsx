@@ -80,7 +80,7 @@ const BlogPostCard = ({ post }: BlogPostCardProps) => {
                 />
               </div>
             )}
-            <span>{post.author?.name || "SphaeraTech"}</span>
+            <span>{post.author?.name || "SpheraTech"}</span>
           </div>
           <time dateTime={post.publishedAt}>{formattedDate}</time>
         </div>

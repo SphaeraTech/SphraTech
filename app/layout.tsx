@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
-  title: "SphaeraTech - Transform Your Vision into Reality",
+  title: "SpheraTech - Transform Your Vision into Reality",
   description: "Web development agency specializing in SEO, SaaS Solutions, UI/UX Design, and Mobile Development",
 };
 

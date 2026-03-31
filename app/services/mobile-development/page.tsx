@@ -18,7 +18,7 @@ const ICONS: Record<string, LucideIcon> = {
 const SLUG = 'mobile-development';
 
 export const metadata: Metadata = {
-    title: 'Mobile Development - SphaeraTech',
+    title: 'Mobile Development - SpheraTech',
     description: 'Our team specializes in developing robust and user-friendly mobile applications for iOS and Android.',
 };
 

@@ -18,7 +18,7 @@ const ICONS: Record<string, LucideIcon> = {
 const SLUG = 'seo-services';
 
 export const metadata: Metadata = {
-    title: 'SEO Services - SphaeraTech',
+    title: 'SEO Services - SpheraTech',
     description: 'We optimize your website to improve search engine rankings and drive organic traffic.',
 };
 

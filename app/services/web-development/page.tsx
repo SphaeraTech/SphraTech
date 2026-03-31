@@ -18,7 +18,7 @@ const ICONS: Record<string, LucideIcon> = {
 const SLUG = 'web-development';
 
 export const metadata: Metadata = {
-    title: 'Web Development - SphaeraTech',
+    title: 'Web Development - SpheraTech',
     description: 'We build fast, scalable, and secure web applications using modern technologies and best practices.',
 };
 

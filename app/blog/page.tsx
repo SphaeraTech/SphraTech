@@ -6,8 +6,8 @@ import { WordPressPost } from '@/types/blog';
 import { getPosts } from '@/lib/sanity';
 
 export const metadata: Metadata = {
-    title: 'Blog - SphaeraTech',
-    description: 'Latest insights, news, and updates from SphaeraTech',
+    title: 'Blog - SpheraTech',
+    description: 'Latest insights, news, and updates from SpheraTech',
 };
 
 

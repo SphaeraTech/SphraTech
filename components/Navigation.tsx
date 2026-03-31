@@ -22,7 +22,7 @@ export default function Navigation() {
             </a>
           </div>
           <span className="ml-5 text-xl font-bold">
-            <a href="/">SphaeraTech</a>
+            <a href="/">SpheraTech</a>
           </span>
         </div>
 
