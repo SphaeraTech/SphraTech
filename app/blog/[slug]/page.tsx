@@ -4,6 +4,8 @@ import { PortableText } from '@portabletext/react'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
+export const revalidate = 60; // revalidate every 60 seconds
+
 interface PageProps {
   params: Promise<{
     slug: string

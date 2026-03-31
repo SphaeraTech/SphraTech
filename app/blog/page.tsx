@@ -2,13 +2,15 @@ import React from 'react';
 import Navigation from '@/components/Navigation';
 import BlogPostCard from '@/components/BlogPostCard';
 import { Metadata } from 'next';
-import { WordPressPost } from '@/types/blog';
+import { SanityPost } from '@/types/blog';
 import { getPosts } from '@/lib/sanity';
 
 export const metadata: Metadata = {
     title: 'Blog - SpheraTech',
     description: 'Latest insights, news, and updates from SpheraTech',
 };
+
+export const revalidate = 60; // revalidate every 60 seconds
 
 
 
@@ -41,7 +43,7 @@ export default async function BlogPage() {
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                     <>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {posts.map((post) => (
+                            {posts.map((post: SanityPost) => (
                                 <BlogPostCard key={post._id} post={post} />
                             ))}
                         </div>
