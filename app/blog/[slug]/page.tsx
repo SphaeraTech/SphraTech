@@ -5,9 +5,9 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 async function getPost(slug: string) {
@@ -26,8 +26,34 @@ async function getPost(slug: string) {
 
   return client.fetch(query, { slug })
 }
+const components = {
+  types: {
+    image: ({ value }: any) => (
+      <div className="relative w-full h-[400px] my-10 rounded-xl overflow-hidden">
+        <Image
+          src={urlFor(value).url()}
+          alt={value.alt || 'Blog Image'}
+          fill
+          className="object-cover"
+        />
+      </div>
+    ),
+  },
+  block: {
+    h1: ({ children }: any) => <h1 className="text-4xl font-bold my-6">{children}</h1>,
+    h2: ({ children }: any) => <h2 className="text-3xl font-bold my-4">{children}</h2>,
+    h3: ({ children }: any) => <h3 className="text-2xl font-bold my-4">{children}</h3>,
+    normal: ({ children }: any) => <p className="text-lg leading-relaxed mb-4 text-slate-300">{children}</p>,
+  },
+  list: {
+    bullet: ({ children }: any) => <ul className="list-disc ml-6 mb-4 space-y-2">{children}</ul>,
+    number: ({ children }: any) => <ol className="list-decimal ml-6 mb-4 space-y-2">{children}</ol>,
+  },
+}
+
 export default async function BlogPostPage({ params }: PageProps) {
-  const post = await getPost(params.slug)
+  const { slug } = await params
+  const post = await getPost(slug)
 
   if (!post) return notFound()
 
@@ -40,8 +66,8 @@ export default async function BlogPostPage({ params }: PageProps) {
     }
   )
 
-  return ( 
-    <article className="max-w-4xl mx-auto px-6 py-12">
+  return (
+    <article className="max-w-4xl mx-auto px-6 pt-32 pb-12">
       {/* Title */}
       <h1 className="text-4xl font-bold mb-6">{post.title}</h1>
 
@@ -61,7 +87,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           <p>{post.author?.name}</p>
           <time dateTime={post.publishedAt}>{formattedDate}</time>
         </div>
-        
+
       </div>
 
       {/* Main Image */}
@@ -77,8 +103,8 @@ export default async function BlogPostPage({ params }: PageProps) {
       )}
 
       {/* Content */}
-      <div className="prose prose-invert max-w-none">
-        <PortableText value={post.body} />
+      <div className="prose prose-invert prose-slate max-w-none">
+        <PortableText value={post.body} components={components} />
       </div>
     </article>
   )
