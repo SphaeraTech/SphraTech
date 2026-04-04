@@ -6,7 +6,11 @@ import ProcessSection from '@/components/ProcessSection';
 import FAQSection from '@/components/FAQSection';
 import QuoteSection from '@/components/QuoteSection';
 import ProductsSection from '@/components/ProductsSection';
-
+export const metadata: Metadata = {
+  title: "Transform Your Vision into Reality",
+  description:
+    "Spheratech helps businesses build modern websites, SaaS platforms, and scalable digital solutions designed for growth.",
+};
 export default function Home() {
   return (
     <main

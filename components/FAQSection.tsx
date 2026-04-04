@@ -123,14 +123,14 @@ export default function FAQSection() {
                       w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0
                       transition-transform duration-300
                       ${isOpen
-                                                ? 'bg-gradient-to-r from-violet-500/20 to-blue-500/20 rotate-180'
-                                                : 'bg-slate-800'
+                                                ? 'bg-gradient-to-r from-violet-500/20 to-red-500/20 rotate-180'
+                                                : 'bg-red-800'
                                             }
                     `}>
                                             {isOpen ? (
-                                                <Minus className="w-5 h-5 text-violet-400" />
+                                                <Minus className="w-5 h-5 text-red-400" />
                                             ) : (
-                                                <Plus className="w-5 h-5 text-slate-400" />
+                                                <Plus className="w-5 h-5 text-red-400" />
                                             )}
                                         </div>
                                     </button>
@@ -141,7 +141,7 @@ export default function FAQSection() {
                                                 initial={{ opacity: 0, height: 0 }}
                                                 animate={{ opacity: 1, height: 'auto' }}
                                                 exit={{ opacity: 0, height: 0 }}
-                                                transition={{ duration: 0.3 }}
+                                                transition={{ duration: 0.2 }}
                                                 className="px-8 pb-6"
                                             >
                                                 <div className="pl-12 border-l-2 border-gradient-to-b from-violet-500/30 to-blue-500/30">

@@ -42,7 +42,7 @@ export default function HeroSection() {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto mb-12">
+          <p className=" md:text-2xl text-slate-300 max-w-3xl mx-auto mb-12">
             {t.hero.subtitle}
           </p>
 

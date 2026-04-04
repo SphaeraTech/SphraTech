@@ -18,8 +18,8 @@ export const translations = {
       title3: 'into',
       title4: 'Reality',
       title5: 'with us',
-      subtitle: 'Contact us today and discover how we can elevate your business to new heights!',
-      ctaBtn: 'Get started',
+      subtitle: 'We build fast, scalable, and secure digital solutions that elevate your business — from stunning websites to full digital transformation.',
+      ctaBtn: 'Start your project today',
       seeWorkBtn: 'See Our Work',
       scrollBtn: 'Scroll to explore'
     },
@@ -30,7 +30,7 @@ export const translations = {
       saas: {
         title: 'SaaS Solutions',
         desc: 'We develop scalable and secure Software as a Service solutions tailored to your business needs.',
-        longDesc: 'Transform your business ideas into powerful SaaS platforms. We build cloud-based solutions that scale with your business, ensuring security, reliability, and exceptional user experience.',
+        longDesc: 'We develop scalable and secure Software as a Service solutions tailored to your business needs. Our web development agency combines cutting-edge technology with intelligent architecture to create platforms that grow with your business—from MVP to millions of users.',
         benefits: [
           'Scalable architecture',
           'Cloud-native solutions',
@@ -138,7 +138,7 @@ export const translations = {
       mobile: {
         title: 'Mobile Development',
         desc: 'Our team specializes in developing robust and user-friendly mobile applications for iOS and Android.',
-        longDesc: 'Build native and cross-platform mobile applications that deliver exceptional performance. We create apps that users love, with seamless functionality across all devices.',
+        longDesc: 'Our team specializes in developing robust and user-friendly mobile applications for iOS and Android. Seamlessly integrated with your web infrastructure, our mobile solutions ensure your customers can engage with your brand anytime, anywhere.',
         benefits: [
           'Native & cross-platform',
           'Smooth performance',
@@ -220,30 +220,30 @@ export const translations = {
     },
     why: {
       title: "Why Choose\nUs?",
-      subtitle: "We don't just build products; we create thoughtful digital experiences that help brands stand out and grow.",
+      subtitle: "We're not just another web development agency. We're strategic partners invested in your success. Every decision we make, from architecture to design, is driven by your business goals and your customers' needs.",
       portfolio: "View Portfolio",
       start: "Start Project",
       cards: {
         quality: {
           title: "Quality Control",
-          desc: "Excellence in every realization. We maintain rigorous standards to ensure every pixel and line of code meets world-class benchmarks.",
+          desc: "Excellence in every realization. As a web development agency, we maintain rigorous standards to ensure every pixel and line of code meets world-class benchmarks. No shortcuts, no compromises.",
           tag: "Precision Engineered"
         },
         price: {
           title: "Value-Driven Pricing",
-          desc: "Affordable and reasonable without compromising on the high-end boutique quality your brand deserves."
+          desc: "Affordable and reasonable without compromising on the high-end boutique quality your brand deserves. We believe a web development agency should deliver enterprise-level results without enterprise-level price tags."
         },
         seo: {
           title: "SEO Optimized",
-          desc: "Natural referencing built into the core. Our SEO-first code ensures your project ranks from day one."
+          desc: "Natural referencing built into the core. Our SEO-first code ensures your project ranks from day one. We don't separate web development from SEO strategy."
         },
         design: {
           title: "Elegant Design",
-          desc: "Custom graphic quality tailored for your specific brand identity. No templates, just pure creativity."
+          desc: "Custom graphic quality tailored for your specific brand identity. No templates, no stock solutions."
         },
         fast: {
           title: "Fast Service",
-          desc: "High-performing products delivered in record time frames."
+          desc: "High-performing products delivered in record time frames. Speed without sacrifice—that's our commitment to you."
         },
         personal: {
           title: "Personalized Touch",
@@ -252,9 +252,10 @@ export const translations = {
       }
     },
     cta: {
-      title: "Let's discuss the idea",
-      desc: "Ready to transform your vision into reality? Let's collaborate and create something extraordinary together.",
-      button: "LET'S GO"
+      title: "Let's discuss your project",
+      desc: " Let's discuss your idea and explore how our web development agency ( or Spheratech) can transform your vision into a digital powerhouse that drives real business growth.",
+      button: "Schedule Your Consultation",
+      tooltip: "Whether you're a startup with a bold vision or an established enterprise looking to modernize your digital presence, we're ready to help."
     },
     footer: {
       company: 'Company',
@@ -555,7 +556,7 @@ export const translations = {
       ourProducts: 'Nos Produits',
       freeTools: 'Outils Gratuits',
       blog: 'Blog',
-      about: 'À Propos',
+      about: 'À propos',
       contact: 'Nous contacter'
     },
     hero: {
@@ -564,8 +565,8 @@ export const translations = {
       title3: 'en',
       title4: 'Réalité',
       title5: 'avec nous',
-      subtitle: 'Contactez-nous dès aujourd’hui et découvrez comment nous pouvons propulser votre entreprise vers de nouveaux sommets !',
-      ctaBtn: 'Commencer',
+      subtitle: 'Nous créons des solutions numériques rapides, évolutives et sécurisées qui élèvent votre entreprise — des sites web époustouflants à la transformation numérique complète.',
+      ctaBtn: 'Commencez votre projet aujourd’hui',
       seeWorkBtn: 'Voir Nos Réalisations',
       scrollBtn: 'Faites défiler pour explorer'
     },
@@ -576,7 +577,7 @@ export const translations = {
       saas: {
         title: 'Solutions SaaS',
         desc: 'Nous développons des solutions SaaS évolutives et sécurisées, adaptées à vos besoins métiers.',
-        longDesc: 'Transformez vos idées en plateformes SaaS puissantes. Nous créons des solutions basées sur le cloud qui évoluent avec votre entreprise, garantissant sécurité, fiabilité et une expérience utilisateur exceptionnelle.',
+        longDesc: 'Nous développons des solutions SaaS évolutives et sécurisées, adaptées à vos besoins métiers. Notre agence de développement web combine les technologies de pointe avec une architecture intelligente pour créer des plateformes qui grandissent avec votre entreprise — du MVP à des millions d’utilisateurs.',
         benefits: [
           'Architecture évolutive',
           'Solutions natives cloud',
@@ -585,45 +586,38 @@ export const translations = {
         ],
         process: [
           {
-            title: 'Découverte et Planification',
-            desc: 'Comprendre vos besoins métiers et planifier l’architecture'
+            title: 'Découverte & Planification',
+            desc: 'Comprendre vos exigences métiers et planifier l’architecture'
           },
           {
-            title: 'Développement et Tests',
-            desc: 'Construire votre plateforme SaaS avec des tests rigoureux à chaque étape'
+            title: 'Développement & Tests',
+            desc: 'Construction de votre plateforme SaaS avec des tests rigoureux à chaque étape'
           },
           {
-            title: 'Lancement et Évolutivité',
+            title: 'Lancement & Évolutivité',
             desc: 'Déploiement en production et mise à l’échelle au fur et à mesure de la croissance de votre base d’utilisateurs'
           }
         ],
         technologies: ['React', 'Node.js', 'AWS', 'Docker', 'Kubernetes', 'PostgreSQL'],
         faqs: [
           {
-            question: 'Quelles technologies utilisez-vous pour le développement SaaS ?',
-            answer: 'Nous utilisons des technologies cloud modernes, notamment React, Node.js, AWS et Docker, pour créer des plateformes SaaS évolutives et maintenables.'
+            question: 'Quelles technologies utilisez-vous pour le développement SaaS ?',
+            answer: 'Nous utilisons des technologies cloud-native modernes, notamment React, Node.js, AWS et Docker, pour construire des plateformes SaaS évolutives et maintenables.'
           },
           {
-            question: 'Comment garantissez-vous la sécurité ?',
-            answer: 'Nous mettons en œuvre des pratiques de sécurité standard, notamment le chiffrement, l’authentification sécurisée, des audits de sécurité réguliers et le respect des réglementations sur la protection des données.'
+            question: 'Comment assurez-vous la sécurité ?',
+            answer: 'Nous mettons en œuvre des pratiques de sécurité conformes aux normes du secteur, notamment le chiffrement, l’authentification sécurisée, des audits de sécurité réguliers et le respect des réglementations sur la protection des données.'
           },
           {
-            question: 'Pouvez-vous aider avec des applications SaaS existantes ?',
+            question: 'Pouvez-vous aider avec des applications SaaS existantes ?',
             answer: 'Oui, nous pouvons vous aider à moderniser, mettre à l’échelle ou ajouter de nouvelles fonctionnalités à vos applications SaaS existantes.'
           }
         ],
         clients: [
           {
-            name: "BS move",
-            description: "Site web pour une entreprise de déménagement complet avec calculateur de devis, modèles d’emails personnalisés...",
-            pictures: ["client-projects/web-dev/bs-move/pic1.png", "client-projects/web-dev/bs-move/pic4.png", "client-projects/web-dev/bs-move/pic3.png", "client-projects/web-dev/bs-move/pic2.png"],
-            siteLink: "https://bsmove.com/"
-          },
-          {
-            name: "EMSG Mansoure",
-            description: "Site web pour la plus grande entreprise allemande de pièces automobiles en Algérie.",
-            pictures: ["client-projects/web-dev/emsg/pic1.png", "client-projects/web-dev/emsg/pic4.png", "client-projects/web-dev/emsg/pic3.png", "client-projects/web-dev/emsg/pic2.png"],
-            siteLink: "https://bsmove.com/"
+            name: "CargoFlow",
+            description: "Une plateforme qui aide les entreprises de déménagement à gérer les devis, la planification et les opérations commerciales de manière efficace.",
+            pictures: ["saas-projects/cargoflow/front.png", "saas-projects/cargoflow/02.png"]
           }
         ]
       },
@@ -643,38 +637,52 @@ export const translations = {
         ],
         process: [
           {
-            title: 'Planification et Architecture',
+            title: 'Planification & Architecture',
             desc: 'Définition des exigences, sélection de la stack technologique et conception de l’architecture système'
           },
           {
-            title: 'Développement et Implémentation',
+            title: 'Développement & Implémentation',
             desc: 'Construction des fonctionnalités avec un code propre, en suivant les meilleures pratiques et en implémentant les fonctionnalités principales'
           },
           {
-            title: 'Tests et Déploiement',
+            title: 'Tests & Déploiement',
             desc: 'Tests approfondis, correction des bugs et déploiement en production avec mise en place de la surveillance'
           }
         ],
         technologies: ['React', 'Next.js', 'TypeScript', 'Node.js', 'Express.js', 'MongoDB', 'PostgreSQL', 'Tailwind CSS', 'AWS', 'Docker'],
         faqs: [
           {
-            question: 'Quelle est la différence entre le développement frontend et backend ?',
+            question: 'Quelle est la différence entre le développement frontend et backend ?',
             answer: 'Le développement frontend se concentre sur l’interface utilisateur et les fonctionnalités côté client, tandis que le développement backend gère la logique côté serveur, les bases de données et les API.'
           },
           {
-            question: 'Proposez-vous une maintenance continue ?',
-            answer: 'Oui, nous offrons des forfaits de maintenance qui incluent des mises à jour, des corrections de bugs, des correctifs de sécurité et une surveillance des performances après le déploiement.'
+            question: 'Proposez-vous une maintenance continue ?',
+            answer: 'Oui, nous offrons des forfaits de maintenance qui incluent les mises à jour, les corrections de bugs, les correctifs de sécurité et la surveillance des performances après le déploiement.'
           },
           {
-            question: 'Pouvez-vous travailler avec des codebases existantes ?',
-            answer: 'Absolument ! Nous pouvons améliorer, refactoriser ou ajouter des fonctionnalités à vos applications web existantes tout en maintenant la qualité du code.'
+            question: 'Pouvez-vous travailler avec des codebases existantes ?',
+            answer: 'Absolument ! Nous pouvons améliorer, refactoriser ou ajouter des fonctionnalités à vos applications web existantes tout en maintenant la qualité du code.'
+          }
+        ],
+        clients: [
+          {
+            name: "BS move",
+            description: "Site web pour une entreprise de déménagement complet avec calculateur de devis, modèles d’emails personnalisés, etc.",
+            pictures: ["client-projects/web-dev/bs-move/pic1.png", "client-projects/web-dev/bs-move/pic4.png", "client-projects/web-dev/bs-move/pic3.png", "client-projects/web-dev/bs-move/pic2.png"],
+            siteLink: "https://bsmove.com/"
+          },
+          {
+            name: "EMSG Mansoure",
+            description: "Site web pour la plus grande entreprise allemande de pièces automobiles en Algérie.",
+            pictures: ["client-projects/web-dev/emsg/pic1.png", "client-projects/web-dev/emsg/pic4.png", "client-projects/web-dev/emsg/pic3.png", "client-projects/web-dev/emsg/pic2.png"],
+            siteLink: "https://bsmove.com/"
           }
         ]
       },
       mobile: {
         title: 'Développement Mobile',
         desc: 'Notre équipe se spécialise dans le développement d’applications mobiles robustes et conviviales pour iOS et Android.',
-        longDesc: 'Créez des applications mobiles natives et multiplateformes offrant des performances exceptionnelles. Nous développons des applications que les utilisateurs adorent, avec une fonctionnalité fluide sur tous les appareils.',
+        longDesc: 'Notre équipe se spécialise dans le développement d’applications mobiles robustes et conviviales pour iOS et Android. Intégrées de manière transparente à votre infrastructure web, nos solutions mobiles garantissent que vos clients peuvent interagir avec votre marque à tout moment et en tout lieu.',
         benefits: [
           'Applications natives et multiplateformes',
           'Performances fluides',
@@ -683,71 +691,71 @@ export const translations = {
         ],
         process: [
           {
-            title: 'Planification et Design',
+            title: 'Planification & Design',
             desc: 'Définition des fonctionnalités de l’application, des flux utilisateurs et création de designs intuitifs'
           },
           {
-            title: 'Développement et Assurance Qualité',
-            desc: 'Construction de votre application avec un code propre et une assurance qualité rigoureuse'
+            title: 'Développement & Assurance Qualité',
+            desc: 'Construction de votre application avec un code propre et une assurance qualité approfondie'
           },
           {
-            title: 'Lancement et Maintenance',
-            desc: 'Soumission sur les stores et mises à jour continues et support'
+            title: 'Lancement & Maintenance',
+            desc: 'Soumission aux stores et mises à jour continues et support'
           }
         ],
         technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Firebase', 'GraphQL'],
         faqs: [
           {
-            question: 'Natif ou Multiplateforme : lequel est le meilleur ?',
-            answer: 'Les applications natives offrent les meilleures performances pour les applications complexes, tandis que les solutions multiplateformes comme React Native ou Flutter sont rentables pour la plupart des cas d’usage avec d’excellentes performances.'
+            question: 'Native vs Cross-platform : Quelle est la meilleure option ?',
+            answer: 'Les applications natives offrent les meilleures performances pour les applications complexes, tandis que les solutions multiplateformes comme React Native ou Flutter sont économiques pour la plupart des cas d’usage avec d’excellentes performances.'
           },
           {
-            question: 'Combien de temps faut-il pour développer une application mobile ?',
-            answer: 'Les délais varient en fonction de la complexité. Une application simple prend 2-3 mois, tandis que les applications complexes peuvent prendre 6+ mois. Nous fournissons des délais détaillés après l’analyse des exigences.'
+            question: 'Combien de temps faut-il pour développer une application mobile ?',
+            answer: 'Les délais varient selon la complexité. Une application simple prend 2-3 mois, tandis que les applications complexes peuvent prendre 6+ mois. Nous fournissons des délais détaillés après l’analyse des exigences.'
           },
           {
-            question: 'Aidez-vous à la soumission sur les stores ?',
-            answer: 'Oui, nous gérons l’intégralité du processus de soumission sur les stores pour l’App Store d’Apple et le Google Play Store, y compris la préparation de tous les actifs et métadonnées requis.'
+            question: 'Aidez-vous à la soumission sur les stores ?',
+            answer: 'Oui, nous gérons l’intégralité du processus de soumission sur les stores pour l’App Store d’Apple et le Google Play Store, y compris la préparation de tous les éléments et métadonnées requis.'
           }
         ],
         clients: []
       },
       seo: {
         title: 'Services SEO',
-        desc: 'Nous optimisons votre site web pour améliorer son classement dans les moteurs de recherche et générer du trafic organique.',
-        longDesc: 'Nos services SEO complets aident les entreprises à augmenter leur visibilité en ligne et à attirer un trafic plus qualifié. Nous utilisons des stratégies éprouvées, notamment la recherche de mots-clés, l’optimisation on-page, le SEO technique et le netlinking pour améliorer votre classement dans les moteurs de recherche.',
+        desc: 'Nous optimisons votre site web pour améliorer les classements dans les moteurs de recherche et générer du trafic organique.',
+        longDesc: 'Nos services SEO complets aident les entreprises à augmenter leur visibilité en ligne et à attirer plus de trafic qualifié. Nous utilisons des stratégies éprouvées, notamment la recherche de mots-clés, l’optimisation on-page, le SEO technique et le netlinking pour améliorer vos classements dans les moteurs de recherche.',
         benefits: [
           'Augmentation du trafic organique',
-          'Meilleur classement dans les moteurs de recherche',
+          'Meilleurs classements dans les moteurs de recherche',
           'Meilleure expérience utilisateur',
           'Taux de conversion améliorés'
         ],
         process: [
           {
-            title: 'Analyse et Audit',
-            desc: 'Nous analysons votre performance SEO actuelle et identifions les opportunités d’amélioration'
+            title: 'Analyse & Audit',
+            desc: 'Nous analysons vos performances SEO actuelles et identifions les opportunités d’amélioration'
           },
           {
             title: 'Développement de Stratégie',
             desc: 'Création d’une stratégie SEO personnalisée adaptée à vos objectifs métiers'
           },
           {
-            title: 'Implémentation et Optimisation',
-            desc: 'Exécution de la stratégie et optimisation continue pour obtenir les meilleurs résultats'
+            title: 'Implémentation & Optimisation',
+            desc: 'Exécution de la stratégie et optimisation continue pour les meilleurs résultats'
           }
         ],
         technologies: ['Google Analytics', 'SEMrush', 'Ahrefs', 'Moz', 'Screaming Frog', 'Google Search Console'],
         faqs: [
           {
-            question: 'Combien de temps faut-il pour voir des résultats en SEO ?',
-            answer: 'Le SEO est une stratégie à long terme. Vous pouvez généralement vous attendre à voir des résultats significatifs dans 3 à 6 mois, bien que certaines améliorations puissent être visibles plus tôt.'
+            question: 'Combien de temps faut-il pour voir les résultats du SEO ?',
+            answer: 'Le SEO est une stratégie à long terme. Vous pouvez généralement voir des résultats significatifs en 3-6 mois, bien que certaines améliorations puissent être visibles plus tôt.'
           },
           {
-            question: 'Garantissez-vous un classement en première page ?',
+            question: 'Garantissez-vous une place en première page ?',
             answer: 'Bien que nous ne puissions pas garantir des classements spécifiques (aucune agence SEO éthique ne le peut), nous garantissons de suivre les meilleures pratiques et de travailler assidûment pour améliorer votre visibilité.'
           },
           {
-            question: 'Que comprend vos services SEO ?',
+            question: 'Que comprennent vos services SEO ?',
             answer: 'Nos services incluent la recherche de mots-clés, l’optimisation on-page, le SEO technique, la stratégie de contenu, le netlinking et des rapports de performance réguliers.'
           }
         ],
@@ -755,46 +763,47 @@ export const translations = {
       }
     },
     why: {
-      title: "Pourquoi\nNous Choisir ?",
-      subtitle: "Nous ne construisons pas seulement des produits ; nous créons des expériences numériques réfléchies qui aident les marques à se démarquer et à grandir.",
+      title: "Pourquoi Nous\nChoisir ?",
+      subtitle: "Nous ne sommes pas une simple agence de développement web. Nous sommes des partenaires stratégiques investis dans votre succès. Chaque décision que nous prenons, de l’architecture au design, est motivée par vos objectifs métiers et les besoins de vos clients.",
       portfolio: "Voir le Portfolio",
       start: "Démarrer un Projet",
       cards: {
         quality: {
           title: "Contrôle Qualité",
-          desc: "L’excellence dans chaque réalisation. Nous maintenons des standards rigoureux pour garantir que chaque pixel et chaque ligne de code répondent aux normes mondiales.",
+          desc: "L’excellence dans chaque réalisation. En tant qu’agence de développement web, nous maintenons des standards rigoureux pour garantir que chaque pixel et chaque ligne de code répondent aux normes mondiales. Pas de raccourcis, pas de compromis.",
           tag: "Ingénierie de Précision"
         },
         price: {
           title: "Tarification Axée sur la Valeur",
-          desc: "Abordable et raisonnable sans compromis sur la qualité haut de gamme que mérite votre marque."
+          desc: "Abordable et raisonnable sans compromis sur la qualité haut de gamme que mérite votre marque. Nous croyons qu’une agence de développement web doit offrir des résultats de niveau entreprise sans les prix exorbitants."
         },
         seo: {
           title: "Optimisé SEO",
-          desc: "Le référencement naturel intégré au cœur. Notre code axé sur le SEO garantit que votre projet est bien classé dès le premier jour."
+          desc: "Le référencement naturel intégré dès le cœur. Notre code SEO-first garantit que votre projet est classé dès le premier jour. Nous ne séparons pas le développement web de la stratégie SEO."
         },
         design: {
           title: "Design Élégant",
-          desc: "Une qualité graphique sur mesure pour votre identité de marque spécifique. Pas de templates, juste de la créativité pure."
+          desc: "Qualité graphique sur mesure adaptée à votre identité de marque spécifique. Pas de templates, pas de solutions toutes faites."
         },
         fast: {
           title: "Service Rapide",
-          desc: "Des produits performants livrés dans des délais records."
+          desc: "Produits haute performance livrés dans des délais records. Rapidité sans sacrifice — c’est notre engagement envers vous."
         },
         personal: {
           title: "Touche Personnalisée",
-          desc: "Des produits ajustables et personnalisés. Nous évoluons avec vous, en offrant un support humain à chaque étape."
+          desc: "Produits ajustables et personnalisés. Nous évoluons avec vous, en offrant un support humain à chaque étape."
         }
       }
     },
     cta: {
-      title: "Discutons de votre idée",
-      desc: "Prêt à transformer votre vision en réalité ? Collaborons et créons quelque chose d’extraordinaire ensemble.",
-      button: "C’EST PARTI"
+      title: "Discutons de votre projet",
+      desc: "Discutons de votre idée et explorons comment notre agence de développement web (ou SpheraTech) peut transformer votre vision en une puissance digitale qui stimule une croissance réelle de votre entreprise.",
+      button: "Planifier Votre Consultation",
+      tooltip: "Que vous soyez une startup avec une vision audacieuse ou une entreprise établie cherchant à moderniser votre présence digitale, nous sommes prêts à vous aider."
     },
     footer: {
       company: 'Entreprise',
-      aboutUs: 'À propos',
+      aboutUs: 'À propos de nous',
       team: 'Équipe',
       careers: 'Carrières',
       services: 'Services',
@@ -811,13 +820,13 @@ export const translations = {
     servicePage: {
       benefits: 'Avantages Clés',
       contact: 'Nous Contacter',
-      contactDesc: 'Prêt à commencer ? Contactez-nous dès aujourd’hui pour discuter de votre projet.',
+      contactDesc: 'Prêt à commencer ? Contactez-nous aujourd’hui pour discuter de votre projet.',
       backToServices: 'Retour aux Services',
       getStartedNow: 'Commencer Maintenant',
       howItWorks: 'Comment Ça Marche',
       processDesc: 'Notre processus éprouvé garantit des résultats de qualité et la satisfaction client',
       whyChooseUs: 'Pourquoi Nous Choisir',
-      featuresDesc: 'Nous livrons l’excellence grâce à l’innovation et à l’engagement',
+      featuresDesc: 'Nous livrons l’excellence par l’innovation et le dévouement',
       technologies: 'Technologies & Outils',
       technologiesDesc: 'Nous utilisons des technologies de pointe pour construire des solutions robustes',
       ourProjects: 'Nos Projets',
@@ -827,15 +836,15 @@ export const translations = {
       features: {
         fast: {
           title: 'Livraison Rapide',
-          desc: 'Des délais de livraison rapides sans compromis sur la qualité'
+          desc: 'Délais de réalisation rapides sans compromis sur la qualité'
         },
         secure: {
           title: 'Sécurisé & Fiable',
-          desc: 'Des normes de sécurité et de fiabilité de niveau entreprise'
+          desc: 'Normes de sécurité et de fiabilité de niveau entreprise'
         },
         support: {
           title: 'Support 24/7',
-          desc: 'Un support disponible 24h/24 et 7j/7 pour tous vos besoins'
+          desc: 'Support permanent pour tous vos besoins'
         },
         scalable: {
           title: 'Solutions Évolutives',
@@ -845,7 +854,7 @@ export const translations = {
     },
     process: {
       title: "Notre Processus",
-      subtitle: "Une approche transparente, étape par étape, pour des résultats exceptionnels",
+      subtitle: "Une approche transparente, étape par étape, pour livrer des résultats exceptionnels",
       steps: [
         {
           title: "Découverte & Stratégie",
@@ -859,7 +868,7 @@ export const translations = {
         },
         {
           title: "Design & Prototypage",
-          description: "Création d’interfaces utilisateur intuitives et d’expériences qui s’alignent sur votre identité de marque.",
+          description: "Création d’interfaces et d’expériences utilisateur intuitives qui s’alignent sur votre identité de marque.",
           subSteps: [
             "Maquettage",
             "Design UI/UX",
@@ -915,58 +924,58 @@ export const translations = {
       categories: ["Général", "Services", "Collaboration", "Innovation"],
       items: [
         {
-          question: "Combien de temps dure un projet typique ?",
-          answer: "Les délais des projets varient selon la complexité et l’ampleur. Un site web basique peut prendre 4 à 6 semaines, tandis que des applications complexes peuvent prendre 3 à 6 mois. Nous fournissons des délais détaillés lors de la phase de découverte.",
+          question: "Combien de temps dure un projet typique ?",
+          answer: "Les délais des projets varient selon la complexité et l’ampleur. Un site web basique peut prendre 4-6 semaines, tandis que des applications complexes peuvent prendre 3-6 mois. Nous fournissons des délais détaillés lors de notre phase de découverte.",
           category: 0
         },
         {
-          question: "Quelle est votre structure tarifaire ?",
-          answer: "Nous proposons des modèles de tarification flexibles : projets à prix fixe, temps et matériaux, et modèles d’équipe dédiée. Tous les tarifs sont transparents avec des détails complets avant de commencer.",
+          question: "Quelle est votre structure tarifaire ?",
+          answer: "Nous proposons des modèles de tarification flexibles : projets à prix fixe, temps et matériaux, et modèles d’équipe dédiée. Tous les tarifs sont transparents avec des détails complets avant de commencer.",
           category: 0
         },
         {
-          question: "Proposez-vous un support continu ?",
-          answer: "Oui, nous offrons des forfaits de support complets incluant la maintenance, les mises à jour, les correctifs de sécurité et la surveillance des performances. Nous proposons également des formations pour votre équipe.",
+          question: "Proposez-vous un support continu ?",
+          answer: "Oui, nous offrons des forfaits de support complets incluant la maintenance, les mises à jour, les correctifs de sécurité et la surveillance des performances. Nous proposons également une formation pour votre équipe.",
           category: 1
         },
         {
-          question: "Quelles technologies maîtrisez-vous ?",
+          question: "Quelles technologies maîtrisez-vous ?",
           answer: "Nous travaillons avec des technologies modernes, notamment React/Next.js, Node.js, TypeScript, Tailwind CSS, Python, AWS, Docker, et bien plus. Nous choisissons la meilleure stack pour vos besoins spécifiques.",
           category: 1
         },
         {
-          question: "Pouvez-vous travailler avec notre équipe existante ?",
-          answer: "Absolument ! Nous collaborons sans accroc avec les équipes internes, en fournissant une expertise là où c’est nécessaire et en nous intégrant à vos flux de travail et processus existants.",
+          question: "Pouvez-vous travailler avec notre équipe existante ?",
+          answer: "Absolument ! Nous collaborons sans accroc avec les équipes internes, en apportant notre expertise là où c’est nécessaire et en nous intégrant à vos workflows et processus existants.",
           category: 2
         },
         {
-          question: "Qu’est-ce qui rend votre approche différente ?",
+          question: "Qu’est-ce qui rend votre approche différente ?",
           answer: "Notre méthodologie unique combine le développement agile avec le design thinking, garantissant que nous livrons non seulement des solutions fonctionnelles, mais aussi des expériences utilisateur exceptionnelles qui génèrent des résultats métiers.",
           category: 3
         }
       ],
-      contactTitle: "Vous avez encore des questions ?",
+      contactTitle: "Vous avez encore des questions ?",
       contactDesc: "Notre équipe est prête à vous fournir une assistance personnalisée et des réponses détaillées à vos questions spécifiques.",
       contactButton: "Nous Contacter Maintenant"
     },
     products: {
       title: 'Nos Produits',
-      subtitle: 'Des outils et solutions puissants conçus pour rationaliser votre flux de travail et stimuler votre productivité',
+      subtitle: 'Des outils et solutions puissants conçus pour rationaliser votre workflow et stimuler votre productivité',
       viewAll: 'Voir Tous les Produits',
       management: {
         title: 'Logiciels de Gestion',
-        desc: 'Des outils complets de gestion de projets et d’équipes pour garder votre entreprise organisée et efficace.'
+        desc: 'Des outils complets de gestion de projet et d’équipe pour garder votre entreprise organisée et efficace.'
       },
       extensions: {
         title: 'Extensions Navigateur',
-        desc: 'Améliorez votre expérience de navigation avec notre suite d’extensions de productivité.'
+        desc: 'Améliorez votre expérience de navigation avec notre suite d’extensions navigateur stimulant la productivité.'
       },
       security: {
         title: 'Outils de Sécurité',
         desc: 'Des solutions de sécurité avancées pour protéger vos données et garantir la conformité aux normes du secteur.'
       },
       productivity: {
-        title: 'Suite de Productivité',
+        title: 'Suite Productivité',
         desc: 'Des outils de productivité tout-en-un conçus pour vous aider à travailler plus intelligemment et à accomplir davantage.'
       }
     },
@@ -983,7 +992,7 @@ export const translations = {
       noResultsDesc: 'Essayez d’ajuster votre recherche ou vos filtres',
       trustBadge: 'Fait confiance par',
       users: 'utilisateurs',
-      newReleases: 'Nouvelles sorties chaque mois'
+      newReleases: 'Nouveautés chaque mois'
     },
     about: {
       heroBadge: 'Conçu avec passion, de zéro',
@@ -994,40 +1003,40 @@ export const translations = {
       storyTitle1: 'D’une',
       storyHighlight: 'idée de garage',
       storyTitle2: 'à une vraie agence',
-      storyP1: 'Tout a commencé tard une nuit — trop d’onglets ouverts, trop d’entreprises avec des sites web médiocres, et une pensée claire : « Je peux régler ça. »',
-      storyP2: 'SpheraTech n’est pas née dans un espace de coworking ou un incubateur, mais dans le genre d’environnement chaotique, alimenté par la caféine, où vivent les meilleures idées. Pas d’investisseurs, pas de filet de sécurité — juste la conviction sincère que le bon design et le code propre peuvent changer la façon dont une entreprise se développe.',
-      storyP3: 'Chaque projet depuis a été traité de la même manière : avec une pleine responsabilité, une communication honnête et une détermination sans faille à livrer quelque chose dont le client est réellement fier.',
+      storyP1: 'Tout a commencé une nuit tardive — trop d’onglets ouverts, trop d’entreprises avec des sites web médiocres, et une pensée claire : « Je peux régler ça. »',
+      storyP2: 'SpheraTech n’est pas née dans un espace de coworking ou un incubateur, mais dans le genre d’environnement chaotique, alimenté par la caféine, où vivent les meilleures idées. Pas d’investisseurs, pas de filet de sécurité — juste la conviction sincère que le bon design et le code propre peuvent changer la façon dont une entreprise grandit.',
+      storyP3: 'Chaque projet depuis a été traité de la même manière : avec une pleine responsabilité, une communication honnête et une détermination sans faille à livrer quelque chose dont le client est réellement fier.',
       storyCta: 'Travailler Avec Nous',
       founderRole: 'Fondateur & Développeur Principal',
       founderQuote: '"J’ai lancé SpheraTech depuis ma chambre avec un ordinateur portable, une connexion Wi-Fi solide et une obsession pour construire des choses qui fonctionnent vraiment. Pas de bureau chic, pas de grande équipe — juste une concentration sans relâche pour livrer des résultats concrets à des gens réels."',
-      marketingName: 'Growth Marketing Leader',
-      marketingRole: 'Responsable de la Croissance & du Marketing',
-      marketingQuote: '"Le marketing ne consiste pas à pousser des produits — il s’agit de raconter de vraies histoires qui créent du lien. Chaque campagne que je construis commence par une question : qu’est-ce qui intéresse vraiment le public de ce client ?"',
+      marketingName: 'Responsable Marketing Croissance',
+      marketingRole: 'Responsable Croissance & Marketing',
+      marketingQuote: '"Le marketing ne consiste pas à pousser des produits — il s’agit de raconter de vraies histoires qui créent des liens. Chaque campagne que je construis commence par une question : qu’est-ce qui importe vraiment à l’audience de ce client ?"',
       mvTitle: 'Mission & Vision',
       mvSubtitle: 'Le "pourquoi" derrière tout ce que nous construisons',
       missionTitle: 'Notre Mission',
       missionDesc: 'Rendre les expériences digitales de classe mondiale accessibles à chaque entreprise — quelle que soit sa taille. Nous croyons qu’une petite entreprise mérite la même qualité de présence web qu’une entreprise du Fortune 500, et nous sommes là pour que cela devienne réalité, un projet à la fois.',
       visionTitle: 'Notre Vision',
-      visionDesc: 'Devenir le partenaire digital de référence pour les entreprises ambitieuses à travers le monde — connu non seulement pour un travail de qualité, mais aussi pour la croissance mesurable que nous créons. Un avenir où SpheraTech est synonyme de confiance, d’innovation et de résultats.',
+      visionDesc: 'Devenir le partenaire digital de référence pour les entreprises ambitieuses à travers le monde — connu non seulement pour la beauté de notre travail, mais aussi pour la croissance mesurable que nous créons. Un avenir où SpheraTech est synonyme de confiance, d’innovation et de résultats.',
       valuesTitle: 'Ce en quoi nous croyons',
       valuesSubtitle: 'Les principes qui guident chaque décision que nous prenons',
-      value1Title: 'La Passion D’abord',
+      value1Title: 'Passion D’abord',
       value1Desc: 'Nous ne construisons pas seulement des sites web — nous mettons de la passion dans chaque pixel, chaque ligne de code et chaque interaction. Cela a commencé par l’amour du métier, et cela n’a jamais changé.',
-      value2Title: 'Vitesse & Qualité',
-      value2Desc: 'Nous croyons que vous ne devriez jamais avoir à choisir entre une livraison rapide et une haute qualité. Nous avons construit notre flux de travail pour offrir les deux, à chaque fois.',
+      value2Title: 'Rapidité & Qualité',
+      value2Desc: 'Nous croyons que vous ne devriez jamais avoir à choisir entre une livraison rapide et une haute qualité. Nous avons construit notre workflow pour offrir les deux, à chaque fois.',
       value3Title: 'Transparence',
       value3Desc: 'Pas de frais cachés, pas de délais vagues, pas de jargon corporatif. Vous saurez toujours exactement ce que nous construisons, quand et pourquoi.',
       value4Title: 'Obsédés par le Client',
-      value4Desc: 'Votre succès est notre succès. Nous traitons chaque projet comme si c’était notre propre entreprise en jeu — parce que votre croissance est ce qui motive la nôtre.',
+      value4Desc: 'Votre succès est notre succès. Nous traitons chaque projet comme si c’était notre propre entreprise en jeu — parce que votre croissance est ce qui stimule la nôtre.',
 
       teamTitle: 'Les Personnes Derrière le Travail',
-      teamSubtitle: 'Petite équipe. Résultats massifs.',
+      teamSubtitle: 'Petite équipe. Production massive.'
     },
     contact: {
       hero: {
         title: "Construisons quelque chose d'{amazing}",
-        subtitle: "Parlez-nous de votre projet et nous vous répondrons sous 24 heures avec une solution sur mesure.",
-        amazing: "Extraordinaire",
+        subtitle: "Parlez-nous de votre projet et nous vous recontacterons dans les 24 heures avec une solution sur mesure.",
+        amazing: "Incroyable",
       },
       form: {
         name: {
@@ -1036,7 +1045,7 @@ export const translations = {
         },
         email: {
           label: "Email",
-          placeholder: "jean@exemple.com",
+          placeholder: "jean@example.com",
         },
         phone: {
           label: "Téléphone",
@@ -1044,15 +1053,15 @@ export const translations = {
           placeholder: "+33 1 23 45 67 89",
         },
         service: {
-          label: "Quel service recherchez-vous ?",
+          label: "Quel service recherchez-vous ?",
           options: ["Développement Web", "SEO", "UI/UX", "Mobile", "SaaS", "Autre"],
         },
         budget: {
-          label: "Quel est votre budget ?",
-          options: ["Moins de 5 000 €", "5 000 € - 15 000 €", "15 000 € - 50 000 €", "Plus de 50 000 €"],
+          label: "Quel est votre budget ?",
+          options: ["Moins de 5 000 €", "5 000 € - 15 000 €", "15 000 € - 50 000 €", "50 000 €+"],
         },
         timeline: {
-          label: "Quand en avez-vous besoin ?",
+          label: "Quand en avez-vous besoin ?",
           options: ["Dès que possible", "1-3 mois", "3-6 mois", "Je regarde juste"],
         },
         message: {
@@ -1060,28 +1069,27 @@ export const translations = {
           placeholder: "Décrivez votre projet, vos objectifs et toute exigence spécifique...",
         },
         submit: {
-          button: "Discutons de votre projet",
+          button: "Discutons de Votre Projet",
           sending: "Envoi en cours...",
         },
         footer: "Nous répondons généralement sous 24 heures",
         errors: {
           required: "Veuillez remplir tous les champs obligatoires",
           email: "Veuillez entrer une adresse email valide",
-          submit: "Une erreur est survenue. Veuillez réessayer ou nous envoyer un email directement à hello@SpheraTech.com",
+          submit: "Quelque chose s’est mal passé. Veuillez réessayer ou nous envoyer un email directement à contact@spheratech.org",
         },
         success: {
-          title: "Merci !",
-          message: "Nous avons bien reçu votre message et vous répondrons sous 24 heures.",
-          checkout: "En attendant, découvrez :",
+          title: "Merci !",
+          message: "Nous avons bien reçu votre message et vous recontacterons sous 24 heures.",
+          checkout: "En attendant, découvrez :",
           services: "Nos Services",
           products: "Nos Produits",
           about: "À Propos",
-          another: "Soumettre une autre demande",
+          another: "Soumettre Une Autre Demande",
         },
-      },
+      }
     }
-  }
-  ,
+  },
   es: {
     nav: {
       home: 'Inicio',
@@ -1099,8 +1107,8 @@ export const translations = {
       title3: 'en',
       title4: 'Realidad',
       title5: 'con nosotros',
-      subtitle: 'Contáctanos hoy y descubre cómo podemos llevar tu negocio a nuevas alturas.',
-      ctaBtn: 'Empezar',
+      subtitle: 'Construimos soluciones digitales rápidas, escalables y seguras que elevan tu negocio, desde sitios web impresionantes hasta una transformación digital completa.',
+      ctaBtn: 'Empieza tu proyecto hoy',
       seeWorkBtn: 'Ver Nuestro Trabajo',
       scrollBtn: 'Desplázate para explorar'
     },
@@ -1110,8 +1118,8 @@ export const translations = {
       learnMore: 'Sabér Más',
       saas: {
         title: 'Soluciones SaaS',
-        desc: 'Desarrollamos soluciones SaaS escalables y seguras, adaptadas a las necesidades de tu negocio.',
-        longDesc: 'Transforma tus ideas en potentes plataformas SaaS. Creamos soluciones basadas en la nube que escalan con tu negocio, garantizando seguridad, confiabilidad y una experiencia de usuario excepcional.',
+        desc: 'Desarrollamos soluciones SaaS escalables y seguras adaptadas a las necesidades de tu negocio.',
+        longDesc: 'Desarrollamos soluciones SaaS escalables y seguras adaptadas a las necesidades de tu negocio. Nuestra agencia de desarrollo web combina tecnología de vanguardia con arquitectura inteligente para crear plataformas que crecen con tu negocio, desde el MVP hasta millones de usuarios.',
         benefits: [
           'Arquitectura escalable',
           'Soluciones nativas en la nube',
@@ -1121,51 +1129,44 @@ export const translations = {
         process: [
           {
             title: 'Descubrimiento y Planificación',
-            desc: 'Comprender tus requisitos comerciales y planificar la arquitectura'
+            desc: 'Comprender los requisitos de tu negocio y planificar la arquitectura'
           },
           {
             title: 'Desarrollo y Pruebas',
-            desc: 'Construir tu plataforma SaaS con pruebas rigurosas en cada etapa'
+            desc: 'Construcción de tu plataforma SaaS con pruebas rigurosas en cada etapa'
           },
           {
-            title: 'Lanzamiento y Escalabilidad',
+            title: 'Lanzamiento y Escalado',
             desc: 'Implementación en producción y escalado a medida que crece tu base de usuarios'
           }
         ],
         technologies: ['React', 'Node.js', 'AWS', 'Docker', 'Kubernetes', 'PostgreSQL'],
         faqs: [
           {
-            question: '¿Qué tecnologías usan para el desarrollo de SaaS?',
+            question: '¿Qué tecnologías usan para el desarrollo SaaS?',
             answer: 'Utilizamos tecnologías nativas en la nube modernas, incluyendo React, Node.js, AWS y Docker, para construir plataformas SaaS escalables y mantenibles.'
           },
           {
             question: '¿Cómo garantizan la seguridad?',
-            answer: 'Implementamos prácticas de seguridad estándar de la industria, incluyendo cifrado, autenticación segura, auditorías de seguridad regulares y cumplimiento de regulaciones de protección de datos.'
+            answer: 'Implementamos prácticas de seguridad estándar de la industria, incluyendo cifrado, autenticación segura, auditorías de seguridad regulares y cumplimiento con regulaciones de protección de datos.'
           },
           {
             question: '¿Pueden ayudar con aplicaciones SaaS existentes?',
-            answer: 'Sí, podemos ayudarte a modernizar, escalar o agregar nuevas funcionalidades a tus aplicaciones SaaS existentes.'
+            answer: 'Sí, podemos ayudarte a modernizar, escalar o agregar nuevas funcionalidades a aplicaciones SaaS existentes.'
           }
         ],
         clients: [
           {
-            name: "BS move",
-            description: "Sitio web para una empresa de mudanzas completo con calculadora de cotizaciones, plantillas de correo personalizadas...",
-            pictures: ["client-projects/web-dev/bs-move/pic1.png", "client-projects/web-dev/bs-move/pic4.png", "client-projects/web-dev/bs-move/pic3.png", "client-projects/web-dev/bs-move/pic2.png"],
-            siteLink: "https://bsmove.com/"
-          },
-          {
-            name: "EMSG Mansoure",
-            description: "Sitio web para la mayor empresa alemana de autopartes en Argelia.",
-            pictures: ["client-projects/web-dev/emsg/pic1.png", "client-projects/web-dev/emsg/pic4.png", "client-projects/web-dev/emsg/pic3.png", "client-projects/web-dev/emsg/pic2.png"],
-            siteLink: "https://bsmove.com/"
+            name: "CargoFlow",
+            description: "Una plataforma que ayuda a las empresas de mudanzas a gestionar cotizaciones, programación y operaciones comerciales de manera eficiente.",
+            pictures: ["saas-projects/cargoflow/front.png", "saas-projects/cargoflow/02.png"]
           }
         ]
       },
       webDev: {
         title: 'Desarrollo Web',
-        desc: 'Construimos aplicaciones web rápidas, escalables y seguras utilizando tecnologías modernas y las mejores prácticas.',
-        longDesc: 'Transforma tus ideas en potentes aplicaciones web con nuestra experiencia en desarrollo full-stack. Creamos soluciones de alto rendimiento, escalables y mantenibles utilizando tecnologías de vanguardia para frontend y backend.',
+        desc: 'Construimos aplicaciones web rápidas, escalables y seguras utilizando tecnologías modernas y mejores prácticas.',
+        longDesc: 'Transforma tus ideas en poderosas aplicaciones web con nuestra experiencia en desarrollo full-stack. Creamos soluciones de alto rendimiento, escalables y mantenibles utilizando tecnologías de vanguardia para frontend y backend.',
         benefits: [
           'Aplicaciones web personalizadas',
           'Diseño responsive y mobile-first',
@@ -1183,7 +1184,7 @@ export const translations = {
           },
           {
             title: 'Desarrollo e Implementación',
-            desc: 'Construcción de funcionalidades con código limpio, siguiendo las mejores prácticas e implementando la funcionalidad principal'
+            desc: 'Construcción de funcionalidades con código limpio, siguiendo mejores prácticas e implementando funcionalidades principales'
           },
           {
             title: 'Pruebas y Despliegue',
@@ -1194,22 +1195,36 @@ export const translations = {
         faqs: [
           {
             question: '¿Cuál es la diferencia entre desarrollo frontend y backend?',
-            answer: 'El desarrollo frontend se enfoca en la interfaz de usuario y la funcionalidad del lado del cliente, mientras que el desarrollo backend maneja la lógica del lado del servidor, las bases de datos y las API.'
+            answer: 'El desarrollo frontend se enfoca en la interfaz de usuario y la funcionalidad del lado del cliente, mientras que el desarrollo backend maneja la lógica del lado del servidor, bases de datos y APIs.'
           },
           {
             question: '¿Ofrecen mantenimiento continuo?',
             answer: 'Sí, ofrecemos paquetes de mantenimiento que incluyen actualizaciones, corrección de errores, parches de seguridad y monitoreo de rendimiento después del despliegue.'
           },
           {
-            question: '¿Pueden trabajar con bases de código existentes?',
+            question: '¿Pueden trabajar con codebases existentes?',
             answer: '¡Absolutamente! Podemos mejorar, refactorizar o agregar funcionalidades a tus aplicaciones web existentes manteniendo la calidad del código.'
+          }
+        ],
+        clients: [
+          {
+            name: "BS move",
+            description: "Sitio web para una empresa de mudanzas completo con calculadora de cotizaciones, plantillas de correo personalizadas, etc.",
+            pictures: ["client-projects/web-dev/bs-move/pic1.png", "client-projects/web-dev/bs-move/pic4.png", "client-projects/web-dev/bs-move/pic3.png", "client-projects/web-dev/bs-move/pic2.png"],
+            siteLink: "https://bsmove.com/"
+          },
+          {
+            name: "EMSG Mansoure",
+            description: "Sitio web para la mayor empresa alemana de autopartes en Argelia.",
+            pictures: ["client-projects/web-dev/emsg/pic1.png", "client-projects/web-dev/emsg/pic4.png", "client-projects/web-dev/emsg/pic3.png", "client-projects/web-dev/emsg/pic2.png"],
+            siteLink: "https://bsmove.com/"
           }
         ]
       },
       mobile: {
         title: 'Desarrollo Móvil',
         desc: 'Nuestro equipo se especializa en desarrollar aplicaciones móviles robustas y fáciles de usar para iOS y Android.',
-        longDesc: 'Construye aplicaciones móviles nativas y multiplataforma que ofrecen un rendimiento excepcional. Creamos aplicaciones que los usuarios aman, con funcionalidad fluida en todos los dispositivos.',
+        longDesc: 'Nuestro equipo se especializa en desarrollar aplicaciones móviles robustas y fáciles de usar para iOS y Android. Integradas perfectamente con tu infraestructura web, nuestras soluciones móviles aseguran que tus clientes puedan interactuar con tu marca en cualquier momento y lugar.',
         benefits: [
           'Aplicaciones nativas y multiplataforma',
           'Rendimiento fluido',
@@ -1219,41 +1234,41 @@ export const translations = {
         process: [
           {
             title: 'Planificación y Diseño',
-            desc: 'Definición de características de la aplicación, flujos de usuario y creación de diseños intuitivos'
+            desc: 'Definición de funcionalidades de la app, flujos de usuario y creación de diseños intuitivos'
           },
           {
             title: 'Desarrollo y Aseguramiento de Calidad',
-            desc: 'Construcción de tu aplicación con código limpio y pruebas rigurosas de calidad'
+            desc: 'Construcción de tu app con código limpio y pruebas de calidad exhaustivas'
           },
           {
             title: 'Lanzamiento y Mantenimiento',
-            desc: 'Envío a tiendas de aplicaciones y actualizaciones y soporte continuos'
+            desc: 'Envío a tiendas de aplicaciones y actualizaciones continuas y soporte'
           }
         ],
         technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Firebase', 'GraphQL'],
         faqs: [
           {
-            question: '¿Nativo vs. Multiplataforma: ¿Cuál es mejor?',
-            answer: 'Las aplicaciones nativas ofrecen el mejor rendimiento para aplicaciones complejas, mientras que las soluciones multiplataforma como React Native o Flutter son rentables para la mayoría de los casos de uso con un excelente rendimiento.'
+            question: '¿Nativo vs. Multiplataforma: Cuál es mejor?',
+            answer: 'Las apps nativas ofrecen el mejor rendimiento para aplicaciones complejas, mientras que las soluciones multiplataforma como React Native o Flutter son rentables para la mayoría de los casos de uso con un excelente rendimiento.'
           },
           {
-            question: '¿Cuánto tiempo se tarda en desarrollar una aplicación móvil?',
-            answer: 'Los plazos varían según la complejidad. Una aplicación simple tarda 2-3 meses, mientras que las aplicaciones complejas pueden tardar 6+ meses. Proporcionamos plazos detallados después del análisis de requisitos.'
+            question: '¿Cuánto tiempo toma desarrollar una app móvil?',
+            answer: 'Los plazos varían según la complejidad. Una app simple toma 2-3 meses, mientras que aplicaciones complejas pueden tomar 6+ meses. Proporcionamos plazos detallados después del análisis de requisitos.'
           },
           {
             question: '¿Ayudan con el envío a las tiendas de aplicaciones?',
-            answer: 'Sí, manejamos todo el proceso de envío a las tiendas para la App Store de Apple y Google Play Store, incluyendo la preparación de todos los activos y metadatos requeridos.'
+            answer: 'Sí, manejamos todo el proceso de envío a las tiendas para Apple App Store y Google Play Store, incluyendo la preparación de todos los activos y metadatos requeridos.'
           }
         ],
         clients: []
       },
       seo: {
         title: 'Servicios SEO',
-        desc: 'Optimizamos tu sitio web para mejorar el posicionamiento en los motores de búsqueda y generar tráfico orgánico.',
-        longDesc: 'Nuestros servicios SEO completos ayudan a las empresas a aumentar su visibilidad en línea y atraer más tráfico calificado. Utilizamos estrategias probadas, incluyendo investigación de palabras clave, optimización en la página, SEO técnico y construcción de enlaces para mejorar tu posicionamiento en los motores de búsqueda.',
+        desc: 'Optimizamos tu sitio web para mejorar el posicionamiento en motores de búsqueda y generar tráfico orgánico.',
+        longDesc: 'Nuestros servicios SEO completos ayudan a las empresas a aumentar su visibilidad en línea y atraer más tráfico calificado. Utilizamos estrategias probadas, incluyendo investigación de palabras clave, optimización on-page, SEO técnico y construcción de enlaces para mejorar tu posicionamiento en motores de búsqueda.',
         benefits: [
           'Aumento del tráfico orgánico',
-          'Mejor posicionamiento en los motores de búsqueda',
+          'Mejor posicionamiento en motores de búsqueda',
           'Mejor experiencia de usuario',
           'Tasas de conversión mejoradas'
         ],
@@ -1264,68 +1279,69 @@ export const translations = {
           },
           {
             title: 'Desarrollo de Estrategia',
-            desc: 'Crear una estrategia SEO personalizada adaptada a tus objetivos comerciales'
+            desc: 'Creación de una estrategia SEO personalizada adaptada a tus objetivos de negocio'
           },
           {
             title: 'Implementación y Optimización',
-            desc: 'Ejecutar la estrategia y optimizar continuamente para obtener los mejores resultados'
+            desc: 'Ejecución de la estrategia y optimización continua para los mejores resultados'
           }
         ],
         technologies: ['Google Analytics', 'SEMrush', 'Ahrefs', 'Moz', 'Screaming Frog', 'Google Search Console'],
         faqs: [
           {
-            question: '¿Cuánto tiempo tarda el SEO en mostrar resultados?',
-            answer: 'El SEO es una estrategia a largo plazo. Generalmente, puedes esperar ver resultados significativos en 3-6 meses, aunque algunas mejoras pueden ser visibles antes.'
+            question: '¿Cuánto tiempo toma ver resultados de SEO?',
+            answer: 'El SEO es una estrategia a largo plazo. Generalmente puedes esperar ver resultados significativos en 3-6 meses, aunque algunas mejoras pueden ser visibles antes.'
           },
           {
-            question: '¿Garantizan el posicionamiento en la primera página?',
+            question: '¿Garantizan posicionamiento en la primera página?',
             answer: 'Aunque no podemos garantizar posiciones específicas (ninguna agencia SEO ética puede hacerlo), garantizamos seguir las mejores prácticas y trabajar diligentemente para mejorar tu visibilidad.'
           },
           {
             question: '¿Qué incluye sus servicios SEO?',
-            answer: 'Nuestros servicios incluyen investigación de palabras clave, optimización en la página, SEO técnico, estrategia de contenido, construcción de enlaces e informes de rendimiento regulares.'
+            answer: 'Nuestros servicios incluyen investigación de palabras clave, optimización on-page, SEO técnico, estrategia de contenido, construcción de enlaces y reportes de rendimiento regulares.'
           }
         ],
         clients: []
       }
     },
     why: {
-      title: "¿Por qué\nElegirnos?",
-      subtitle: "No solo construimos productos; creamos experiencias digitales pensadas que ayudan a las marcas a destacar y crecer.",
+      title: "¿Por Qué\nElegirnos?",
+      subtitle: "No somos solo otra agencia de desarrollo web. Somos socios estratégicos invertidos en tu éxito. Cada decisión que tomamos, desde la arquitectura hasta el diseño, está impulsada por tus objetivos de negocio y las necesidades de tus clientes.",
       portfolio: "Ver Portafolio",
       start: "Iniciar Proyecto",
       cards: {
         quality: {
           title: "Control de Calidad",
-          desc: "Excelencia en cada realización. Mantenemos estándares rigurosos para asegurar que cada píxel y línea de código cumpla con los estándares de clase mundial.",
+          desc: "Excelencia en cada realización. Como agencia de desarrollo web, mantenemos estándares rigurosos para asegurar que cada píxel y línea de código cumpla con los más altos estándares mundiales. Sin atajos, sin compromisos.",
           tag: "Ingeniería de Precisión"
         },
         price: {
           title: "Precios Basados en Valor",
-          desc: "Asequible y razonable sin comprometer la calidad boutique de alta gama que merece tu marca."
+          desc: "Asequible y razonable sin comprometer la calidad boutique de alta gama que merece tu marca. Creemos que una agencia de desarrollo web debe entregar resultados a nivel empresarial sin las etiquetas de precio empresariales."
         },
         seo: {
           title: "Optimizado para SEO",
-          desc: "Referenciación natural integrada en el núcleo. Nuestro código primero en SEO asegura que tu proyecto tenga un buen posicionamiento desde el primer día."
+          desc: "Referenciación natural integrada en el núcleo. Nuestro código SEO-first asegura que tu proyecto tenga ranking desde el primer día. No separamos el desarrollo web de la estrategia SEO."
         },
         design: {
           title: "Diseño Elegante",
-          desc: "Calidad gráfica personalizada para tu identidad de marca específica. Sin plantillas, solo creatividad pura."
+          desc: "Calidad gráfica personalizada adaptada a tu identidad de marca específica. Sin plantillas, sin soluciones genéricas."
         },
         fast: {
           title: "Servicio Rápido",
-          desc: "Productos de alto rendimiento entregados en plazos récord."
+          desc: "Productos de alto rendimiento entregados en plazos récord. Velocidad sin sacrificios: ese es nuestro compromiso contigo."
         },
         personal: {
           title: "Toque Personalizado",
-          desc: "Productos ajustables y personales. Escalamos contigo, proporcionando soporte humano en cada paso."
+          desc: "Productos ajustables y personalizados. Crecemos contigo, proporcionando soporte humano en cada paso."
         }
       }
     },
     cta: {
-      title: "Hablemos de la idea",
-      desc: "¿Listo para transformar tu visión en realidad? Colaboremos y creemos algo extraordinario juntos.",
-      button: "¡VAMOS!"
+      title: "Hablemos de tu proyecto",
+      desc: "Hablemos de tu idea y exploremos cómo nuestra agencia de desarrollo web (o SpheraTech) puede transformar tu visión en una potencia digital que impulse un crecimiento real en tu negocio.",
+      button: "Programar tu Consulta",
+      tooltip: "Ya sea que seas una startup con una visión audaz o una empresa establecida que busca modernizar tu presencia digital, estamos listos para ayudarte."
     },
     footer: {
       company: 'Compañía',
@@ -1345,14 +1361,14 @@ export const translations = {
     },
     servicePage: {
       benefits: 'Beneficios Clave',
-      contact: 'Ponte en Contacto',
-      contactDesc: '¿Listo para empezar? Contáctanos hoy para hablar de tu proyecto.',
+      contact: 'Contáctanos',
+      contactDesc: '¿Listo para empezar? Contáctanos hoy para discutir tu proyecto.',
       backToServices: 'Volver a Servicios',
       getStartedNow: 'Empezar Ahora',
       howItWorks: 'Cómo Funciona',
       processDesc: 'Nuestro proceso probado garantiza resultados de calidad y satisfacción del cliente',
-      whyChooseUs: '¿Por qué Elegirnos?',
-      featuresDesc: 'Entregamos excelencia a través de la innovación y la dedicación',
+      whyChooseUs: '¿Por Qué Elegirnos?',
+      featuresDesc: 'Entregamos excelencia a través de innovación y dedicación',
       technologies: 'Tecnologías y Herramientas',
       technologiesDesc: 'Utilizamos tecnologías de vanguardia para construir soluciones robustas',
       ourProjects: 'Nuestros Proyectos',
@@ -1366,7 +1382,7 @@ export const translations = {
         },
         secure: {
           title: 'Seguro y Confiable',
-          desc: 'Estándares de seguridad y confiabilidad de nivel empresarial'
+          desc: 'Estándares de seguridad y confiabilidad a nivel empresarial'
         },
         support: {
           title: 'Soporte 24/7',
@@ -1380,7 +1396,7 @@ export const translations = {
     },
     process: {
       title: "Nuestro Proceso",
-      subtitle: "Un enfoque transparente, paso a paso, para lograr resultados excepcionales",
+      subtitle: "Un enfoque transparente, paso a paso, para entregar resultados excepcionales",
       steps: [
         {
           title: "Descubrimiento y Estrategia",
@@ -1394,7 +1410,7 @@ export const translations = {
         },
         {
           title: "Diseño y Prototipado",
-          description: "Creación de interfaces de usuario intuitivas y experiencias que se alinean con tu identidad de marca.",
+          description: "Creación de interfaces y experiencias de usuario intuitivas que se alineen con tu identidad de marca.",
           subSteps: [
             "Wireframing",
             "Diseño UI/UX",
@@ -1404,7 +1420,7 @@ export const translations = {
         },
         {
           title: "Desarrollo",
-          description: "Construcción de soluciones robustas y escalables utilizando tecnologías modernas y las mejores prácticas.",
+          description: "Construcción de soluciones robustas y escalables utilizando tecnologías modernas y mejores prácticas.",
           subSteps: [
             "Desarrollo frontend",
             "Integración backend",
@@ -1414,7 +1430,7 @@ export const translations = {
         },
         {
           title: "Pruebas y Optimización",
-          description: "Pruebas rigurosas para garantizar el rendimiento, la seguridad y la satisfacción del usuario.",
+          description: "Pruebas rigurosas para asegurar rendimiento, seguridad y satisfacción del usuario.",
           subSteps: [
             "Pruebas de rendimiento",
             "Auditorías de seguridad",
@@ -1451,22 +1467,22 @@ export const translations = {
       items: [
         {
           question: "¿Cuánto dura un proyecto típico?",
-          answer: "Los plazos de los proyectos varían según la complejidad y el alcance. Un sitio web básico puede tardar 4-6 semanas, mientras que aplicaciones complejas pueden tardar 3-6 meses. Proporcionamos plazos detallados durante la fase de descubrimiento.",
+          answer: "Los plazos de los proyectos varían según la complejidad y el alcance. Un sitio web básico puede tomar 4-6 semanas, mientras que aplicaciones complejas pueden tomar 3-6 meses. Proporcionamos plazos detallados durante nuestra fase de descubrimiento.",
           category: 0
         },
         {
           question: "¿Cuál es su estructura de precios?",
-          answer: "Ofrecemos modelos de precios flexibles: proyectos a precio fijo, tiempo y materiales, y modelos de equipo dedicado. Todos los precios son transparentes con desgloses detallados antes de empezar.",
+          answer: "Ofrecemos modelos de precios flexibles: proyectos a precio fijo, tiempo y materiales, y modelos de equipo dedicado. Todos los precios son transparentes con desgloses detallados antes de comenzar.",
           category: 0
         },
         {
           question: "¿Ofrecen soporte continuo?",
-          answer: "Sí, ofrecemos paquetes de soporte completos que incluyen actualizaciones, corrección de errores, parches de seguridad y monitoreo de rendimiento. También proporcionamos capacitación para tu equipo.",
+          answer: "Sí, ofrecemos paquetes de soporte completos que incluyen mantenimiento, actualizaciones, parches de seguridad y monitoreo de rendimiento. También proporcionamos capacitación para tu equipo.",
           category: 1
         },
         {
-          question: "¿Qué tecnologías dominan?",
-          answer: "Trabajamos con tecnologías modernas, incluyendo React/Next.js, Node.js, TypeScript, Tailwind CSS, Python, AWS, Docker y más. Elegimos la mejor pila para tus necesidades específicas.",
+          question: "¿En qué tecnologías se especializan?",
+          answer: "Trabajamos con tecnologías modernas, incluyendo React/Next.js, Node.js, TypeScript, Tailwind CSS, Python, AWS, Docker y más. Elegimos la mejor pila tecnológica para tus necesidades específicas.",
           category: 1
         },
         {
@@ -1475,8 +1491,8 @@ export const translations = {
           category: 2
         },
         {
-          question: "¿Qué hace diferente su enfoque?",
-          answer: "Nuestra metodología única combina el desarrollo ágil con el pensamiento de diseño, asegurando que entregamos no solo soluciones funcionales, sino experiencias de usuario excepcionales que generan resultados comerciales.",
+          question: "¿Qué hace diferente a su enfoque?",
+          answer: "Nuestra metodología única combina el desarrollo ágil con el pensamiento de diseño, asegurando que entreguemos no solo soluciones funcionales, sino también experiencias de usuario excepcionales que generen resultados de negocio.",
           category: 3
         }
       ],
@@ -1494,11 +1510,11 @@ export const translations = {
       },
       extensions: {
         title: 'Extensiones de Navegador',
-        desc: 'Mejora tu experiencia de navegación con nuestra suite de extensiones para aumentar la productividad.'
+        desc: 'Mejora tu experiencia de navegación con nuestra suite de extensiones de navegador que aumentan la productividad.'
       },
       security: {
         title: 'Herramientas de Seguridad',
-        desc: 'Soluciones de seguridad avanzadas para proteger tus datos y garantizar el cumplimiento de los estándares de la industria.'
+        desc: 'Soluciones de seguridad avanzadas para proteger tus datos y asegurar el cumplimiento de estándares de la industria.'
       },
       productivity: {
         title: 'Suite de Productividad',
@@ -1527,36 +1543,36 @@ export const translations = {
       heroSubtitle: 'Una agencia digital apasionada en una misión para ayudar a las empresas a transformar sus ideas más audaces en experiencias digitales de clase mundial.',
 
       storyTitle1: 'De una',
-      storyHighlight: 'idea en un garaje',
+      storyHighlight: 'idea de garaje',
       storyTitle2: 'a una agencia real',
       storyP1: 'Todo comenzó una noche tarde — demasiadas pestañas abiertas en el navegador, demasiadas empresas con sitios web terribles, y un pensamiento claro: "Puedo arreglar esto".',
       storyP2: 'SpheraTech no nació en un espacio de coworking ni en una incubadora, sino en el tipo de entorno caótico y alimentado por cafeína donde realmente viven las mejores ideas. Sin inversores, sin red de seguridad, solo la creencia genuina de que el buen diseño y el código limpio pueden cambiar la forma en que crece un negocio.',
       storyP3: 'Cada proyecto desde entonces ha sido tratado de la misma manera: con total propiedad, comunicación honesta y un impulso incansable para entregar algo de lo que el cliente esté genuinamente orgulloso.',
       storyCta: 'Trabaja Con Nosotros',
       founderRole: 'Fundador y Desarrollador Principal',
-      founderQuote: '"Empecé SpheraTech desde mi habitación con una laptop, una conexión Wi-Fi fuerte y una obsesión por construir cosas que realmente funcionen. Sin oficina elegante, sin gran equipo, solo un enfoque incansable en entregar resultados reales para personas reales."',
-      marketingName: 'Growth Marketing Manager',
-      marketingRole: 'Jefa de Crecimiento y Marketing',
-      marketingQuote: '"El marketing no se trata de empujar productos, se trata de contar historias reales que conecten. Cada campaña que construyo comienza con una pregunta: ¿qué le importa realmente a la audiencia de este cliente?"',
+      founderQuote: '"Comencé SpheraTech desde mi habitación con una laptop, una conexión Wi-Fi fuerte y una obsesión por construir cosas que realmente funcionen. Sin oficina elegante, sin gran equipo, solo un enfoque incansable en entregar resultados reales para personas reales."',
+      marketingName: 'Líder de Marketing de Crecimiento',
+      marketingRole: 'Jefe de Crecimiento y Marketing',
+      marketingQuote: '"El marketing no se trata de empujar productos, se trata de contar historias reales que conecten. Cada campaña que construyo comienza con una pregunta: ¿qué es lo que realmente le importa a la audiencia de este cliente?"',
       mvTitle: 'Misión y Visión',
       mvSubtitle: 'El "por qué" detrás de todo lo que construimos',
       missionTitle: 'Nuestra Misión',
-      missionDesc: 'Hacer que las experiencias digitales de clase mundial sean accesibles para cada empresa, sin importar su tamaño. Creemos que una pequeña empresa merece la misma calidad de presencia web que una empresa Fortune 500, y estamos aquí para hacer que eso suceda, un proyecto a la vez.',
+      missionDesc: 'Hacer que las experiencias digitales de clase mundial sean accesibles para cada negocio, sin importar su tamaño. Creemos que una pequeña empresa merece la misma calidad de presencia web que una compañía Fortune 500, y estamos aquí para hacerlo realidad, un proyecto a la vez.',
       visionTitle: 'Nuestra Visión',
-      visionDesc: 'Convertirnos en el socio digital de referencia para empresas ambiciosas en todo el mundo, conocidos no solo por un trabajo hermoso, sino por el crecimiento medible que creamos. Un futuro donde SpheraTech sea sinónimo de confianza, innovación y resultados.',
+      visionDesc: 'Convertirnos en el socio digital de referencia para empresas ambiciosas en todo el mundo, conocidas no solo por nuestro trabajo hermoso, sino por el crecimiento medible que creamos. Un futuro donde SpheraTech sea sinónimo de confianza, innovación y resultados.',
       valuesTitle: 'En lo que Creemos',
       valuesSubtitle: 'Los principios que guían cada decisión que tomamos',
       value1Title: 'Pasión Primero',
       value1Desc: 'No solo construimos sitios web, ponemos pasión en cada píxel, cada línea de código y cada interacción. Esto comenzó por amor al oficio, y eso nunca ha cambiado.',
       value2Title: 'Velocidad y Calidad',
-      value2Desc: 'Creemos que nunca deberías tener que elegir entre entrega rápida y alta calidad. Hemos construido nuestro flujo de trabajo para ofrecer ambos, cada vez.',
+      value2Desc: 'Creemos que nunca deberías tener que elegir entre entrega rápida y alta calidad. Hemos construido nuestro flujo de trabajo para ofrecer ambas, cada vez.',
       value3Title: 'Transparencia',
-      value3Desc: 'Sin tarifas ocultas, sin plazos vagos, sin jerga corporativa. Siempre sabrás exactamente qué estamos construyendo, cuándo y por qué.',
+      value3Desc: 'Sin tarifas ocultas, sin plazos vagos, sin rodeos corporativos. Siempre sabrás exactamente qué estamos construyendo, cuándo y por qué.',
       value4Title: 'Obsesionados con el Cliente',
       value4Desc: 'Tu éxito es nuestro éxito. Tratamos cada proyecto como si fuera nuestro propio negocio en juego, porque tu crecimiento es lo que impulsa el nuestro.',
 
       teamTitle: 'Las Personas Detrás del Trabajo',
-      teamSubtitle: 'Equipo pequeño. Resultados masivos.',
+      teamSubtitle: 'Equipo pequeño. Producción masiva.'
     },
     contact: {
       hero: {
@@ -1571,12 +1587,12 @@ export const translations = {
         },
         email: {
           label: "Correo Electrónico",
-          placeholder: "juan@ejemplo.com",
+          placeholder: "juan@example.com",
         },
         phone: {
           label: "Teléfono",
           optional: "opcional",
-          placeholder: "+34 123 456 789",
+          placeholder: "+52 1 234 567 8900",
         },
         service: {
           label: "¿Qué servicio necesitas?",
@@ -1584,25 +1600,25 @@ export const translations = {
         },
         budget: {
           label: "¿Cuál es tu rango de presupuesto?",
-          options: ["Menos de $5K", "$5K-$15K", "$15K-$50K", "Más de $50K"],
+          options: ["Menos de $5K", "$5K-$15K", "$15K-$50K", "$50K+"],
         },
         timeline: {
           label: "¿Cuándo lo necesitas?",
-          options: ["Lo antes posible", "1-3 meses", "3-6 meses", "Solo estoy mirando"],
+          options: ["Lo antes posible", "1-3 meses", "3-6 meses", "Solo mirando"],
         },
         message: {
           label: "Cuéntanos sobre tu proyecto",
           placeholder: "Describe tu proyecto, objetivos y cualquier requisito específico...",
         },
         submit: {
-          button: "Hablemos de tu proyecto",
+          button: "Hablemos de Tu Proyecto",
           sending: "Enviando...",
         },
         footer: "Normalmente respondemos en 24 horas",
         errors: {
-          required: "Por favor, completa todos los campos obligatorios",
-          email: "Por favor, ingresa una dirección de correo electrónico válida",
-          submit: "Algo salió mal. Por favor, inténtalo de nuevo o envíanos un correo directamente a hello@SpheraTech.com",
+          required: "Por favor completa todos los campos obligatorios",
+          email: "Por favor ingresa una dirección de correo electrónico válida",
+          submit: "Algo salió mal. Por favor inténtalo de nuevo o envíanos un correo directamente a contact@spheratech.org",
         },
         success: {
           title: "¡Gracias!",
@@ -1613,8 +1629,7 @@ export const translations = {
           about: "Sobre Nosotros",
           another: "Enviar Otra Solicitud",
         },
-      },
+      }
     }
   }
-
 };

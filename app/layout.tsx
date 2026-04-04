@@ -6,10 +6,13 @@ import Footer from "@/components/Footer";
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
-  title: "SpheraTech - Transform Your Vision into Reality",
-  description: "Web development agency specializing in SEO, SaaS Solutions, UI/UX Design, and Mobile Development",
+  title: {
+    default: "Spheratech - Web Development Agency",
+    template: "%s | Spheratech",
+  },
+  description:
+    "Web development agency focused on SaaS, custom applications, and scalable digital platforms built for performance and growth.",
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
