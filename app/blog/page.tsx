@@ -16,7 +16,6 @@ export const revalidate = 60; // revalidate every 60 seconds
 
 export default async function BlogPage() {
     const posts = await getPosts();
-    console.log(posts)
     return (
         <div className="min-h-screen bg-slate-950" >
             <Navigation />

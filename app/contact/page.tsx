@@ -1,13 +1,14 @@
-'use client';
 
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
 import { Metadata } from 'next';
-import { useLanguage } from '../contexts/LanguageContext';
-
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Get in touch with Spheratech to discuss your web development project and receive a tailored solution for your business.",
+};
 export default function ContactPage() {
-  const { t } = useLanguage();
 
   return (
     <>
