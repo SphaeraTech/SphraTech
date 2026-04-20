@@ -8,7 +8,7 @@ export const client = createClient({
 });
 
 export async function getPosts() {
-    return await client.fetch(`
+  return await client.fetch(`
       *[_type == "post"] | order(publishedAt desc) {
         _id,
         title,
@@ -18,4 +18,12 @@ export async function getPosts() {
         body
       }
     `);
-  }
+}
+
+export async function getPostsSlugs() {
+  return await client.fetch(`
+      *[_type == "post"] | order(publishedAt desc) {
+        slug
+      }
+    `);
+}
