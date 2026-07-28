@@ -1,7 +1,68 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/*
+  SpheraTech design tokens — the single source of truth.
+  See DESIGN.md at repo root before adding any color or font.
+*/
+@theme {
+  /* Brand — the red of the TS monogram logo. The ONLY accent color. */
+  --color-brand: #ec3234;
+  --color-brand-strong: #c9252b;
+
+  /* Neutral ground */
+  --color-base: #0a0d14;
+  --color-surface: #10141d;
+  --color-surface-2: #151b26;
+  --color-edge: #232936;
+  --color-edge-strong: #303950;
+
+  /* Text */
+  --color-ink: #f4f6f9;
+  --color-body: #9aa3b2;
+  --color-faint: #647084;
+
+  /* Type roles — wired to next/font variables set on <html> */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
 body {
-  background-color: rgb(2 6 23);
-  color: white;
+  background-color: var(--color-base);
+  color: var(--color-body);
+}
+
+::selection {
+  background-color: var(--color-brand);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+/* Pre-reveal state for Reveal.tsx — only when JS can actually reveal it. */
+@media (scripting: enabled) {
+  [data-reveal] {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -13,6 +13,7 @@
     "@sanity/client": "^7.15.0",
     "@sanity/image-url": "^2.0.3",
     "@tailwindcss/typography": "^0.5.19",
+    "animejs": "^4.5.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.25.0",
     "lucide-react": "^0.562.0",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/nodemailer": "^8.0.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "tailwindcss": "^4",

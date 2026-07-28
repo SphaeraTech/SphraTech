@@ -1,139 +1,129 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+import { animate, createTimeline, svg, utils } from 'animejs';
 import { useLanguage } from '@/app/contexts/LanguageContext';
-import { FlipWords } from "@/components/ui/FlipWords";
-import { ArrowRight, PlayCircle, CheckCircle, Users, Rocket, Award, ChevronDown } from 'lucide-react';
 
 export default function HeroSection() {
   const { t } = useLanguage();
-  const words1 = ["Vision", "Dream", "Idea", "Goal"];
-  const words2 = ["Reality", "Success", "Achievement", "Result"];
+  const rootRef = useRef<HTMLElement>(null);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!root) return;
+    const steps = root.querySelectorAll<HTMLElement>('[data-hero]');
+    const traces = root.querySelectorAll<SVGPathElement>('[data-hero-trace]');
+    const nodes = root.querySelectorAll<SVGCircleElement>('[data-hero-node]');
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      utils.set([...steps, ...traces, ...nodes], { opacity: 1 });
+      return;
     }
-  };
+
+    utils.set(nodes, { opacity: 0 });
+    const tl = createTimeline({ defaults: { ease: 'outCubic' } });
+    tl.add(steps, {
+      opacity: [0, 1],
+      translateY: [20, 0],
+      duration: 700,
+      delay: (_, i = 0) => i * 130,
+    });
+
+    traces.forEach((trace, i) => {
+      const [drawable] = svg.createDrawable(trace);
+      utils.set(trace, { opacity: 1 });
+      tl.add(drawable, { draw: '0 1', duration: 900, ease: 'inOutQuad' }, 450 + i * 150);
+    });
+    nodes.forEach((node, i) => {
+      tl.add(node, { opacity: [0, 1], scale: [0, 1], duration: 300, ease: 'outBack' }, 1250 + i * 150);
+    });
+  }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden">
-    
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      </div>
+    <section
+      ref={rootRef}
+      id="home"
+      className="relative min-h-screen flex items-center justify-center px-6 pt-24 overflow-hidden"
+    >
+      {/* The site's single gradient: one quiet red wash behind the headline. */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(ellipse 60% 45% at 50% 38%, rgba(236,50,52,0.09) 0%, transparent 70%)',
+        }}
+      />
+      {/* Faint engineering grid, contained to the hero and faded out at the edges. */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none opacity-70"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)',
+          backgroundSize: '44px 44px',
+          maskImage: 'radial-gradient(ellipse 75% 65% at 50% 45%, black 30%, transparent 75%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 75% 65% at 50% 45%, black 30%, transparent 75%)',
+        }}
+      />
 
-      <div className="relative max-w-7xl mx-auto z-10">
-        <div className="text-center mb-12">
-          {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            {t.hero.title1}
-            <span className="bg-clip-text bg-gradient-to-r text-red-500">
-              <FlipWords words={words1} />
-            </span>{' '}
-            {t.hero.title3}
-            <br />
-            <span className="bg-clip-text bg-gradient-to-r text-red-500">
-              <FlipWords words={words2} />
-            </span>{' '}
-            {t.hero.title5}
-          </h1>
+      <div className="relative z-10 max-w-5xl mx-auto text-center">
+        <p
+          data-hero
+          data-reveal
+          className="font-mono text-brand text-xs md:text-sm uppercase tracking-[0.3em] mb-6"
+        >
+          {'// '}Web · SaaS · Mobile · SEO
+        </p>
 
-          {/* Subtitle */}
-          <p className=" md:text-2xl text-slate-300 max-w-3xl mx-auto mb-12">
-            {t.hero.subtitle}
-          </p>
+        <h1
+          data-hero
+          data-reveal
+          className="font-display text-5xl md:text-7xl font-bold tracking-tight text-ink leading-[1.05] mb-8"
+        >
+          {t.hero.title1} <span className="text-brand">{t.hero.title2}</span> {t.hero.title3}{' '}
+          <span className="text-brand">{t.hero.title4}</span> {t.hero.title5}
+        </h1>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="group px-8 py-4 bg-gradient-to-r from-red-600 to-red-500 rounded-full font-semibold hover:from-red-500 hover:to-red-400 transition-all flex items-center gap-2 hover:gap-4 shadow-lg shadow-red-500/25 hover:shadow-red-500/40"
-            >
-              <a href="contact"> {t.hero.ctaBtn}</a>
+        <p data-hero data-reveal className="text-lg md:text-xl text-body max-w-2xl mx-auto mb-10">
+          {t.hero.subtitle}
+        </p>
 
-
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-
-
-          </div>
-
-          {/* Social Proof Stats */}
-          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mb-16">
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="relative bg-slate-800/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-red-500/30 transition-all">
-                <div className="flex items-center justify-center mb-2">
-                  <Users className="w-8 h-8 text-red-400" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-1">150+</div>
-                <div className="text-sm text-slate-400">Happy Clients</div>
-              </div>
-            </div>
-
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="relative bg-slate-800/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-red-500/30 transition-all">
-                <div className="flex items-center justify-center mb-2">
-                  <Rocket className="w-8 h-8 text-red-400" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-1">300+</div>
-                <div className="text-sm text-slate-400">Projects Done</div>
-              </div>
-            </div>
-
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="relative bg-slate-800/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-red-500/30 transition-all">
-                <div className="flex items-center justify-center mb-2">
-                  <Award className="w-8 h-8 text-red-400" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-1">98%</div>
-                <div className="text-sm text-slate-400">Success Rate</div>
-              </div>
-            </div>
-
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="relative bg-slate-800/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-red-500/30 transition-all">
-                <div className="flex items-center justify-center mb-2">
-                  <CheckCircle className="w-8 h-8 text-red-400" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-1">5+</div>
-                <div className="text-sm text-slate-400">Years Experience</div>
-              </div>
-            </div>
-          </div> */}
-
-          {/* Trust Indicators */}
-          {/* <div className="flex flex-wrap justify-center items-center gap-8 mb-8 opacity-60">
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-green-400" />
-              <span className="text-slate-300">Money-Back Guarantee</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-green-400" />
-              <span className="text-slate-300">24/7 Support</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-green-400" />
-              <span className="text-slate-300">Fast Delivery</span>
-            </div>
-          </div> */}
+        <div
+          data-hero
+          data-reveal
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+        >
+          <Link
+            href="/contact"
+            className="group inline-flex items-center gap-2 px-7 py-3.5 bg-brand hover:bg-brand-strong text-ink font-semibold rounded-lg transition-colors"
+          >
+            {t.hero.ctaBtn}
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Link>
+          <Link
+            href="/realisations"
+            className="inline-flex items-center gap-2 px-7 py-3.5 border border-edge hover:border-brand text-ink font-semibold rounded-lg transition-colors"
+          >
+            {t.hero.seeWorkBtn}
+          </Link>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom--10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <button
-            onClick={() => scrollToSection('about')}
-            className="flex flex-col items-center gap-2 text-slate-400 hover:text-red-400 transition-colors"
-          >
-            <span className="text-sm">{t.hero.scrollBtn}</span>
-            <ChevronDown className="w-6 h-6" />
-          </button>
+        {/* Signature: circuit traces drawn from the logo's own detailing. */}
+        <div aria-hidden="true" className="mt-16 flex items-center justify-center gap-6 text-brand/70">
+          <svg viewBox="0 0 320 24" fill="none" className="w-40 md:w-64 h-5" style={{ transform: 'scaleX(-1)' }}>
+            <path data-hero-trace d="M0 20 H176 L192 6 H298" stroke="currentColor" strokeWidth="1.5" opacity="0" />
+            <circle data-hero-node cx="306" cy="6" r="3.5" stroke="currentColor" strokeWidth="1.5" fill="none" style={{ transformOrigin: '306px 6px' }} />
+          </svg>
+          <span data-hero data-reveal className="font-mono text-faint text-xs uppercase tracking-[0.25em]">
+            {t.hero.scrollBtn}
+          </span>
+          <svg viewBox="0 0 320 24" fill="none" className="w-40 md:w-64 h-5">
+            <path data-hero-trace d="M0 20 H176 L192 6 H298" stroke="currentColor" strokeWidth="1.5" opacity="0" />
+            <circle data-hero-node cx="306" cy="6" r="3.5" stroke="currentColor" strokeWidth="1.5" fill="none" style={{ transformOrigin: '306px 6px' }} />
+          </svg>
         </div>
       </div>
     </section>

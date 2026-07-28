@@ -450,6 +450,12 @@ export const translations = {
       users: 'users',
       newReleases: 'New releases every month'
     },
+    realisations: {
+      title: 'Our work',
+      subtitle: 'Real projects shipped for real clients — websites, platforms, and SaaS products.',
+      webTitle: 'Websites & platforms',
+      saasTitle: 'SaaS products',
+    },
     about: {
       heroBadge: 'Built with passion, from scratch',
       heroTitle1: 'We are',
@@ -994,6 +1000,12 @@ export const translations = {
       users: 'utilisateurs',
       newReleases: 'Nouveautés chaque mois'
     },
+    realisations: {
+      title: 'Nos réalisations',
+      subtitle: 'Des projets réels livrés à de vrais clients — sites web, plateformes et produits SaaS.',
+      webTitle: 'Sites web & plateformes',
+      saasTitle: 'Produits SaaS',
+    },
     about: {
       heroBadge: 'Conçu avec passion, de zéro',
       heroTitle1: 'Nous sommes',
@@ -1535,6 +1547,12 @@ export const translations = {
       trustBadge: 'Confían en nosotros',
       users: 'usuarios',
       newReleases: 'Nuevos lanzamientos cada mes'
+    },
+    realisations: {
+      title: 'Nuestro trabajo',
+      subtitle: 'Proyectos reales entregados a clientes reales: sitios web, plataformas y productos SaaS.',
+      webTitle: 'Sitios web y plataformas',
+      saasTitle: 'Productos SaaS',
     },
     about: {
       heroBadge: 'Construido con pasión, desde cero',

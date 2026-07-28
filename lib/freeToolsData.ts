@@ -7,7 +7,6 @@ export interface FreeTool {
   image: string;
   featured: boolean;
   link: string;
-  gradient: string;
 }
 
 export const categories = [
@@ -29,8 +28,7 @@ export const freeToolsData: FreeTool[] = [
     categoryLabel: 'ANALYTICS',
     image: '/tools/speed-test.svg',
     featured: true,
-    link: '/free-tools/website-speed-test',
-    gradient: 'from-yellow-500 to-orange-500'
+    link: '/free-tools/website-speed-test'
   },
   {
     id: 'seo-analyzer',
@@ -40,8 +38,7 @@ export const freeToolsData: FreeTool[] = [
     categoryLabel: 'SEO',
     image: '/tools/seo-analyzer.svg',
     featured: true,
-    link: '/free-tools/seo-analyzer',
-    gradient: 'from-orange-500 to-red-500'
+    link: '/free-tools/seo-analyzer'
   },
   {
     id: 'meta-tag-generator',
@@ -51,8 +48,7 @@ export const freeToolsData: FreeTool[] = [
     categoryLabel: 'SEO',
     image: '/tools/meta-generator.svg',
     featured: false,
-    link: '/free-tools/meta-tag-generator',
-    gradient: 'from-amber-500 to-orange-500'
+    link: '/free-tools/meta-tag-generator'
   },
   {
     id: 'robots-sitemap-checker',
@@ -62,8 +58,7 @@ export const freeToolsData: FreeTool[] = [
     categoryLabel: 'SEO',
     image: '/tools/robots-sitemap.svg',
     featured: false,
-    link: '/free-tools/robots-sitemap-checker',
-    gradient: 'from-red-500 to-rose-500'
+    link: '/free-tools/robots-sitemap-checker'
   },
   {
     id: 'keyword-difficulty-checker',
@@ -73,8 +68,7 @@ export const freeToolsData: FreeTool[] = [
     categoryLabel: 'SEO',
     image: '/tools/keyword-checker.svg',
     featured: false,
-    link: '/free-tools/keyword-difficulty-checker',
-    gradient: 'from-orange-400 to-red-600'
+    link: '/free-tools/keyword-difficulty-checker'
   },
   {
     id: 'website-cost-estimator',
@@ -84,8 +78,7 @@ export const freeToolsData: FreeTool[] = [
     categoryLabel: 'UTILITIES',
     image: '/tools/cost-estimator.svg',
     featured: true,
-    link: '/free-tools/website-cost-estimator',
-    gradient: 'from-emerald-500 to-teal-500'
+    link: '/free-tools/website-cost-estimator'
   },
   {
     id: 'mobile-friendly-test',
@@ -95,8 +88,7 @@ export const freeToolsData: FreeTool[] = [
     categoryLabel: 'ANALYTICS',
     image: '/tools/mobile-test.svg',
     featured: false,
-    link: '/free-tools/mobile-friendly-test',
-    gradient: 'from-sky-500 to-blue-500'
+    link: '/free-tools/mobile-friendly-test'
   },
   {
     id: 'tech-stack-detector',
@@ -106,8 +98,7 @@ export const freeToolsData: FreeTool[] = [
     categoryLabel: 'DEVTOOLS',
     image: '/tools/tech-stack.svg',
     featured: false,
-    link: '/free-tools/tech-stack-detector',
-    gradient: 'from-red-500 to-purple-500'
+    link: '/free-tools/tech-stack-detector'
   },
   {
     id: 'color-palette-generator',
@@ -117,8 +108,7 @@ export const freeToolsData: FreeTool[] = [
     categoryLabel: 'UTILITIES',
     image: '/tools/color-palette.svg',
     featured: false,
-    link: '/free-tools/color-palette-generator',
-    gradient: 'from-pink-500 to-rose-500'
+    link: '/free-tools/color-palette-generator'
   },
   {
     id: 'favicon-generator',
@@ -128,8 +118,7 @@ export const freeToolsData: FreeTool[] = [
     categoryLabel: 'UTILITIES',
     image: '/tools/favicon.svg',
     featured: false,
-    link: '/free-tools/favicon-generator',
-    gradient: 'from-purple-500 to-fuchsia-500'
+    link: '/free-tools/favicon-generator'
   }
 ];
 

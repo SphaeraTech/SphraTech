@@ -3,9 +3,9 @@ import { SITE_URL } from '@/utils/constants'
 import { getPostsSlugs } from '@/lib/sanity'
 
 
-export default async function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const blogPostsSlugs = await getPostsSlugs()
-    const blogPages = blogPostsSlugs.map((slug) => {
+    const blogPages = blogPostsSlugs.map((slug: { slug: { current: string } }) => {
         return {
             url: `${SITE_URL}/blog/${slug.slug.current}`,
             lastModified: new Date(),

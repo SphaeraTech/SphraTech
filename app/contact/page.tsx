@@ -1,6 +1,4 @@
 
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
 import { Metadata } from 'next';
 export const metadata: Metadata = {

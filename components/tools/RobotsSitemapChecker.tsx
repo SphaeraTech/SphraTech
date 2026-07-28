@@ -50,19 +50,19 @@ export default function RobotsSitemapChecker() {
             <div className="max-w-3xl mx-auto">
                 <form onSubmit={handleValidate} className="flex flex-col md:flex-row gap-4">
                     <div className="flex-1 relative">
-                        <Globe className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" />
+                        <Globe className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-faint" />
                         <input
                             type="text"
                             placeholder="Enter your domain (e.g., example.com)"
                             value={url}
                             onChange={(e) => setUrl(e.target.value)}
-                            className="w-full bg-slate-800/50 border border-slate-700 rounded-2xl pl-12 pr-4 py-4 focus:outline-none focus:border-red-500 transition-all"
+                            className="w-full bg-surface-2 border border-edge rounded-lg pl-12 pr-4 py-4 text-ink placeholder:text-faint focus:outline-none focus:border-brand transition-all"
                         />
                     </div>
                     <button
                         type="submit"
                         disabled={isValidating || !url}
-                        className="bg-red-600 hover:bg-red-500 disabled:opacity-50 px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 transition-all"
+                        className="bg-brand hover:bg-brand-strong text-ink disabled:opacity-50 px-8 py-4 rounded-lg font-bold flex items-center justify-center gap-2 transition-all"
                     >
                         {isValidating ? 'Validating...' : 'Check Files'}
                     </button>
@@ -72,18 +72,18 @@ export default function RobotsSitemapChecker() {
             {results && (
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
                     {/* Robots.txt Card */}
-                    <div className="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-xl">
-                        <div className="p-6 border-b border-slate-800 flex items-center justify-between bg-slate-900/50">
+                    <div className="bg-surface border border-edge rounded-xl overflow-hidden">
+                        <div className="p-6 border-b border-edge flex items-center justify-between bg-surface-2">
                             <div className="flex items-center gap-3">
-                                <div className="p-2 bg-red-500/10 rounded-lg">
-                                    <FileText className="w-5 h-5 text-red-400" />
+                                <div className="p-2 bg-brand/10 rounded-lg">
+                                    <FileText className="w-5 h-5 text-brand" />
                                 </div>
                                 <div>
-                                    <h3 className="font-bold">robots.txt</h3>
-                                    <span className="text-xs text-slate-500 font-mono">{results.robots.url}</span>
+                                    <h3 className="font-display font-bold text-ink">robots.txt</h3>
+                                    <span className="text-xs text-faint font-mono">{results.robots.url}</span>
                                 </div>
                             </div>
-                            <div className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${results.robots.status === 'pass' ? 'bg-emerald-500/10 text-emerald-500' : 'bg-amber-500/10 text-amber-500'
+                            <div className={`px-3 py-1 rounded-lg font-mono text-xs uppercase tracking-[0.15em] ${results.robots.status === 'pass' ? 'bg-emerald-500/10 text-emerald-500' : 'bg-amber-500/10 text-amber-500'
                                 }`}>
                                 {results.robots.status}
                             </div>
@@ -93,8 +93,8 @@ export default function RobotsSitemapChecker() {
                                 <div key={idx} className="flex gap-4">
                                     <div className="mt-1"><StatusIcon status={audit.status} /></div>
                                     <div>
-                                        <h4 className="font-semibold text-slate-200">{audit.title}</h4>
-                                        <p className="text-sm text-slate-400">{audit.msg}</p>
+                                        <h4 className="font-semibold text-ink">{audit.title}</h4>
+                                        <p className="text-sm text-body">{audit.msg}</p>
                                     </div>
                                 </div>
                             ))}
@@ -102,18 +102,18 @@ export default function RobotsSitemapChecker() {
                     </div>
 
                     {/* Sitemap.xml Card */}
-                    <div className="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-xl">
-                        <div className="p-6 border-b border-slate-800 flex items-center justify-between bg-slate-900/50">
+                    <div className="bg-surface border border-edge rounded-xl overflow-hidden">
+                        <div className="p-6 border-b border-edge flex items-center justify-between bg-surface-2">
                             <div className="flex items-center gap-3">
-                                <div className="p-2 bg-purple-500/10 rounded-lg">
-                                    <Map className="w-5 h-5 text-purple-400" />
+                                <div className="p-2 bg-brand/10 rounded-lg">
+                                    <Map className="w-5 h-5 text-brand" />
                                 </div>
                                 <div>
-                                    <h3 className="font-bold">sitemap.xml</h3>
-                                    <span className="text-xs text-slate-500 font-mono">{results.sitemap.url}</span>
+                                    <h3 className="font-display font-bold text-ink">sitemap.xml</h3>
+                                    <span className="text-xs text-faint font-mono">{results.sitemap.url}</span>
                                 </div>
                             </div>
-                            <div className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${results.sitemap.status === 'pass' ? 'bg-emerald-500/10 text-emerald-500' : 'bg-amber-500/10 text-amber-500'
+                            <div className={`px-3 py-1 rounded-lg font-mono text-xs uppercase tracking-[0.15em] ${results.sitemap.status === 'pass' ? 'bg-emerald-500/10 text-emerald-500' : 'bg-amber-500/10 text-amber-500'
                                 }`}>
                                 {results.sitemap.status}
                             </div>
@@ -123,22 +123,22 @@ export default function RobotsSitemapChecker() {
                                 <div key={idx} className="flex gap-4">
                                     <div className="mt-1"><StatusIcon status={audit.status} /></div>
                                     <div>
-                                        <h4 className="font-semibold text-slate-200">{audit.title}</h4>
-                                        <p className="text-sm text-slate-400">{audit.msg}</p>
+                                        <h4 className="font-semibold text-ink">{audit.title}</h4>
+                                        <p className="text-sm text-body">{audit.msg}</p>
                                     </div>
                                 </div>
                             ))}
                         </div>
                     </div>
 
-                    <div className="lg:col-span-2 bg-red-600/10 border border-red-500/20 p-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div className="lg:col-span-2 bg-brand/10 border border-brand/20 p-8 rounded-xl flex flex-col md:flex-row items-center justify-between gap-8">
                         <div className="space-y-2">
-                            <h3 className="text-2xl font-bold">Improve Your Site's Crawlability</h3>
-                            <p className="text-slate-400 max-w-xl">
+                            <h3 className="font-display text-2xl font-bold text-ink">Improve Your Site's Crawlability</h3>
+                            <p className="text-body max-w-xl">
                                 Technical SEO issues in your robots.txt or sitemap can prevent search engines from indexing your most important pages.
                             </p>
                         </div>
-                        <Link href="/contact" className="whitespace-nowrap bg-red-600 hover:bg-red-50 text-white hover:text-red-600 px-8 py-4 rounded-2xl font-bold transition-all flex items-center gap-2 group">
+                        <Link href="/contact" className="whitespace-nowrap bg-brand hover:bg-brand-strong text-ink px-8 py-4 rounded-lg font-bold transition-all flex items-center gap-2 group">
                             Fix My Technical SEO
                             <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </Link>

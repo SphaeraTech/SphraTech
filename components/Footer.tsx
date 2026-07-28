@@ -1,6 +1,5 @@
 'use client';
 
-import { Globe } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 
 export default function Footer() {
@@ -10,163 +9,86 @@ export default function Footer() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const link = 'text-body hover:text-ink transition-colors';
+
   return (
-    <footer className="bg-slate-950 border-t border-slate-800 py-12 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-base border-t border-edge py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
-          {/* Company Links */}
           <div>
-            <h3 className="font-bold text-white mb-4">{t.footer.company}</h3>
-            <ul className="space-y-3 text-slate-400">
-              <li>
-                <a
-                  href="/about"
-                  className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
-                >
-                  {t.footer.aboutUs}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/about#team"
-                  className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
-                >
-                  {t.footer.team}
-                </a>
-              </li>
-              {/*
-              <li>
-                <a 
-                  href="#" 
-                  className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
-                >
-                  {t.footer.careers}
-                </a>
-              </li>
-              */}
+            <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-faint mb-4">
+              {t.footer.company}
+            </h3>
+            <ul className="space-y-3">
+              <li><a href="/about" className={link}>{t.footer.aboutUs}</a></li>
+              <li><a href="/about#team" className={link}>{t.footer.team}</a></li>
             </ul>
           </div>
 
-          {/* Services Links */}
           <div>
-            <h3 className="font-bold text-white mb-4">{t.footer.services}</h3>
-            <ul className="space-y-3 text-slate-400">
-              <li>
-                <a
-                  href="/services/saas-solutions"
-                  className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
-                >
-                  {t.footer.saas}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services/web-development"
-                  className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
-                >
-                  {t.footer.webDev}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services/mobile-development"
-                  className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
-                >
-                  {t.footer.mobileDev}
-                </a>
-              </li>
+            <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-faint mb-4">
+              {t.footer.services}
+            </h3>
+            <ul className="space-y-3">
+              <li><a href="/services/saas-solutions" className={link}>{t.footer.saas}</a></li>
+              <li><a href="/services/web-development" className={link}>{t.footer.webDev}</a></li>
+              <li><a href="/services/mobile-development" className={link}>{t.footer.mobileDev}</a></li>
             </ul>
           </div>
 
-          {/* Resources Links */}
           <div>
-            <h3 className="font-bold text-white mb-4">{t.footer.resources}</h3>
-            <ul className="space-y-3 text-slate-400">
-              <li>
-                <a
-                  href="/blog"
-                  className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
-                >
-                  {t.footer.blog}
-                </a>
-              </li>
-              {
-                /*  <li>
-                <a 
-                  href="#" 
-                  className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
-                >
-                  {t.footer.caseStudy}
-                </a>
-              </li>  */
-              }
-
-              {
-                /*  <li>
-                <a 
-                  href="#" 
-                  className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
-                >
-                  {t.footer.testimonials}
-                </a>
-              </li>  */
-              }
-
+            <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-faint mb-4">
+              {t.footer.resources}
+            </h3>
+            <ul className="space-y-3">
+              <li><a href="/blog" className={link}>{t.footer.blog}</a></li>
+              <li><a href="/free-tools" className={link}>{t.nav.freeTools}</a></li>
             </ul>
           </div>
 
-          {/* Social Links */}
           <div>
-            <h3 className="font-bold text-white mb-4">{t.footer.follow}</h3>
-            <ul className="space-y-3 text-slate-400">
-              
+            <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-faint mb-4">
+              {t.footer.follow}
+            </h3>
+            <ul className="space-y-3">
               <li>
                 <a
                   href="https://www.linkedin.com/company/spheradev"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors duration-200 hover:translate-x-1 inline-flex items-center gap-2"
+                  className={link}
                 >
-                  <span>LinkedIn</span>
+                  LinkedIn
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Logo and Copyright Section */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-slate-800">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-edge">
           <div className="flex items-center gap-3">
-            <div className="relative">
-            <img src="/navbar-logo.png" alt="SphæraTech Logo" width="64px" />
-
-            </div>
-            <span className="font-bold text-white text-lg">SpheraTech</span>
+            <img src="/navbar-logo.png" alt="SpheraTech logo" className="w-10 h-auto" />
+            <span className="font-display font-bold text-ink text-lg">SpheraTech</span>
           </div>
 
-          <div className="text-slate-400 text-sm text-center sm:text-right">
+          <div className="text-faint text-sm text-center sm:text-right">
             <p>&copy; {new Date().getFullYear()} SpheraTech. {t.footer.rights || 'All rights reserved.'}</p>
             <p className="mt-1">
-              <a href="/privacy" className="hover:text-white transition-colors mx-2">
-                Privacy Policy
-              </a>
+              <a href="/privacy" className="hover:text-body transition-colors mx-2">Privacy Policy</a>
               |
-              <a href="/terms" className="hover:text-white transition-colors mx-2">
-                Terms of Service
-              </a>
+              <a href="/terms" className="hover:text-body transition-colors mx-2">Terms of Service</a>
             </p>
           </div>
         </div>
 
-        {/* Go to Top Button */}
         <div className="flex justify-center mt-8">
           <button
             onClick={scrollToTop}
-            className="px-6 py-3 border border-red-500 text-red-500 rounded-full hover:bg-red-500 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-red-500/25 active:scale-95 flex items-center gap-2 group"
+            className="group px-5 py-2.5 border border-edge hover:border-brand text-body hover:text-brand rounded-lg transition-colors flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em]"
             aria-label="Scroll to top"
           >
             <svg
-              className="w-5 h-5 transform transition-transform group-hover:-translate-y-1"
+              className="w-4 h-4 transform transition-transform group-hover:-translate-y-0.5"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

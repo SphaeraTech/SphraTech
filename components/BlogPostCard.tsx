@@ -19,8 +19,8 @@ const BlogPostCard = ({ post }: BlogPostCardProps) => {
   );
 
   return (
-    <article className="bg-slate-900/50 rounded-xl overflow-hidden border border-slate-800 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1">
-      
+    <article className="h-full flex flex-col bg-surface border border-edge rounded-xl overflow-hidden hover:border-brand/40 hover:-translate-y-0.5 transition-all">
+
       {/* Featured Image */}
       {post.mainImage && (
         <Link
@@ -31,21 +31,21 @@ const BlogPostCard = ({ post }: BlogPostCardProps) => {
             src={urlFor(post.mainImage).width(800).height(500).url()}
             alt={post.title}
             fill
-            className="object-cover transition-transform duration-300 hover:scale-105"
+            className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </Link>
       )}
 
-      <div className="p-6">
-        
+      <div className="p-6 flex-1 flex flex-col">
+
         {/* Categories */}
         {post.categories && post.categories.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-3">
+          <div className="flex flex-wrap gap-x-4 gap-y-1 mb-3">
             {post.categories.slice(0, 2).map((category) => (
               <span
                 key={category._id}
-                className="text-xs px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20"
+                className="font-mono text-xs uppercase tracking-[0.15em] text-brand"
               >
                 {category.title}
               </span>
@@ -55,20 +55,20 @@ const BlogPostCard = ({ post }: BlogPostCardProps) => {
 
         {/* Title */}
         <Link href={`/blog/${post.slug.current}`}>
-          <h2 className="text-xl font-bold mb-3 hover:text-blue-400 transition-colors line-clamp-2">
+          <h2 className="font-display text-xl font-bold tracking-tight text-ink mb-3 hover:text-brand transition-colors line-clamp-2">
             {post.title}
           </h2>
         </Link>
 
         {/* Excerpt */}
         {post.excerpt && (
-          <p className="text-slate-400 mb-4 line-clamp-3 text-sm">
+          <p className="text-body mb-4 line-clamp-3 text-sm leading-relaxed">
             {post.excerpt}
           </p>
         )}
 
         {/* Meta */}
-        <div className="flex items-center justify-between text-sm text-slate-500 border-t border-slate-800 pt-4">
+        <div className="mt-auto flex items-center justify-between font-mono text-xs text-faint border-t border-edge pt-4">
           <div className="flex items-center gap-2">
             {post.author?.image && (
               <div className="relative w-6 h-6 rounded-full overflow-hidden">

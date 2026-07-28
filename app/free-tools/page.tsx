@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { Search, Sparkles, Users } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { freeToolsData, categories } from '@/lib/freeToolsData';
 import FreeToolCard from '@/components/FreeToolCard';
+import Reveal from '@/components/motion/Reveal';
 
 export default function FreeToolsPage() {
   const { t } = useLanguage();
@@ -18,84 +19,79 @@ export default function FreeToolsPage() {
     return matchesCategory && matchesSearch;
   });
 
+  const tabClass = (isActive: boolean) =>
+    `px-4 py-2 rounded-lg font-mono text-xs uppercase tracking-[0.15em] border transition-colors ${
+      isActive
+        ? 'text-brand border-brand bg-brand/10'
+        : 'text-body border-edge hover:border-edge-strong'
+    }`;
+
   return (
-    <>
+    <main className="min-h-screen pt-24">
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        {/* Header */}
+        <Reveal className="mb-12">
+          <p className="font-mono text-brand text-xs uppercase tracking-[0.25em] mb-4">
+            {'// '}Free tools
+          </p>
+          <h1 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-ink">
+            {t.freeTools?.title || 'Free tools'}
+          </h1>
+          <p className="mt-4 max-w-2xl text-body md:text-lg">
+            {t.freeTools?.subtitle || 'Tools to help you work faster and more efficiently.'}
+          </p>
+        </Reveal>
 
-      <main className="min-h-screen bg-slate-950 text-white pt-24">
-        <div className="max-w-7xl mx-auto px-6 py-12">
-          {/* Header Section */}
-          <div className="text-center mb-12">
-
-
-            {/* Title */}
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-red-400 to-purple-400 text-transparent bg-clip-text">
-              {t.freeTools?.title || 'Free tools'}
-            </h1>
-
-            <p className="text-xl text-slate-400 mb-6">
-              {t.freeTools?.subtitle || 'Tools to help you work faster and more efficiently.'}
-            </p>
-
-
-          </div>
-
-          {/* Categories and Search */}
-          <div className="mb-8">
-            {/* Categories */}
-            <div className="flex flex-wrap gap-3 mb-6">
+        {/* Categories and Search */}
+        <div className="mb-10">
+          <div className="flex flex-wrap gap-3 mb-6">
+            <button onClick={() => setSelectedCategory('all')} className={tabClass(selectedCategory === 'all')}>
+              All
+            </button>
+            {categories.map((category) => (
               <button
-                onClick={() => setSelectedCategory('all')}
-                className={`px-6 py-2 rounded-full font-medium transition-all ${selectedCategory === 'all'
-                  ? 'bg-red-600 text-white'
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-                  }`}
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={tabClass(selectedCategory === category.id)}
               >
-                All
+                {category.name}
               </button>
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-2 rounded-full font-medium transition-all ${selectedCategory === category.id
-                    ? 'bg-red-600 text-white'
-                    : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-                    }`}
-                >
-                  {category.name}
-                </button>
-              ))}
-            </div>
-
-            {/* Search Bar */}
-            <div className="relative max-w-md">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
-              <input
-                type="text"
-                placeholder="Search products"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-red-500 transition-colors"
-              />
-            </div>
-          </div>
-
-          {/* Tools Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredTools.map((tool) => (
-              <FreeToolCard key={tool.id} tool={tool} />
             ))}
           </div>
 
-          {/* No Results */}
-          {filteredTools.length === 0 && (
-            <div className="text-center py-20">
-              <div className="text-slate-400 text-xl mb-4">No tools found</div>
-              <p className="text-slate-500">Try adjusting your search or filters</p>
-            </div>
-          )}
+          <div className="relative max-w-md">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-faint" />
+            <input
+              type="text"
+              placeholder={t.freeTools?.searchPlaceholder || 'Search tools'}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-11 pr-4 py-3 bg-surface-2 border border-edge rounded-lg text-ink placeholder-faint focus:outline-none focus:border-brand transition-colors"
+            />
+          </div>
         </div>
-      </main>
 
-    </>
+        {/* Tools Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {filteredTools.map((tool, index) => (
+            <Reveal key={tool.id} delay={(index % 3) * 70}>
+              <FreeToolCard tool={tool} />
+            </Reveal>
+          ))}
+        </div>
+
+        {/* No Results */}
+        {filteredTools.length === 0 && (
+          <div className="text-center py-20">
+            <p className="font-display text-xl font-bold text-ink mb-2">
+              {t.freeTools?.noResults || 'No tools found'}
+            </p>
+            <p className="text-body">
+              {t.freeTools?.noResultsDesc || 'Try adjusting your search or filters'}
+            </p>
+          </div>
+        )}
+      </div>
+    </main>
   );
 }

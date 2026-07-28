@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import { FreeTool } from '@/lib/freeToolsData';
 
 interface FreeToolCardProps {
@@ -9,46 +10,35 @@ interface FreeToolCardProps {
 
 export default function FreeToolCard({ tool }: FreeToolCardProps) {
   return (
-    <Link href={tool.link}>
-      <div className="group relative bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-800 hover:border-red-500/50 transition-all duration-300 overflow-hidden h-full">
-        {/* Featured Badge */}
+    <Link
+      href={tool.link}
+      className="group flex flex-col bg-surface border border-edge hover:border-brand/40 rounded-xl overflow-hidden transition-all hover:-translate-y-0.5 h-full"
+    >
+      {/* Terminal-window header */}
+      <div className="flex items-center gap-2 bg-surface-2 border-b border-edge px-4 py-2.5">
+        <span className="w-2 h-2 rounded-full bg-edge-strong" />
+        <span className="w-2 h-2 rounded-full bg-edge-strong" />
+        <span className="w-2 h-2 rounded-full bg-edge-strong" />
+        <span className="ml-2 font-mono text-xs text-faint truncate">~/tools/{tool.id}</span>
         {tool.featured && (
-          <div className="absolute top-4 right-4 z-10">
-            <span className="px-3 py-1 bg-red-600 text-white text-xs font-bold rounded-full">
-              Featured
-            </span>
-          </div>
+          <span className="ml-auto font-mono text-[0.65rem] uppercase tracking-[0.15em] text-brand border border-brand/40 rounded px-2 py-0.5">
+            Featured
+          </span>
         )}
+      </div>
 
-        {/* Image Container */}
-        <div className="relative h-64 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center p-8 overflow-hidden">
-          <div className={`absolute inset-0 bg-gradient-to-br ${tool.gradient} opacity-10 group-hover:opacity-20 transition-opacity`}></div>
+      {/* Body */}
+      <div className="flex flex-col flex-1 p-6">
+        <span className="font-mono text-xs uppercase tracking-[0.2em] text-brand mb-3">
+          $ {tool.categoryLabel.toLowerCase()}
+        </span>
+        <h3 className="font-display text-xl font-bold text-ink mb-2">{tool.title}</h3>
+        <p className="text-body text-sm leading-relaxed flex-1">{tool.description}</p>
 
-          {/* Placeholder Icon/Image */}
-          <div className={`relative w-32 h-32 bg-gradient-to-br ${tool.gradient} rounded-3xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300`}>
-            <div className="w-16 h-16 bg-white/20 rounded-2xl"></div>
-          </div>
-        </div>
-
-        {/* Content */}
-        <div className="p-6">
-          <div className="mb-3">
-            <span className="text-xs font-semibold text-red-400 tracking-wider">
-              {tool.categoryLabel}
-            </span>
-          </div>
-
-          <h3 className="text-xl font-bold mb-2 text-white group-hover:text-red-400 transition-colors">
-            {tool.title}
-          </h3>
-
-          <p className="text-slate-400 text-sm leading-relaxed">
-            {tool.description}
-          </p>
-
-          {/* Hover Effect Border */}
-          <div className="absolute inset-0 border-2 border-transparent group-hover:border-red-500/20 rounded-2xl transition-colors pointer-events-none"></div>
-        </div>
+        <span className="mt-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em] text-brand">
+          Open tool
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </span>
       </div>
     </Link>
   );

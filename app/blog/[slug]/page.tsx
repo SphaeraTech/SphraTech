@@ -3,6 +3,7 @@ import { urlFor } from '@/lib/helpers'
 import { PortableText } from '@portabletext/react'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
+import { Metadata } from 'next'
 
 export const revalidate = 60; // revalidate every 60 seconds
 
@@ -31,7 +32,7 @@ async function getPost(slug: string) {
 const components = {
   types: {
     image: ({ value }: any) => (
-      <div className="relative w-full h-[400px] my-10 rounded-xl overflow-hidden">
+      <div className="relative w-full h-[400px] my-10 rounded-xl overflow-hidden border border-edge">
         <Image
           src={urlFor(value).url()}
           alt={value.alt || 'Blog Image'}
@@ -42,17 +43,20 @@ const components = {
     ),
   },
   block: {
-    h1: ({ children }: any) => <h1 className="text-4xl font-bold my-6">{children}</h1>,
-    h2: ({ children }: any) => <h2 className="text-3xl font-bold my-4">{children}</h2>,
-    h3: ({ children }: any) => <h3 className="text-2xl font-bold my-4">{children}</h3>,
-    normal: ({ children }: any) => <p className="text-lg leading-relaxed mb-4 text-slate-300">{children}</p>,
+    h1: ({ children }: any) => <h1 className="font-display text-4xl font-bold tracking-tight text-ink my-6">{children}</h1>,
+    h2: ({ children }: any) => <h2 className="font-display text-3xl font-bold tracking-tight text-ink my-4">{children}</h2>,
+    h3: ({ children }: any) => <h3 className="font-display text-2xl font-bold tracking-tight text-ink my-4">{children}</h3>,
+    normal: ({ children }: any) => <p className="text-lg leading-relaxed mb-4 text-body">{children}</p>,
   },
   list: {
-    bullet: ({ children }: any) => <ul className="list-disc ml-6 mb-4 space-y-2">{children}</ul>,
-    number: ({ children }: any) => <ol className="list-decimal ml-6 mb-4 space-y-2">{children}</ol>,
+    bullet: ({ children }: any) => <ul className="list-disc ml-6 mb-4 space-y-2 text-body">{children}</ul>,
+    number: ({ children }: any) => <ol className="list-decimal ml-6 mb-4 space-y-2 text-body">{children}</ol>,
   },
 }
-
+export const metadata: Metadata = {
+  title: 'Blog - SpheraTech',
+  description: 'Latest insights, news, and updates from SpheraTech',
+};
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params
   const post = await getPost(slug)
@@ -69,12 +73,12 @@ export default async function BlogPostPage({ params }: PageProps) {
   )
 
   return (
-    <article className="max-w-4xl mx-auto px-6 pt-32 pb-12">
+    <article className="max-w-4xl mx-auto px-6 pt-32 pb-20">
       {/* Title */}
-      <h1 className="text-4xl font-bold mb-6">{post.title}</h1>
+      <h1 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-ink mb-6">{post.title}</h1>
 
       {/* Meta */}
-      <div className="flex items-center gap-4 mb-8 text-slate-400">
+      <div className="flex items-center gap-4 mb-8">
         {post.author?.image && (
           <div className="relative w-10 h-10 rounded-full overflow-hidden">
             <Image
@@ -86,15 +90,15 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
         )}
         <div>
-          <p>{post.author?.name}</p>
-          <time dateTime={post.publishedAt}>{formattedDate}</time>
+          <p className="text-ink text-sm font-medium">{post.author?.name}</p>
+          <time dateTime={post.publishedAt} className="font-mono text-xs text-faint">{formattedDate}</time>
         </div>
 
       </div>
 
       {/* Main Image */}
       {post.mainImage && (
-        <div className="relative w-full h-[400px] mb-10 rounded-xl overflow-hidden">
+        <div className="relative w-full h-[400px] mb-10 rounded-xl overflow-hidden border border-edge">
           <Image
             src={urlFor(post.mainImage).width(1200).height(600).url()}
             alt={post.title}
@@ -105,7 +109,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       )}
 
       {/* Content */}
-      <div className="prose prose-invert prose-slate max-w-none">
+      <div className="prose prose-invert max-w-none prose-headings:font-display prose-headings:tracking-tight prose-headings:text-ink prose-p:text-body prose-li:text-body prose-strong:text-ink prose-a:text-brand hover:prose-a:text-brand-strong prose-blockquote:border-brand prose-blockquote:text-body prose-code:text-ink prose-pre:bg-surface prose-pre:border prose-pre:border-edge prose-hr:border-edge">
         <PortableText value={post.body} components={components} />
       </div>
     </article>

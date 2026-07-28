@@ -55,42 +55,42 @@ export default function MetaTagGenerator() {
             {/* Input Section */}
             <div className="space-y-6">
                 <div>
-                    <h3 className="text-xl font-semibold mb-6 flex items-center gap-2 text-red-400">
-                        <Code className="w-5 h-5" />
+                    <h3 className="font-display text-xl font-semibold mb-6 flex items-center gap-2 text-ink">
+                        <Code className="w-5 h-5 text-brand" />
                         Meta Information
                     </h3>
 
                     <div className="space-y-4">
                         <div>
-                            <label className="block text-sm font-medium text-slate-400 mb-2">Page Title</label>
+                            <label className="block text-sm font-medium text-body mb-2">Page Title</label>
                             <input
                                 type="text"
                                 name="title"
                                 value={formData.title}
                                 onChange={handleInputChange}
                                 placeholder="Enter page title (Recommended: < 60 chars)"
-                                className="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:border-red-500 transition-colors"
+                                className="w-full bg-surface-2 border border-edge rounded-lg px-4 py-3 text-ink placeholder:text-faint focus:outline-none focus:border-brand transition-colors"
                                 maxLength={70}
                             />
                             <div className="flex justify-end mt-1">
-                                <span className={`text-xs ${formData.title.length > 60 ? 'text-orange-400' : 'text-slate-500'}`}>
+                                <span className={`text-xs ${formData.title.length > 60 ? 'text-orange-400' : 'text-faint'}`}>
                                     {formData.title.length}/60
                                 </span>
                             </div>
                         </div>
 
                         <div>
-                            <label className="block text-sm font-medium text-slate-400 mb-2">Meta Description</label>
+                            <label className="block text-sm font-medium text-body mb-2">Meta Description</label>
                             <textarea
                                 name="description"
                                 value={formData.description}
                                 onChange={handleInputChange}
                                 placeholder="Briefly describe your page (Recommended: < 160 chars)"
-                                className="w-full h-32 bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:border-red-500 transition-colors resize-none"
+                                className="w-full h-32 bg-surface-2 border border-edge rounded-lg px-4 py-3 text-ink placeholder:text-faint focus:outline-none focus:border-brand transition-colors resize-none"
                                 maxLength={200}
                             />
                             <div className="flex justify-end mt-1">
-                                <span className={`text-xs ${formData.description.length > 160 ? 'text-orange-400' : 'text-slate-500'}`}>
+                                <span className={`text-xs ${formData.description.length > 160 ? 'text-orange-400' : 'text-faint'}`}>
                                     {formData.description.length}/160
                                 </span>
                             </div>
@@ -98,38 +98,38 @@ export default function MetaTagGenerator() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
-                                <label className="block text-sm font-medium text-slate-400 mb-2">Site URL</label>
+                                <label className="block text-sm font-medium text-body mb-2">Site URL</label>
                                 <input
                                     type="url"
                                     name="url"
                                     value={formData.url}
                                     onChange={handleInputChange}
                                     placeholder="https://example.com"
-                                    className="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:border-red-500 transition-colors"
+                                    className="w-full bg-surface-2 border border-edge rounded-lg px-4 py-3 text-ink placeholder:text-faint focus:outline-none focus:border-brand transition-colors"
                                 />
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-slate-400 mb-2">Image URL</label>
+                                <label className="block text-sm font-medium text-body mb-2">Image URL</label>
                                 <input
                                     type="url"
                                     name="image"
                                     value={formData.image}
                                     onChange={handleInputChange}
                                     placeholder="https://example.com/image.jpg"
-                                    className="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:border-red-500 transition-colors"
+                                    className="w-full bg-surface-2 border border-edge rounded-lg px-4 py-3 text-ink placeholder:text-faint focus:outline-none focus:border-brand transition-colors"
                                 />
                             </div>
                         </div>
 
                         <div>
-                            <label className="block text-sm font-medium text-slate-400 mb-2">Keywords (Optional)</label>
+                            <label className="block text-sm font-medium text-body mb-2">Keywords (Optional)</label>
                             <input
                                 type="text"
                                 name="keywords"
                                 value={formData.keywords}
                                 onChange={handleInputChange}
                                 placeholder="keyword1, keyword2, keyword3"
-                                className="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:border-red-500 transition-colors"
+                                className="w-full bg-surface-2 border border-edge rounded-lg px-4 py-3 text-ink placeholder:text-faint focus:outline-none focus:border-brand transition-colors"
                             />
                         </div>
                     </div>
@@ -138,10 +138,10 @@ export default function MetaTagGenerator() {
 
             {/* Preview/Output Section */}
             <div className="space-y-6">
-                <div className="flex bg-slate-800/50 p-1 rounded-xl w-fit">
+                <div className="flex bg-surface-2 p-1 rounded-lg w-fit">
                     <button
                         onClick={() => setActiveTab('preview')}
-                        className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeTab === 'preview' ? 'bg-red-600 text-white shadow-lg' : 'text-slate-400 hover:text-white'
+                        className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeTab === 'preview' ? 'bg-brand text-ink' : 'text-body hover:text-ink'
                             }`}
                     >
                         <Eye className="w-4 h-4" />
@@ -149,7 +149,7 @@ export default function MetaTagGenerator() {
                     </button>
                     <button
                         onClick={() => setActiveTab('code')}
-                        className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeTab === 'code' ? 'bg-red-600 text-white shadow-lg' : 'text-slate-400 hover:text-white'
+                        className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeTab === 'code' ? 'bg-brand text-ink' : 'text-body hover:text-ink'
                             }`}
                     >
                         <Code className="w-4 h-4" />
@@ -207,24 +207,24 @@ export default function MetaTagGenerator() {
                     <div className="relative group animate-in fade-in slide-in-from-bottom-2 duration-300">
                         <button
                             onClick={copyToClipboard}
-                            className="absolute top-4 right-4 p-2 bg-slate-700/50 hover:bg-slate-700 rounded-lg transition-colors z-10"
+                            className="absolute top-4 right-4 p-2 bg-surface-2 border border-edge hover:border-edge-strong text-body rounded-lg transition-colors z-10"
                             title="Copy to clipboard"
                         >
                             {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
                         </button>
-                        <pre className="bg-slate-950 border border-slate-800 rounded-xl p-6 pt-12 overflow-x-auto text-sm font-mono text-red-300 custom-scrollbar">
+                        <pre className="bg-surface border border-edge rounded-xl p-6 pt-12 overflow-x-auto text-sm font-mono text-brand custom-scrollbar">
                             {generateMetaTags()}
                         </pre>
                     </div>
                 )}
 
-                <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-6 flex items-start gap-4">
-                    <div className="p-2 bg-red-500/20 rounded-lg">
-                        <Search className="w-5 h-5 text-red-400" />
+                <div className="bg-brand/10 border border-brand/20 rounded-xl p-6 flex items-start gap-4">
+                    <div className="p-2 bg-brand/20 rounded-lg">
+                        <Search className="w-5 h-5 text-brand" />
                     </div>
                     <div>
-                        <h4 className="font-semibold text-red-400 mb-1">SEO Tip</h4>
-                        <p className="text-sm text-slate-400 leading-relaxed">
+                        <h4 className="font-semibold text-brand mb-1">SEO Tip</h4>
+                        <p className="text-sm text-body leading-relaxed">
                             Keep your title under 60 characters and description under 160 characters for optimal visibility in Search Engine Results Pages (SERPs).
                         </p>
                     </div>
