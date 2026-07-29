@@ -20,6 +20,18 @@ export async function getPosts() {
     `);
 }
 
+/** Slug + real edit date, so the sitemap reports a truthful `lastmod`. */
+export async function getPostSitemapEntries(): Promise<
+  { slug: string; updatedAt: string }[]
+> {
+  return await client.fetch(`
+      *[_type == "post" && defined(slug.current)] | order(publishedAt desc) {
+        "slug": slug.current,
+        "updatedAt": _updatedAt
+      }
+    `);
+}
+
 export async function getPostsSlugs() {
   return await client.fetch(`
       *[_type == "post"] | order(publishedAt desc) {

@@ -183,6 +183,18 @@ export async function getProjectSlugs(): Promise<string[]> {
   );
 }
 
+/** Slug + real edit date, so the sitemap reports a truthful `lastmod`. */
+export async function getProjectSitemapEntries(): Promise<
+  { slug: string; updatedAt: string }[]
+> {
+  return client.fetch(
+    `*[_type == "project" && defined(slug.current)] ${ORDER} {
+      "slug": slug.current,
+      "updatedAt": _updatedAt
+    }`
+  );
+}
+
 /**
  * The project to offer at the end of a case study — the next one in display
  * order, wrapping to the first. Returns null when there's nothing else.

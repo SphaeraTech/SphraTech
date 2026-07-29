@@ -8,6 +8,8 @@ import CTASection from '@/components/CTASection';
 import ProjectCardCompact from '@/components/projects/ProjectCardCompact';
 import SectionHeader from '@/components/SectionHeader';
 import Reveal from '@/components/motion/Reveal';
+import JsonLd from '@/components/seo/JsonLd';
+import { breadcrumbSchema, faqSchema, serviceSchema } from '@/lib/schema';
 
 const ICONS: Record<string, LucideIcon> = {
     Globe,
@@ -21,7 +23,8 @@ const SLUG = 'saas-solutions';
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-    title: 'SaaS Solutions - SpheraTech',
+    alternates: { canonical: `/services/${SLUG}` },
+    title: 'SaaS Solutions',
     description: 'We develop scalable and secure Software as a Service solutions tailored to your business needs.',
 };
 
@@ -57,6 +60,21 @@ export default async function SaaSPage() {
 
     return (
         <main className="min-h-screen">
+            <JsonLd
+                schema={[
+                    serviceSchema({
+                        name: serviceData.title,
+                        description: serviceData.desc,
+                        path: `/services/${SLUG}`,
+                    }),
+                    faqSchema(serviceData.faqs),
+                    breadcrumbSchema([
+                        { name: 'Home', path: '/' },
+                        { name: t.nav.services, path: '/services' },
+                        { name: serviceData.title, path: `/services/${SLUG}` },
+                    ]),
+                ]}
+            />
             {/* Hero Section */}
             <section className="pt-32 pb-20 px-6">
                 <div className="max-w-7xl mx-auto">

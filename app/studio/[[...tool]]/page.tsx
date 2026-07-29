@@ -1,8 +1,16 @@
+import type { Metadata } from 'next';
+import { metadata as studioMetadata } from 'next-sanity/studio';
 import Studio from './Studio';
 
 export const dynamic = 'force-static';
 
-export { metadata, viewport } from 'next-sanity/studio';
+export { viewport } from 'next-sanity/studio';
+
+/** The CMS is not content — keep it out of the index entirely. */
+export const metadata: Metadata = {
+  ...studioMetadata,
+  robots: { index: false, follow: false, nocache: true },
+};
 
 export default function StudioPage() {
   return <Studio />;

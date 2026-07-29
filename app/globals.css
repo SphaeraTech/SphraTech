@@ -56,6 +56,30 @@ body {
   }
 }
 
+/* Hero load sequence.
+   CSS rather than Anime.js on purpose: the <h1> is the LCP element, and
+   holding it at opacity 0 until the animation bundle parsed cost ~2.9s of
+   render delay. A keyframe animation starts on the first frame instead and is
+   visually identical (fade + 20px rise, 700ms, outCubic, 130ms stagger).
+   Anime.js still owns the circuit-trace draw that follows.
+   The reduced-motion block below collapses the duration, and `both` leaves the
+   element at its final state, so it simply appears. */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+[data-hero] {
+  animation: hero-rise 700ms cubic-bezier(0.33, 1, 0.68, 1) both;
+  animation-delay: calc(var(--hero-i, 0) * 130ms);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   ::before,

@@ -66,9 +66,15 @@ decorative element — everything else stays quiet.
 
 - Scroll reveals: `components/motion/Reveal.tsx`. One pattern sitewide:
   fade + 12px rise, 550ms, `outCubic`, optional per-card stagger via `delay`.
-- Hero: one orchestrated `createTimeline` load sequence (eyebrow → headline →
-  lede → CTA → circuit draw). Used on the home hero and the case-study hero,
-  and nowhere else.
+- Hero: one orchestrated load sequence (eyebrow → headline → lede → CTA →
+  circuit draw). Used on the home hero and the case-study hero, and nowhere
+  else. The **text steps are CSS** (`@keyframes hero-rise` in globals.css,
+  staggered by a `--hero-i` custom property) — the `<h1>` is the LCP element,
+  and holding it at `opacity: 0` until the Anime.js bundle parsed cost ~2.9s
+  of render delay. Anime.js still drives the circuit draw that follows. The
+  motion is unchanged; only the mechanism differs. This is the one sanctioned
+  exception to "Anime.js only", and it exists solely because it is the LCP
+  element — do not reach for CSS keyframes elsewhere.
 - Micro-interactions: CSS transitions on border/color/arrow-nudge only.
 - Everything respects `prefers-reduced-motion` (global kill in globals.css,
   and Reveal renders content visible immediately).

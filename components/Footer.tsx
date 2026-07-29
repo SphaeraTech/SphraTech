@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 
 export default function Footer() {
@@ -67,7 +68,13 @@ export default function Footer() {
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-edge">
           <div className="flex items-center gap-3">
-            <img src="/navbar-logo.png" alt="SpheraTech logo" className="w-10 h-auto" />
+            <Image
+              src="/navbar-logo.png"
+              alt="SpheraTech logo"
+              width={504}
+              height={580}
+              className="w-10 h-auto"
+            />
             <span className="font-display font-bold text-ink text-lg">SpheraTech</span>
           </div>
 

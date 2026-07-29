@@ -4,6 +4,8 @@ import { PortableText } from '@portabletext/react'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
+import JsonLd from '@/components/seo/JsonLd'
+import { articleSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const revalidate = 60; // revalidate every 60 seconds
 
@@ -20,6 +22,8 @@ async function getPost(slug: string) {
       mainImage,
       body,
       publishedAt,
+      _updatedAt,
+      excerpt,
       author->{
         name,
         image
@@ -28,6 +32,18 @@ async function getPost(slug: string) {
   `
 
   return client.fetch(query, { slug })
+}
+
+/** Falls back to the first paragraph when a post has no explicit excerpt. */
+function summarize(post: any): string | undefined {
+  if (post?.excerpt) return post.excerpt
+  const block = post?.body?.find(
+    (b: any) => b?._type === 'block' && b?.children?.some((c: any) => c?.text?.trim())
+  )
+  if (!block) return undefined
+  const text = block.children.map((c: any) => c.text ?? '').join('').trim()
+  if (!text) return undefined
+  return text.length > 155 ? `${text.slice(0, 152).trimEnd()}…` : text
 }
 const components = {
   types: {
@@ -53,10 +69,41 @@ const components = {
     number: ({ children }: any) => <ol className="list-decimal ml-6 mb-4 space-y-2 text-body">{children}</ol>,
   },
 }
-export const metadata: Metadata = {
-  title: 'Blog - SpheraTech',
-  description: 'Latest insights, news, and updates from SpheraTech',
-};
+/** Per-post metadata — a shared static title left every post with the same
+ *  SERP entry and no post name at all. */
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params
+  const post = await getPost(slug)
+  if (!post) return {}
+
+  const description = summarize(post)
+  const image = post.mainImage
+    ? urlFor(post.mainImage).width(1200).height(630).url()
+    : undefined
+
+  return {
+    title: post.title,
+    ...(description ? { description } : {}),
+    alternates: { canonical: `/blog/${slug}` },
+    openGraph: {
+      type: 'article',
+      url: `/blog/${slug}`,
+      title: post.title,
+      ...(description ? { description } : {}),
+      ...(post.publishedAt ? { publishedTime: post.publishedAt } : {}),
+      ...(post._updatedAt ? { modifiedTime: post._updatedAt } : {}),
+      ...(post.author?.name ? { authors: [post.author.name] } : {}),
+      ...(image ? { images: [{ url: image, width: 1200, height: 630 }] } : {}),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      ...(description ? { description } : {}),
+      ...(image ? { images: [image] } : {}),
+    },
+  }
+}
+
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params
   const post = await getPost(slug)
@@ -74,6 +121,26 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <article className="max-w-4xl mx-auto px-6 pt-32 pb-20">
+      <JsonLd
+        schema={[
+          articleSchema({
+            title: post.title,
+            description: summarize(post),
+            path: `/blog/${slug}`,
+            publishedAt: post.publishedAt,
+            updatedAt: post._updatedAt,
+            image: post.mainImage
+              ? urlFor(post.mainImage).width(1200).height(630).url()
+              : undefined,
+          }),
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Blog', path: '/blog' },
+            { name: post.title, path: `/blog/${slug}` },
+          ]),
+        ]}
+      />
+
       {/* Title */}
       <h1 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-ink mb-6">{post.title}</h1>
 

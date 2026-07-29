@@ -6,7 +6,8 @@ import BlogPostCard from '@/components/BlogPostCard';
 import Reveal from '@/components/motion/Reveal';
 
 export const metadata: Metadata = {
-    title: 'Blog - SpheraTech',
+    title: 'Blog',
+    alternates: { canonical: '/blog' },
     description: 'Latest insights, news, and updates from SpheraTech',
 };
 

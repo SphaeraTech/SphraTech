@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import { animate, createTimeline, svg, utils } from 'animejs';
+import { createTimeline, svg, utils } from 'animejs';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 
 export default function HeroSection() {
@@ -13,23 +13,18 @@ export default function HeroSection() {
   useEffect(() => {
     const root = rootRef.current;
     if (!root) return;
-    const steps = root.querySelectorAll<HTMLElement>('[data-hero]');
+    // The text steps ([data-hero]) fade in via CSS so the LCP heading paints on
+    // the first frame; this timeline picks the sequence up at the circuit draw.
     const traces = root.querySelectorAll<SVGPathElement>('[data-hero-trace]');
     const nodes = root.querySelectorAll<SVGCircleElement>('[data-hero-node]');
 
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      utils.set([...steps, ...traces, ...nodes], { opacity: 1 });
+      utils.set([...traces, ...nodes], { opacity: 1 });
       return;
     }
 
     utils.set(nodes, { opacity: 0 });
     const tl = createTimeline({ defaults: { ease: 'outCubic' } });
-    tl.add(steps, {
-      opacity: [0, 1],
-      translateY: [20, 0],
-      duration: 700,
-      delay: (_: unknown, i: number = 0) => i * 130,
-    });
 
     traces.forEach((trace, i) => {
       const [drawable] = svg.createDrawable(trace);
@@ -72,7 +67,7 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-5xl mx-auto text-center">
         <p
           data-hero
-          data-reveal
+          style={{ '--hero-i': 0 } as React.CSSProperties}
           className="font-mono text-brand text-xs md:text-sm uppercase tracking-[0.3em] mb-6"
         >
           {'// '}Web · SaaS · Mobile · SEO
@@ -80,20 +75,20 @@ export default function HeroSection() {
 
         <h1
           data-hero
-          data-reveal
+          style={{ '--hero-i': 1 } as React.CSSProperties}
           className="font-display text-5xl md:text-7xl font-bold tracking-tight text-ink leading-[1.05] mb-8"
         >
           {t.hero.title1} <span className="text-brand">{t.hero.title2}</span> {t.hero.title3}{' '}
           <span className="text-brand">{t.hero.title4}</span> {t.hero.title5}
         </h1>
 
-        <p data-hero data-reveal className="text-lg md:text-xl text-body max-w-2xl mx-auto mb-10">
+        <p data-hero style={{ '--hero-i': 2 } as React.CSSProperties} className="text-lg md:text-xl text-body max-w-2xl mx-auto mb-10">
           {t.hero.subtitle}
         </p>
 
         <div
           data-hero
-          data-reveal
+          style={{ '--hero-i': 3 } as React.CSSProperties}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <Link
@@ -117,7 +112,7 @@ export default function HeroSection() {
             <path data-hero-trace d="M0 20 H176 L192 6 H298" stroke="currentColor" strokeWidth="1.5" opacity="0" />
             <circle data-hero-node cx="306" cy="6" r="3.5" stroke="currentColor" strokeWidth="1.5" fill="none" style={{ transformOrigin: '306px 6px' }} />
           </svg>
-          <span data-hero data-reveal className="font-mono text-faint text-xs uppercase tracking-[0.25em]">
+          <span data-hero style={{ '--hero-i': 4 } as React.CSSProperties} className="font-mono text-faint text-xs uppercase tracking-[0.25em]">
             {t.hero.scrollBtn}
           </span>
           <svg viewBox="0 0 320 24" fill="none" preserveAspectRatio="xMinYMid meet" className="h-5 w-16 sm:w-40 md:w-64 shrink-0">

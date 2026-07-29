@@ -4,6 +4,7 @@ import { Menu, X, Languages, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +19,16 @@ export default function Navigation() {
     <nav className="fixed top-0 w-full z-50 bg-base/85 backdrop-blur-lg border-b border-edge">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
-          <img src="/navbar-logo.png" alt="SpheraTech logo" className="w-10 h-auto" />
+          {/* Intrinsic size is 504x580; next/image serves a ~40px-wide WebP and
+              reserves the box so the header never shifts. */}
+          <Image
+            src="/navbar-logo.png"
+            alt="SpheraTech logo"
+            width={504}
+            height={580}
+            className="w-10 h-auto"
+            priority
+          />
           <span className="font-display text-xl font-bold text-ink">SpheraTech</span>
         </Link>
 

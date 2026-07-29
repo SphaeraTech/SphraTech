@@ -6,6 +6,7 @@ export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: 'Our Work',
+  alternates: { canonical: '/realisations' },
   description:
     'Real projects shipped for real clients — websites, platforms, and SaaS products built by SpheraTech.',
 };

@@ -8,7 +8,8 @@ import CTASection from '@/components/CTASection';
 import Reveal from '@/components/motion/Reveal';
 
 export const metadata: Metadata = {
-    title: 'Our Services - SpheraTech',
+    title: 'Our Services',
+    alternates: { canonical: '/services' },
     description: 'Professional web development, SEO, SaaS solutions, and mobile app development services.',
 };
 

@@ -7,7 +7,8 @@ import { Metadata } from 'next';
 import Reveal from '@/components/motion/Reveal';
 
 export const metadata: Metadata = {
-  title: 'Our Products - SpheraTech',
+  title: 'Our Products',
+  alternates: { canonical: '/products' },
   description: 'Explore our range of innovative software products and solutions',
 };
 

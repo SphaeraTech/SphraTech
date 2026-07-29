@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { SITE_URL } from '@/utils/constants'
+import { SITE_URL, absoluteUrl } from '@/utils/constants'
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,8 +7,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
+        // The embedded studio and the tool endpoints are application surface,
+        // not content — crawling them wastes budget and indexes nothing useful.
+        disallow: ['/studio', '/studio/', '/api/'],
       },
     ],
-    sitemap: `${SITE_URL}/sitemap.xml`,
+    sitemap: absoluteUrl('/sitemap.xml'),
+    host: SITE_URL,
   }
 }

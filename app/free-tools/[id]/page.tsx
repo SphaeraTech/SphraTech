@@ -1,49 +1,67 @@
-'use client';
-
-import { useParams, notFound } from 'next/navigation';
-import { freeToolsData } from '@/lib/freeToolsData';
-import { ChevronLeft, Share2 } from 'lucide-react';
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import { ChevronLeft, Share2 } from 'lucide-react';
+import { freeToolsData } from '@/lib/freeToolsData';
+import JsonLd from '@/components/seo/JsonLd';
+import { breadcrumbSchema } from '@/lib/schema';
+import ToolRunner from './ToolRunner';
 
-// Import tool components (placeholders for now)
-import WebsiteSpeedTest from '@/components/tools/WebsiteSpeedTest';
-import SeoAnalyzer from '@/components/tools/SeoAnalyzer';
-import MetaTagGenerator from '@/components/tools/MetaTagGenerator';
-import RobotsSitemapChecker from '@/components/tools/RobotsSitemapChecker';
-import KeywordDifficultyChecker from '@/components/tools/KeywordDifficultyChecker';
-import WebsiteCostEstimator from '@/components/tools/WebsiteCostEstimator';
-import MobileFriendlyTest from '@/components/tools/MobileFriendlyTest';
-import TechStackDetector from '@/components/tools/TechStackDetector';
-import ColorPaletteGenerator from '@/components/tools/ColorPaletteGenerator';
-import FaviconGenerator from '@/components/tools/FaviconGenerator';
+/** Prerender every tool page — the shell is static, only the tool is dynamic. */
+export function generateStaticParams() {
+    return freeToolsData.map((tool) => ({ id: tool.id }));
+}
 
-const toolComponents: { [key: string]: React.ComponentType } = {
-    'website-speed-test': WebsiteSpeedTest,
-    'seo-analyzer': SeoAnalyzer,
-    'meta-tag-generator': MetaTagGenerator,
-    'robots-sitemap-checker': RobotsSitemapChecker,
-    'keyword-difficulty-checker': KeywordDifficultyChecker,
-    'website-cost-estimator': WebsiteCostEstimator,
-    'mobile-friendly-test': MobileFriendlyTest,
-    'tech-stack-detector': TechStackDetector,
-    'color-palette-generator': ColorPaletteGenerator,
-    'favicon-generator': FaviconGenerator,
-};
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+    const { id } = await params;
+    const tool = freeToolsData.find((t) => t.id === id);
+    if (!tool) return {};
 
-export default function ToolPage() {
-    const params = useParams();
-    const id = params.id as string;
+    return {
+        title: tool.title,
+        description: tool.description,
+        alternates: { canonical: `/free-tools/${tool.id}` },
+        openGraph: {
+            url: `/free-tools/${tool.id}`,
+            title: tool.title,
+            description: tool.description,
+        },
+    };
+}
 
+export default async function ToolPage({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = await params;
     const tool = freeToolsData.find((t) => t.id === id);
 
     if (!tool) {
         notFound();
     }
 
-    const ToolComponent = toolComponents[id] || (() => <div>Tool implementation coming soon...</div>);
-
     return (
         <main className="min-h-screen pt-24 pb-12">
+            <JsonLd
+                schema={[
+                    {
+                        '@context': 'https://schema.org',
+                        '@type': 'WebApplication',
+                        name: tool.title,
+                        description: tool.description,
+                        applicationCategory: 'WebApplication',
+                        operatingSystem: 'Any',
+                        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+                    },
+                    breadcrumbSchema([
+                        { name: 'Home', path: '/' },
+                        { name: 'Free Tools', path: '/free-tools' },
+                        { name: tool.title, path: `/free-tools/${tool.id}` },
+                    ]),
+                ]}
+            />
+
             <div className="max-w-7xl mx-auto px-6">
                 {/* Breadcrumbs */}
                 <nav className="flex items-center gap-2 text-faint text-sm mb-8 font-mono">
@@ -68,6 +86,7 @@ export default function ToolPage() {
                             {tool.description}
                         </p>
                     </div>
+                    {/* TODO: no handler wired up — this button is inert today. */}
                     <button className="flex items-center gap-2 px-5 py-2.5 border border-edge hover:border-brand text-ink rounded-lg transition-colors self-start md:self-center">
                         <Share2 className="w-4 h-4" />
                         Share Tool
@@ -76,7 +95,7 @@ export default function ToolPage() {
 
                 {/* Tool Interface */}
                 <div className="bg-surface border border-edge rounded-xl p-8 min-h-[400px]">
-                    <ToolComponent />
+                    <ToolRunner id={tool.id} />
                 </div>
             </div>
         </main>
