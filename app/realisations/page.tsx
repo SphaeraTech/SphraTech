@@ -1,11 +1,12 @@
-import React from 'react'
+import type { Metadata } from 'next';
+import RealisationsContent from './RealisationsContent';
 
-function realisationsPage() {
-  return (
-    <div>
-      
-    </div>
-  )
+export const metadata: Metadata = {
+  title: 'Our Work',
+  description:
+    'Real projects shipped for real clients — websites, platforms, and SaaS products built by SpheraTech.',
+};
+
+export default function RealisationsPage() {
+  return <RealisationsContent />;
 }
-
-export default realisationsPage

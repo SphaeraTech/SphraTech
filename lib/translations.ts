@@ -30,7 +30,7 @@ export const translations = {
       saas: {
         title: 'SaaS Solutions',
         desc: 'We develop scalable and secure Software as a Service solutions tailored to your business needs.',
-        longDesc: 'We develop scalable and secure Software as a Service solutions tailored to your business needs. Our web development agency combines cutting-edge technology with intelligent architecture to create platforms that grow with your businessfrom MVP to millions of users.',
+        longDesc: 'We develop scalable and secure Software as a Service solutions tailored to your business needs. Our web development agency combines cutting-edge technology with intelligent architecture to create platforms that grow with your business — from MVP to millions of users.',
         benefits: [
           'Scalable architecture',
           'Cloud-native solutions',
@@ -243,7 +243,7 @@ export const translations = {
         },
         fast: {
           title: "Fast Service",
-          desc: "High-performing products delivered in record time frames. Speed without sacrificethat's our commitment to you."
+          desc: "High-performing products delivered in record time frames. Speed without sacrifice — that's our commitment to you."
         },
         personal: {
           title: "Personalized Touch",
@@ -253,7 +253,7 @@ export const translations = {
     },
     cta: {
       title: "Let's discuss your project",
-      desc: " Let's discuss your idea and explore how our web development agency ( or Spheratech) can transform your vision into a digital powerhouse that drives real business growth.",
+      desc: "Tell us about your idea and we'll show you how SpheraTech can turn it into real business growth.",
       button: "Schedule Your Consultation",
       tooltip: "Whether you're a startup with a bold vision or an established enterprise looking to modernize your digital presence, we're ready to help."
     },
@@ -271,7 +271,8 @@ export const translations = {
       caseStudy: 'Case study',
       testimonials: 'Testimonials',
       follow: 'Follow us',
-      goTop: 'GO TO TOP'
+      goTop: 'GO TO TOP',
+      rights: 'All rights reserved.'
     },
     servicePage: {
       benefits: 'Key Benefits',
@@ -465,31 +466,31 @@ export const translations = {
       storyTitle1: 'From a',
       storyHighlight: 'garage idea',
       storyTitle2: 'to a real agency',
-      storyP1: 'It all started late one night  too many browser tabs open, too many businesses with terrible websites, and one clear thought: "I can fix this."',
-      storyP2: 'SpheraTech was born not in a co-working space or an incubator, but in the kind of chaotic, caffeine-fueled environment where the best ideas actually live. No investors, no safety net  just genuine belief that good design and clean code can change the way a business grows.',
+      storyP1: 'It all started late one night — too many browser tabs open, too many businesses with terrible websites, and one clear thought: "I can fix this."',
+      storyP2: 'SpheraTech was born not in a co-working space or an incubator, but in the kind of chaotic, caffeine-fueled environment where the best ideas actually live. No investors, no safety net — just genuine belief that good design and clean code can change the way a business grows.',
       storyP3: 'Every project since has been treated the same way: with full ownership, honest communication, and a relentless drive to deliver something the client is genuinely proud of.',
       storyCta: 'Work With Us',
       founderRole: 'Founder & Lead Developer',
-      founderQuote: '"I started SpheraTech from my room with a laptop, a strong Wi-Fi connection, and an obsession for building things that actually work. No fancy office, no big team  just relentless focus on delivering real results for real people."',
+      founderQuote: '"I started SpheraTech from my room with a laptop, a strong Wi-Fi connection, and an obsession for building things that actually work. No fancy office, no big team — just relentless focus on delivering real results for real people."',
       marketingName: 'Growth Marketing Leader',
       marketingRole: 'Head of Growth & Marketing',
-      marketingQuote: '"Marketing isn\'t about pushing products  it\'s about telling real stories that connect. Every campaign I build starts with one question: what does this client\'s audience actually care about?"',
+      marketingQuote: '"Marketing isn\'t about pushing products — it\'s about telling real stories that connect. Every campaign I build starts with one question: what does this client\'s audience actually care about?"',
       mvTitle: 'Mission & Vision',
       mvSubtitle: 'The "why" behind everything we build',
       missionTitle: 'Our Mission',
-      missionDesc: 'To make world-class digital experiences accessible to every business  regardless of size. We believe a small business deserves the same quality of web presence as a Fortune 500 company, and we\'re here to make that happen, one project at a time.',
+      missionDesc: 'To make world-class digital experiences accessible to every business — regardless of size. We believe a small business deserves the same quality of web presence as a Fortune 500 company, and we\'re here to make that happen, one project at a time.',
       visionTitle: 'Our Vision',
-      visionDesc: 'To become the go-to digital partner for ambitious businesses across the globe  known not just for beautiful work, but for the measurable growth we create. A future where SpheraTech is synonymous with trust, innovation, and results.',
+      visionDesc: 'To become the go-to digital partner for ambitious businesses across the globe — known not just for beautiful work, but for the measurable growth we create. A future where SpheraTech is synonymous with trust, innovation, and results.',
       valuesTitle: 'What We Stand For',
       valuesSubtitle: 'The principles that guide every decision we make',
       value1Title: 'Passion First',
-      value1Desc: 'We don\'t just build websites  we pour passion into every pixel, every line of code, and every interaction. This started from love for the craft, and that never changed.',
+      value1Desc: 'We don\'t just build websites — we pour passion into every pixel, every line of code, and every interaction. This started from love for the craft, and that never changed.',
       value2Title: 'Speed & Quality',
       value2Desc: 'We believe you should never have to choose between fast delivery and high quality. We\'ve built our workflow to deliver both, every time.',
       value3Title: 'Transparency',
       value3Desc: 'No hidden fees, no vague timelines, no corporate runaround. You\'ll always know exactly what we\'re building, when, and why.',
       value4Title: 'Client Obsessed',
-      value4Desc: 'Your success is our success. We treat every project as if it were our own business on the line  because your growth is what drives ours.',
+      value4Desc: 'Your success is our success. We treat every project as if it were our own business on the line — because your growth is what drives ours.',
 
       // Team section
       teamTitle: 'The People Behind the Work',
@@ -571,7 +572,7 @@ export const translations = {
       title3: 'en',
       title4: 'Réalité',
       title5: 'avec nous',
-      subtitle: 'Nous concevons des solutions numériques rapides, évolutives et sécurisées  du développement web sur mesure aux applications mobiles, en passant par des plateformes SaaS de pointe pour propulser votre transformation digitale.',
+      subtitle: 'Nous concevons des solutions numériques rapides, évolutives et sécurisées — du développement web sur mesure aux applications mobiles, en passant par des plateformes SaaS de pointe pour propulser votre transformation digitale.',
       ctaBtn: 'Commencez votre projet aujourd’hui',
       seeWorkBtn: 'Voir Nos Réalisations',
       scrollBtn: 'Faites défiler pour explorer'
@@ -583,7 +584,7 @@ export const translations = {
       saas: {
         title: 'Solutions SaaS',
         desc: 'Nous développons des solutions SaaS évolutives et sécurisées, adaptées à vos besoins métiers.',
-        longDesc: 'Nous développons des solutions SaaS évolutives et sécurisées, adaptées à vos besoins métiers. Notre agence de développement web combine les technologies de pointe avec une architecture intelligente pour créer des plateformes qui grandissent avec votre entreprise  du MVP à des millions d’utilisateurs.',
+        longDesc: 'Nous développons des solutions SaaS évolutives et sécurisées, adaptées à vos besoins métiers. Notre agence de développement web combine les technologies de pointe avec une architecture intelligente pour créer des plateformes qui grandissent avec votre entreprise — du MVP à des millions d’utilisateurs.',
         benefits: [
           'Architecture évolutive',
           'Solutions natives cloud',
@@ -793,7 +794,7 @@ export const translations = {
         },
         fast: {
           title: "Service Rapide",
-          desc: "Produits haute performance livrés dans des délais records. Rapidité sans sacrifice  c’est notre engagement envers vous."
+          desc: "Produits haute performance livrés dans des délais records. Rapidité sans sacrifice — c’est notre engagement envers vous."
         },
         personal: {
           title: "Touche Personnalisée",
@@ -803,7 +804,7 @@ export const translations = {
     },
     cta: {
       title: "Discutons de votre projet",
-      desc: "Discutons de votre idée et explorons comment notre agence de développement web (ou SpheraTech) peut transformer votre vision en une puissance digitale qui stimule une croissance réelle de votre entreprise.",
+      desc: "Parlez-nous de votre idée et nous vous montrerons comment SpheraTech peut la transformer en croissance réelle pour votre entreprise.",
       button: "Planifier Votre Consultation",
       tooltip: "Que vous soyez une startup avec une vision audacieuse ou une entreprise établie cherchant à moderniser votre présence digitale, nous sommes prêts à vous aider."
     },
@@ -821,7 +822,8 @@ export const translations = {
       caseStudy: 'Étude de cas',
       testimonials: 'Témoignages',
       follow: 'Suivez-nous',
-      goTop: 'RETOUR EN HAUT'
+      goTop: 'RETOUR EN HAUT',
+      rights: 'Tous droits réservés.'
     },
     servicePage: {
       benefits: 'Avantages Clés',
@@ -1015,31 +1017,31 @@ export const translations = {
       storyTitle1: 'D’une',
       storyHighlight: 'idée de garage',
       storyTitle2: 'à une vraie agence',
-      storyP1: 'Tout a commencé une nuit tardive  trop d’onglets ouverts, trop d’entreprises avec des sites web médiocres, et une pensée claire : « Je peux régler ça. »',
-      storyP2: 'SpheraTech n’est pas née dans un espace de coworking ou un incubateur, mais dans le genre d’environnement chaotique, alimenté par la caféine, où vivent les meilleures idées. Pas d’investisseurs, pas de filet de sécurité  juste la conviction sincère que le bon design et le code propre peuvent changer la façon dont une entreprise grandit.',
+      storyP1: 'Tout a commencé une nuit tardive — trop d’onglets ouverts, trop d’entreprises avec des sites web médiocres, et une pensée claire : « Je peux régler ça. »',
+      storyP2: 'SpheraTech n’est pas née dans un espace de coworking ou un incubateur, mais dans le genre d’environnement chaotique, alimenté par la caféine, où vivent les meilleures idées. Pas d’investisseurs, pas de filet de sécurité — juste la conviction sincère que le bon design et le code propre peuvent changer la façon dont une entreprise grandit.',
       storyP3: 'Chaque projet depuis a été traité de la même manière : avec une pleine responsabilité, une communication honnête et une détermination sans faille à livrer quelque chose dont le client est réellement fier.',
       storyCta: 'Travailler Avec Nous',
       founderRole: 'Fondateur & Développeur Principal',
-      founderQuote: '"J’ai lancé SpheraTech depuis ma chambre avec un ordinateur portable, une connexion Wi-Fi solide et une obsession pour construire des choses qui fonctionnent vraiment. Pas de bureau chic, pas de grande équipe  juste une concentration sans relâche pour livrer des résultats concrets à des gens réels."',
+      founderQuote: '"J’ai lancé SpheraTech depuis ma chambre avec un ordinateur portable, une connexion Wi-Fi solide et une obsession pour construire des choses qui fonctionnent vraiment. Pas de bureau chic, pas de grande équipe — juste une concentration sans relâche pour livrer des résultats concrets à des gens réels."',
       marketingName: 'Responsable Marketing Croissance',
       marketingRole: 'Responsable Croissance & Marketing',
-      marketingQuote: '"Le marketing ne consiste pas à pousser des produits  il s’agit de raconter de vraies histoires qui créent des liens. Chaque campagne que je construis commence par une question : qu’est-ce qui importe vraiment à l’audience de ce client ?"',
+      marketingQuote: '"Le marketing ne consiste pas à pousser des produits — il s’agit de raconter de vraies histoires qui créent des liens. Chaque campagne que je construis commence par une question : qu’est-ce qui importe vraiment à l’audience de ce client ?"',
       mvTitle: 'Mission & Vision',
       mvSubtitle: 'Le "pourquoi" derrière tout ce que nous construisons',
       missionTitle: 'Notre Mission',
-      missionDesc: 'Rendre les expériences digitales de classe mondiale accessibles à chaque entreprise  quelle que soit sa taille. Nous croyons qu’une petite entreprise mérite la même qualité de présence web qu’une entreprise du Fortune 500, et nous sommes là pour que cela devienne réalité, un projet à la fois.',
+      missionDesc: 'Rendre les expériences digitales de classe mondiale accessibles à chaque entreprise — quelle que soit sa taille. Nous croyons qu’une petite entreprise mérite la même qualité de présence web qu’une entreprise du Fortune 500, et nous sommes là pour que cela devienne réalité, un projet à la fois.',
       visionTitle: 'Notre Vision',
-      visionDesc: 'Devenir le partenaire digital de référence pour les entreprises ambitieuses à travers le monde  connu non seulement pour la beauté de notre travail, mais aussi pour la croissance mesurable que nous créons. Un avenir où SpheraTech est synonyme de confiance, d’innovation et de résultats.',
+      visionDesc: 'Devenir le partenaire digital de référence pour les entreprises ambitieuses à travers le monde — connu non seulement pour la beauté de notre travail, mais aussi pour la croissance mesurable que nous créons. Un avenir où SpheraTech est synonyme de confiance, d’innovation et de résultats.',
       valuesTitle: 'Ce en quoi nous croyons',
       valuesSubtitle: 'Les principes qui guident chaque décision que nous prenons',
       value1Title: 'Passion D’abord',
-      value1Desc: 'Nous ne construisons pas seulement des sites web  nous mettons de la passion dans chaque pixel, chaque ligne de code et chaque interaction. Cela a commencé par l’amour du métier, et cela n’a jamais changé.',
+      value1Desc: 'Nous ne construisons pas seulement des sites web — nous mettons de la passion dans chaque pixel, chaque ligne de code et chaque interaction. Cela a commencé par l’amour du métier, et cela n’a jamais changé.',
       value2Title: 'Rapidité & Qualité',
       value2Desc: 'Nous croyons que vous ne devriez jamais avoir à choisir entre une livraison rapide et une haute qualité. Nous avons construit notre workflow pour offrir les deux, à chaque fois.',
       value3Title: 'Transparence',
       value3Desc: 'Pas de frais cachés, pas de délais vagues, pas de jargon corporatif. Vous saurez toujours exactement ce que nous construisons, quand et pourquoi.',
       value4Title: 'Obsédés par le Client',
-      value4Desc: 'Votre succès est notre succès. Nous traitons chaque projet comme si c’était notre propre entreprise en jeu  parce que votre croissance est ce qui stimule la nôtre.',
+      value4Desc: 'Votre succès est notre succès. Nous traitons chaque projet comme si c’était notre propre entreprise en jeu — parce que votre croissance est ce qui stimule la nôtre.',
 
       teamTitle: 'Les Personnes Derrière le Travail',
       teamSubtitle: 'Petite équipe. Production massive.'
@@ -1351,7 +1353,7 @@ export const translations = {
     },
     cta: {
       title: "Hablemos de tu proyecto",
-      desc: "Hablemos de tu idea y exploremos cómo nuestra agencia de desarrollo web (o SpheraTech) puede transformar tu visión en una potencia digital que impulse un crecimiento real en tu negocio.",
+      desc: "Cuéntanos tu idea y te mostraremos cómo SpheraTech puede convertirla en crecimiento real para tu negocio.",
       button: "Programar tu Consulta",
       tooltip: "Ya sea que seas una startup con una visión audaz o una empresa establecida que busca modernizar tu presencia digital, estamos listos para ayudarte."
     },
@@ -1369,7 +1371,8 @@ export const translations = {
       caseStudy: 'Estudio de caso',
       testimonials: 'Testimonios',
       follow: 'Síguenos',
-      goTop: 'IR ARRIBA'
+      goTop: 'IR ARRIBA',
+      rights: 'Todos los derechos reservados.'
     },
     servicePage: {
       benefits: 'Beneficios Clave',
@@ -1563,7 +1566,7 @@ export const translations = {
       storyTitle1: 'De una',
       storyHighlight: 'idea de garaje',
       storyTitle2: 'a una agencia real',
-      storyP1: 'Todo comenzó una noche tarde  demasiadas pestañas abiertas en el navegador, demasiadas empresas con sitios web terribles, y un pensamiento claro: "Puedo arreglar esto".',
+      storyP1: 'Todo comenzó una noche tarde — demasiadas pestañas abiertas en el navegador, demasiadas empresas con sitios web terribles, y un pensamiento claro: "Puedo arreglar esto".',
       storyP2: 'SpheraTech no nació en un espacio de coworking ni en una incubadora, sino en el tipo de entorno caótico y alimentado por cafeína donde realmente viven las mejores ideas. Sin inversores, sin red de seguridad, solo la creencia genuina de que el buen diseño y el código limpio pueden cambiar la forma en que crece un negocio.',
       storyP3: 'Cada proyecto desde entonces ha sido tratado de la misma manera: con total propiedad, comunicación honesta y un impulso incansable para entregar algo de lo que el cliente esté genuinamente orgulloso.',
       storyCta: 'Trabaja Con Nosotros',

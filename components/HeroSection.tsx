@@ -28,7 +28,7 @@ export default function HeroSection() {
       opacity: [0, 1],
       translateY: [20, 0],
       duration: 700,
-      delay: (_, i = 0) => i * 130,
+      delay: (_: unknown, i: number = 0) => i * 130,
     });
 
     traces.forEach((trace, i) => {
@@ -113,14 +113,14 @@ export default function HeroSection() {
 
         {/* Signature: circuit traces drawn from the logo's own detailing. */}
         <div aria-hidden="true" className="mt-16 flex items-center justify-center gap-6 text-brand/70">
-          <svg viewBox="0 0 320 24" fill="none" className="w-40 md:w-64 h-5" style={{ transform: 'scaleX(-1)' }}>
+          <svg viewBox="0 0 320 24" fill="none" preserveAspectRatio="xMaxYMid meet" className="h-5 w-16 sm:w-40 md:w-64 shrink-0" style={{ transform: 'scaleX(-1)' }}>
             <path data-hero-trace d="M0 20 H176 L192 6 H298" stroke="currentColor" strokeWidth="1.5" opacity="0" />
             <circle data-hero-node cx="306" cy="6" r="3.5" stroke="currentColor" strokeWidth="1.5" fill="none" style={{ transformOrigin: '306px 6px' }} />
           </svg>
           <span data-hero data-reveal className="font-mono text-faint text-xs uppercase tracking-[0.25em]">
             {t.hero.scrollBtn}
           </span>
-          <svg viewBox="0 0 320 24" fill="none" className="w-40 md:w-64 h-5">
+          <svg viewBox="0 0 320 24" fill="none" preserveAspectRatio="xMinYMid meet" className="h-5 w-16 sm:w-40 md:w-64 shrink-0">
             <path data-hero-trace d="M0 20 H176 L192 6 H298" stroke="currentColor" strokeWidth="1.5" opacity="0" />
             <circle data-hero-node cx="306" cy="6" r="3.5" stroke="currentColor" strokeWidth="1.5" fill="none" style={{ transformOrigin: '306px 6px' }} />
           </svg>
