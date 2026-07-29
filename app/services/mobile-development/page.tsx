@@ -3,8 +3,9 @@ import Link from 'next/link';
 import { ArrowLeft, Check, ArrowRight, Zap, Shield, Clock, TrendingUp, Globe, Terminal, Smartphone, Code, LucideIcon } from 'lucide-react';
 import { servicesData } from '@/lib/servicesData';
 import { translations } from '@/lib/translations';
+import { getProjectsByService } from '@/lib/projects';
 import CTASection from '@/components/CTASection';
-import ProjectCard from '@/components/ProjectCard';
+import ProjectCardCompact from '@/components/projects/ProjectCardCompact';
 import SectionHeader from '@/components/SectionHeader';
 import Reveal from '@/components/motion/Reveal';
 
@@ -17,16 +18,19 @@ const ICONS: Record<string, LucideIcon> = {
 
 const SLUG = 'mobile-development';
 
+export const revalidate = 60;
+
 export const metadata: Metadata = {
     title: 'Mobile Development - SpheraTech',
     description: 'Our team specializes in developing robust and user-friendly mobile applications for iOS and Android.',
 };
 
-export default function MobileDevPage() {
+export default async function MobileDevPage() {
     const service = servicesData.find((s) => s.slug === SLUG)!;
     const Icon = ICONS[service.iconName] || Code;
     const t = translations.en;
     const serviceData = t.services.mobile;
+    const projects = await getProjectsByService('mobile');
 
     const features = [
         {
@@ -106,7 +110,7 @@ export default function MobileDevPage() {
             </section>
 
             {/* Client Projects Section */}
-            {serviceData.clients && serviceData.clients.length > 0 && (
+            {projects.length > 0 && (
                 <section className="py-20 md:py-28 px-6">
                     <div className="max-w-7xl mx-auto">
                         <SectionHeader
@@ -115,9 +119,9 @@ export default function MobileDevPage() {
                             lede={t.servicePage.projectsDesc}
                         />
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                            {serviceData.clients.map((client: any, index: number) => (
-                                <Reveal key={index} delay={index * 70} className="h-full">
-                                    <ProjectCard client={client} />
+                            {projects.map((project, index) => (
+                                <Reveal key={project._id} delay={index * 70} className="h-full">
+                                    <ProjectCardCompact project={project} index={index} />
                                 </Reveal>
                             ))}
                         </div>

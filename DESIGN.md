@@ -67,10 +67,49 @@ decorative element — everything else stays quiet.
 - Scroll reveals: `components/motion/Reveal.tsx`. One pattern sitewide:
   fade + 12px rise, 550ms, `outCubic`, optional per-card stagger via `delay`.
 - Hero: one orchestrated `createTimeline` load sequence (eyebrow → headline →
-  lede → CTA → circuit draw). The only load animation on the site.
+  lede → CTA → circuit draw). Used on the home hero and the case-study hero,
+  and nowhere else.
 - Micro-interactions: CSS transitions on border/color/arrow-nudge only.
 - Everything respects `prefers-reduced-motion` (global kill in globals.css,
   and Reveal renders content visible immediately).
+
+Three primitives exist for the work pages. Do not add a fourth without a
+reason that none of these covers.
+
+- `motion/MediaReveal.tsx` — two-panel wipe for hero and gallery media: the
+  base-colored panel slides off, flashing brand red beneath it, then the red
+  panel follows. Transforms only. This is the **one** place red is used as a
+  large fill, and it lasts ~200ms.
+- `motion/CountUp.tsx` — tweens the number inside a metric string while its
+  prefix/suffix stay put. Renders the real figure server-side and only drops
+  to zero on the client, so no-JS visitors never see a false "0".
+- Page shutter (`projects/ProjectIndex.tsx`) — leaving the index, sibling rows
+  stagger out, then a `bg-base` panel rises over the nav and navigation happens
+  underneath it. The case study's hero timeline continues the movement, so the
+  two pages read as one gesture. Only mounted while a transition is running.
+
+Cards must never `hover:scale`. Where a screenshot wants to feel alive, scroll
+the image inside a fixed frame instead (see `projects/ProjectRow.tsx`) — for a
+website portfolio that also shows more of the actual page.
+
+## Content
+
+Projects are **not** hardcoded. They live in Sanity as `project` documents and
+are edited in the studio embedded at `/studio` (schema in `sanity/schemas/`,
+queries in `lib/projects.ts`). Adding a project is: create it in the studio,
+publish, done — no deploy.
+
+Every text field on a project is a `localeString` / `localeText` /
+`localeBlock` object with `en` / `fr` / `es` sub-fields. English is required;
+fr and es sit in a collapsed "Translations" fieldset and fall back to English
+when empty (`pick()` / `pickBlocks()`). UI chrome around the content still
+comes from `lib/translations.ts`.
+
+The service pages under `app/services/*` read their project lists from the same
+place: each fetches `getProjectsByService()` for its own `service` value and
+renders `projects/ProjectCardCompact.tsx`, the grid-card sibling of
+`ProjectRow`. Tagging a project with a service is all it takes to surface it
+there.
 
 ## Copy
 

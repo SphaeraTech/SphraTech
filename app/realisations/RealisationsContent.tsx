@@ -3,27 +3,19 @@
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/LanguageContext';
-import ProjectCard from '@/components/ProjectCard';
+import type { Project } from '@/lib/projects';
 import CTASection from '@/components/CTASection';
 import Reveal from '@/components/motion/Reveal';
 import CircuitTrace from '@/components/motion/CircuitTrace';
+import ProjectIndex from '@/components/projects/ProjectIndex';
 
-interface Client {
-  name: string;
-  description: string;
-  pictures: string[];
-  siteLink?: string;
-}
-
-export default function RealisationsContent() {
+export default function RealisationsContent({ projects }: { projects: Project[] }) {
   const { t } = useLanguage();
-  const webClients: Client[] = (t.services.webDev as { clients?: Client[] }).clients ?? [];
-  const saasClients: Client[] = (t.services.saas as { clients?: Client[] }).clients ?? [];
 
   return (
     <main className="min-h-screen">
       {/* Page header */}
-      <section className="pt-32 pb-8 px-6">
+      <section className="pt-32 pb-4 px-6">
         <div className="max-w-7xl mx-auto">
           <Link
             href="/"
@@ -51,39 +43,10 @@ export default function RealisationsContent() {
         </div>
       </section>
 
-      {/* Websites & platforms */}
-      <section className="py-12 md:py-16 px-6">
+      {/* The work */}
+      <section className="pt-8 pb-20 md:pb-28 px-6">
         <div className="max-w-7xl mx-auto">
-          <Reveal className="mb-8">
-            <h2 className="font-display text-2xl md:text-3xl font-bold tracking-tight text-ink">
-              {t.realisations.webTitle}
-            </h2>
-          </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {webClients.map((client, index) => (
-              <Reveal key={client.name} delay={index * 70} className="h-full">
-                <ProjectCard client={{ siteLink: '', ...client }} />
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SaaS products */}
-      <section className="py-12 md:py-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          <Reveal className="mb-8">
-            <h2 className="font-display text-2xl md:text-3xl font-bold tracking-tight text-ink">
-              {t.realisations.saasTitle}
-            </h2>
-          </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {saasClients.map((client, index) => (
-              <Reveal key={client.name} delay={index * 70} className="h-full">
-                <ProjectCard client={{ siteLink: '', ...client }} />
-              </Reveal>
-            ))}
-          </div>
+          <ProjectIndex projects={projects} />
         </div>
       </section>
 

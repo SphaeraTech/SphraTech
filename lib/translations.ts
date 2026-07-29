@@ -65,15 +65,6 @@ export const translations = {
             question: 'Can you help with existing SaaS applications?',
             answer: 'Yes, we can help modernize, scale, or add new features to existing SaaS applications.'
           }
-        ],
-        clients: [
-          {
-            name: "CargoFlow",
-            description: "A platform that helps moving companies manage quotes, scheduling, and business operations efficiently.",
-            pictures: ["saas-projects/cargoflow/front.png", "saas-projects/cargoflow/02.png"],
-
-          }
-
         ]
       },
       webDev: {
@@ -118,21 +109,6 @@ export const translations = {
             question: 'Can you work with existing codebases?',
             answer: 'Absolutely! We can improve, refactor, or add features to your existing web applications while maintaining code quality.'
           }
-        ],
-        clients: [
-          {
-            name: "BS move",
-            description: "Website for a moving-company complete with quota calculator,custom email templates ...",
-            pictures: ["client-projects/web-dev/bs-move/pic1.png", "client-projects/web-dev/bs-move/pic4.png", "client-projects/web-dev/bs-move/pic3.png", "client-projects/web-dev/bs-move/pic2.png"],
-            siteLink: "https://bsmove.com/"
-
-          },
-          {
-            name: "EMSG Mansoure",
-            description: "Website for largest german auto-part company in algeria.",
-            pictures: ["client-projects/web-dev/emsg/pic1.png", "client-projects/web-dev/emsg/pic4.png", "client-projects/web-dev/emsg/pic3.png", "client-projects/web-dev/emsg/pic2.png"],
-            siteLink: "https://bsmove.com/"
-          }
         ]
       },
       mobile: {
@@ -173,8 +149,7 @@ export const translations = {
             question: 'Do you help with app store submission?',
             answer: 'Yes, we handle the entire app store submission process for both Apple App Store and Google Play Store, including preparing all required assets and metadata.'
           }
-        ],
-        clients: []
+        ]
       },
       seo: {
         title: 'SEO Services',
@@ -214,8 +189,7 @@ export const translations = {
             question: 'What\'s included in your SEO services?',
             answer: 'Our services include keyword research, on-page optimization, technical SEO, content strategy, link building, and regular performance reporting.'
           },
-        ],
-        clients: []
+        ]
       },
     },
     why: {
@@ -456,6 +430,29 @@ export const translations = {
       subtitle: 'Real projects shipped for real clients — websites, platforms, and SaaS products.',
       webTitle: 'Websites & platforms',
       saasTitle: 'SaaS products',
+      filterAll: 'All work',
+      filterWeb: 'Websites',
+      filterSaas: 'SaaS',
+      filterMobile: 'Mobile',
+      filterSeo: 'SEO',
+      openCaseStudy: 'Open case study',
+      visitSite: 'Visit site',
+      backToWork: 'Back to our work',
+      empty: 'No projects published yet.',
+      caseStudy: 'Case study',
+      client: 'Client',
+      sector: 'Sector',
+      year: 'Year',
+      duration: 'Duration',
+      delivered: 'Delivered',
+      challenge: 'The challenge',
+      approach: 'What we built',
+      outcome: 'The outcome',
+      results: 'Results',
+      techStack: 'Tech stack',
+      gallery: 'Gallery',
+      nextProject: 'Next project',
+      closeGallery: 'Close',
     },
     about: {
       heroBadge: 'Built with passion, from scratch',
@@ -619,13 +616,6 @@ export const translations = {
             question: 'Pouvez-vous aider avec des applications SaaS existantes ?',
             answer: 'Oui, nous pouvons vous aider à moderniser, mettre à l’échelle ou ajouter de nouvelles fonctionnalités à vos applications SaaS existantes.'
           }
-        ],
-        clients: [
-          {
-            name: "CargoFlow",
-            description: "Une plateforme qui aide les entreprises de déménagement à gérer les devis, la planification et les opérations commerciales de manière efficace.",
-            pictures: ["saas-projects/cargoflow/front.png", "saas-projects/cargoflow/02.png"]
-          }
         ]
       },
       webDev: {
@@ -670,20 +660,6 @@ export const translations = {
             question: 'Pouvez-vous travailler avec des codebases existantes ?',
             answer: 'Absolument ! Nous pouvons améliorer, refactoriser ou ajouter des fonctionnalités à vos applications web existantes tout en maintenant la qualité du code.'
           }
-        ],
-        clients: [
-          {
-            name: "BS move",
-            description: "Site web pour une entreprise de déménagement complet avec calculateur de devis, modèles d’emails personnalisés, etc.",
-            pictures: ["client-projects/web-dev/bs-move/pic1.png", "client-projects/web-dev/bs-move/pic4.png", "client-projects/web-dev/bs-move/pic3.png", "client-projects/web-dev/bs-move/pic2.png"],
-            siteLink: "https://bsmove.com/"
-          },
-          {
-            name: "EMSG Mansoure",
-            description: "Site web pour la plus grande entreprise allemande de pièces automobiles en Algérie.",
-            pictures: ["client-projects/web-dev/emsg/pic1.png", "client-projects/web-dev/emsg/pic4.png", "client-projects/web-dev/emsg/pic3.png", "client-projects/web-dev/emsg/pic2.png"],
-            siteLink: "https://bsmove.com/"
-          }
         ]
       },
       mobile: {
@@ -724,8 +700,7 @@ export const translations = {
             question: 'Aidez-vous à la soumission sur les stores ?',
             answer: 'Oui, nous gérons l’intégralité du processus de soumission sur les stores pour l’App Store d’Apple et le Google Play Store, y compris la préparation de tous les éléments et métadonnées requis.'
           }
-        ],
-        clients: []
+        ]
       },
       seo: {
         title: 'Services SEO',
@@ -765,8 +740,7 @@ export const translations = {
             question: 'Que comprennent vos services SEO ?',
             answer: 'Nos services incluent la recherche de mots-clés, l’optimisation on-page, le SEO technique, la stratégie de contenu, le netlinking et des rapports de performance réguliers.'
           }
-        ],
-        clients: []
+        ]
       }
     },
     why: {
@@ -1007,6 +981,29 @@ export const translations = {
       subtitle: 'Des projets réels livrés à de vrais clients — sites web, plateformes et produits SaaS.',
       webTitle: 'Sites web & plateformes',
       saasTitle: 'Produits SaaS',
+      filterAll: 'Tout',
+      filterWeb: 'Sites web',
+      filterSaas: 'SaaS',
+      filterMobile: 'Mobile',
+      filterSeo: 'SEO',
+      openCaseStudy: 'Voir l’étude de cas',
+      visitSite: 'Voir le site',
+      backToWork: 'Retour aux réalisations',
+      empty: 'Aucun projet publié pour le moment.',
+      caseStudy: 'Étude de cas',
+      client: 'Client',
+      sector: 'Secteur',
+      year: 'Année',
+      duration: 'Durée',
+      delivered: 'Livré',
+      challenge: 'Le défi',
+      approach: 'Ce que nous avons construit',
+      outcome: 'Le résultat',
+      results: 'Résultats',
+      techStack: 'Technologies',
+      gallery: 'Galerie',
+      nextProject: 'Projet suivant',
+      closeGallery: 'Fermer',
     },
     about: {
       heroBadge: 'Conçu avec passion, de zéro',
@@ -1168,13 +1165,6 @@ export const translations = {
             question: '¿Pueden ayudar con aplicaciones SaaS existentes?',
             answer: 'Sí, podemos ayudarte a modernizar, escalar o agregar nuevas funcionalidades a aplicaciones SaaS existentes.'
           }
-        ],
-        clients: [
-          {
-            name: "CargoFlow",
-            description: "Una plataforma que ayuda a las empresas de mudanzas a gestionar cotizaciones, programación y operaciones comerciales de manera eficiente.",
-            pictures: ["saas-projects/cargoflow/front.png", "saas-projects/cargoflow/02.png"]
-          }
         ]
       },
       webDev: {
@@ -1219,20 +1209,6 @@ export const translations = {
             question: '¿Pueden trabajar con codebases existentes?',
             answer: '¡Absolutamente! Podemos mejorar, refactorizar o agregar funcionalidades a tus aplicaciones web existentes manteniendo la calidad del código.'
           }
-        ],
-        clients: [
-          {
-            name: "BS move",
-            description: "Sitio web para una empresa de mudanzas completo con calculadora de cotizaciones, plantillas de correo personalizadas, etc.",
-            pictures: ["client-projects/web-dev/bs-move/pic1.png", "client-projects/web-dev/bs-move/pic4.png", "client-projects/web-dev/bs-move/pic3.png", "client-projects/web-dev/bs-move/pic2.png"],
-            siteLink: "https://bsmove.com/"
-          },
-          {
-            name: "EMSG Mansoure",
-            description: "Sitio web para la mayor empresa alemana de autopartes en Argelia.",
-            pictures: ["client-projects/web-dev/emsg/pic1.png", "client-projects/web-dev/emsg/pic4.png", "client-projects/web-dev/emsg/pic3.png", "client-projects/web-dev/emsg/pic2.png"],
-            siteLink: "https://bsmove.com/"
-          }
         ]
       },
       mobile: {
@@ -1273,8 +1249,7 @@ export const translations = {
             question: '¿Ayudan con el envío a las tiendas de aplicaciones?',
             answer: 'Sí, manejamos todo el proceso de envío a las tiendas para Apple App Store y Google Play Store, incluyendo la preparación de todos los activos y metadatos requeridos.'
           }
-        ],
-        clients: []
+        ]
       },
       seo: {
         title: 'Servicios SEO',
@@ -1314,8 +1289,7 @@ export const translations = {
             question: '¿Qué incluye sus servicios SEO?',
             answer: 'Nuestros servicios incluyen investigación de palabras clave, optimización on-page, SEO técnico, estrategia de contenido, construcción de enlaces y reportes de rendimiento regulares.'
           }
-        ],
-        clients: []
+        ]
       }
     },
     why: {
@@ -1556,6 +1530,29 @@ export const translations = {
       subtitle: 'Proyectos reales entregados a clientes reales: sitios web, plataformas y productos SaaS.',
       webTitle: 'Sitios web y plataformas',
       saasTitle: 'Productos SaaS',
+      filterAll: 'Todo',
+      filterWeb: 'Sitios web',
+      filterSaas: 'SaaS',
+      filterMobile: 'Móvil',
+      filterSeo: 'SEO',
+      openCaseStudy: 'Ver el caso práctico',
+      visitSite: 'Ver el sitio',
+      backToWork: 'Volver a nuestro trabajo',
+      empty: 'Todavía no hay proyectos publicados.',
+      caseStudy: 'Caso práctico',
+      client: 'Cliente',
+      sector: 'Sector',
+      year: 'Año',
+      duration: 'Duración',
+      delivered: 'Entregado',
+      challenge: 'El reto',
+      approach: 'Lo que construimos',
+      outcome: 'El resultado',
+      results: 'Resultados',
+      techStack: 'Tecnologías',
+      gallery: 'Galería',
+      nextProject: 'Siguiente proyecto',
+      closeGallery: 'Cerrar',
     },
     about: {
       heroBadge: 'Construido con pasión, desde cero',
